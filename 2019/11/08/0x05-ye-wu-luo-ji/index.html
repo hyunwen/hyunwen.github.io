@@ -519,7 +519,7 @@
 </blockquote>
 <p>暴露意味着更大的攻击面。隐藏好自己的信息，完备逻辑，完整鉴权，来应对还在潜伏着的威胁。</p>
 <h3 id="KYC认证缺陷"><a href="#KYC认证缺陷" class="headerlink" title="KYC认证缺陷"></a>KYC认证缺陷</h3><p>KYC全称为know-your-customer,  充分了解你的客户 ，了解账户的实际控制人和交易的实际收益人，还要求对客户的身份、常住地址或企业所从事的业务进行充分的了解，并采取相应的措施。<br>认证作为交易所的重要功能之一，认证方式也百花齐放，常见的有身份证正反面照片，手持身份证照片，手持身份证视频等等。而认证方式有人工识别和接口识别两种，人工识别的准确性取决于审核员当天的心情以及前一天的睡眠，PS加AI换脸的手持身份证照片一般来说可以轻松通过。对于调用接口来进行识别的，有使用百度识图接口来验证，判断身份证照片上的身份证号以及姓名与用户输入的是否相同，来判断是否通过；有需要用户自己掏两块钱来审核的支付宝的人脸识别接口。<br>下图为某交易所调用baidu API进行KYC认证的前端代码：</p>
-<p>![某交易所调用baidu api进行KYC认证的前端代码](./kyc js.png “某交易所调用baidu api进行KYC认证的前端代码”)</p>
+<p><img src="/2019/11/08/0x05-ye-wu-luo-ji/kycjs.png" alt="某交易所调用baidu api进行KYC认证的前端代码" title="某交易所调用baidu api进行KYC认证的前端代码"></p>
 <p>对于这种形同虚设KYC认证方式，掌握画图的初级使用技巧即可可以轻松绕过。</p>
 <h3 id="OTC逻辑缺陷"><a href="#OTC逻辑缺陷" class="headerlink" title="OTC逻辑缺陷"></a>OTC逻辑缺陷</h3><p>OTC指的是Over-the-counter，场外交易市场， 通常是指店头交易市场或柜台交易市场 。对于交易所来说，OTC指的是用户依托交易所的担保，卖家和买家进行交易。</p>
 <p>正常OTC交易流程为：</p>
@@ -531,7 +531,7 @@
 <p>商家卖币 =&gt;  攻击者购买币并不支付 =&gt;  攻击者通过越权点击商家的确认收款  =&gt;  系统转账到买家。</p>
 </blockquote>
 <p>图下为某交易所OTC存在的逻辑缺陷：</p>
-<p>![OTC攻击流程](./OTC attack.png “OTC攻击流程”)</p>
+<p><img src="/2019/11/08/0x05-ye-wu-luo-ji/OTCattack.png" alt="OTC攻击流程" title="OTC攻击流程"></p>
 <p>利用此类逻辑问题，攻击者可以轻易的不进行支付而直接获得系统转账。</p>
 <h2 id="盘口价格设置缺陷"><a href="#盘口价格设置缺陷" class="headerlink" title="盘口价格设置缺陷"></a>盘口价格设置缺陷</h2><p>2019年8月23日，由于AWS东京机房硬件设备故障，导致无法连接到服务。部分交易所因使用其他交易所错误的价格数据导致币价出现剧烈波动，BTC成交价最低为0.32USD/BTC，ETH以及EOS均受到影响。</p>
 <p><img src="/2019/11/08/0x05-ye-wu-luo-ji/0.32USDBTC.png" alt="0.32USDBTC"></p>
@@ -999,7 +999,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">3.9k</span>&nbsp;字
+                class="white-color">3.8k</span>&nbsp;字
             
             
             
