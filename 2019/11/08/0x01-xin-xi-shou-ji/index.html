@@ -4,8 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="交易所安全测试--业务逻辑审计, Hyun">
-    <meta name="description" content="交易所安全测试–业务逻辑审计一、概述​    对于交易所来说，一个逻辑完备，鉴权完整的交易流程必不可少。对于前期的信息收集，传统安全的测试这里不再赘述，逻辑安全独立与其他服务却又容易受到其他安全问题的牵扰，一直是困扰广大开发者和安全测试人员">
+    <meta name="keywords" content="交易所安全测试--信息收集, Hyun">
+    <meta name="description" content="交易所安全测试–信息收集一、概述　　对于所有安全相关的测试来说，信息收集都是非常重要且必要的第一步，有时一次非常全面完善的信息收集甚至会占到一次渗透测试总工程量的的70%到80%，能为后续的工作节省大量精力，提供便利，数字货币交易所的安全测">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -13,7 +13,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>交易所安全测试--业务逻辑审计 | Hyun</title>
+    <title>交易所安全测试--信息收集 | Hyun</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -303,13 +303,13 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/15.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/0.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        交易所安全测试--业务逻辑审计
+                        交易所安全测试--信息收集
                     </div>
                 </div>
             </div>
@@ -437,7 +437,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
-                    2019-11-07
+                    2019-11-08
                 </div>
                 
 
@@ -446,14 +446,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>Word Count:&nbsp;&nbsp;
-                    1k
+                    2.3k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>Read Times:&nbsp;&nbsp;
-                    3 Min
+                    7 Min
                 </div>
                 
 				
@@ -469,63 +469,60 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="交易所安全测试–业务逻辑审计"><a href="#交易所安全测试–业务逻辑审计" class="headerlink" title="交易所安全测试–业务逻辑审计"></a>交易所安全测试–业务逻辑审计</h1><h2 id="一、概述"><a href="#一、概述" class="headerlink" title="一、概述"></a>一、概述</h2><p>​    对于交易所来说，一个逻辑完备，鉴权完整的交易流程必不可少。对于前期的信息收集，传统安全的测试这里不再赘述，逻辑安全独立与其他服务却又容易受到其他安全问题的牵扰，一直是困扰广大开发者和安全测试人员的问题。这里给出在经过大量对交易所安全测试后总结出的详细的测试条目，拿出具体案例和大家一起分析存在的安全问题。</p>
+                <h1 id="交易所安全测试–信息收集"><a href="#交易所安全测试–信息收集" class="headerlink" title="交易所安全测试–信息收集"></a>交易所安全测试–信息收集</h1><h2 id="一、概述"><a href="#一、概述" class="headerlink" title="一、概述"></a>一、概述</h2><p>　　对于所有安全相关的测试来说，信息收集都是非常重要且必要的第一步，有时一次非常全面完善的信息收集甚至会占到一次渗透测试总工程量的的70%到80%，能为后续的工作节省大量精力，提供便利，数字货币交易所的安全测试也是一样，第一步的信息收集至关重要。本文将展示零时科技安全团队的多年攻防经验，以及大量交易所客户真实案例，虽然见微知著，但是通过案例就可以了解到，在安全测试过程中数字货币交易所有什么样的信息可供黑客收集利用以及导致怎样的危害。其中几点将会被单独加以说明，以供参考。</p>
 <h2 id="二、测试列表"><a href="#二、测试列表" class="headerlink" title="二、测试列表"></a>二、测试列表</h2><blockquote>
-<p>业务逻辑审计 </p>
+<p>信息收集列表</p>
 <ul>
-<li><p>越权操作测试</p>
-<ul>
-<li><p>订单越权发起、查看、编辑、删除</p>
-</li>
-<li><p>地址越权添加、删除</p>
-</li>
-<li><p>用户信息越权查看、编辑</p>
-</li>
-</ul>
-</li>
-<li><p>工作流程绕过测试</p>
-</li>
-<li><p>KYC认证缺陷测试</p>
-<ul>
-<li>接口识别</li>
-<li>人工识别</li>
-</ul>
-</li>
-<li><p>OTC逻辑缺陷测试</p>
-</li>
-<li><p>盘口价格设置缺陷测试</p>
-</li>
-<li><p>假充值测试</p>
-</li>
-<li><p>短地址攻击测试</p>
-</li>
+<li>域名 Whois及备案信息采集</li>
+<li>服务器真实 IP 发现</li>
+<li>服务器指纹识别</li>
+<li>目标子域探测</li>
+<li>邮件服务探测</li>
+<li>证书信息采集</li>
+<li>Web服务组件指纹采集</li>
+<li>Web网站目录探测</li>
+<li>API接口信息泄露</li>
+<li>端口服务组件指纹采集</li>
+<li>旁服信息采集</li>
+<li>C 段服务采集</li>
+<li>GitHub/SVN源码泄露发现</li>
+<li>DNS记录分析搜索引擎公开信息采集（google，shodan，zoomeye）</li>
+<li>企业信息采集（员工信息，组织框架，企业法人，企业综合信息）</li>
+<li>敏感文件发现</li>
 </ul>
 </blockquote>
-<h2 id="三、案例分析"><a href="#三、案例分析" class="headerlink" title="三、案例分析"></a>三、案例分析</h2><h3 id="越权操作"><a href="#越权操作" class="headerlink" title="越权操作"></a>越权操作</h3><p>​        可能是因为开发人员热衷于打破樊篱 ，所以越权一直是Web安全中老生常谈的问题，并且由于订单、地址、余额和个人信息等等功能的聚集，交易所是越权问题的重灾区。越权漏洞一般分为平行越权和垂直越权两种，而交易所中平行越权占大多数，不仅可以导致越权查看、修改、撤销订单，添加、删除地址以及修改个人信息，而且配合存在的信息泄露问题，可以变相的获取所有用户的KYC信息，因为是正常请求，比起脱裤更难被WAF所发现。</p>
-<p>某交易所修改userphone可以越权让任意用户下单：</p>
-<p><img src="/.top//.%5C%E8%B6%8A%E6%9D%83%E4%B8%8B%E5%8D%95.png" alt="越权下单" title="越权下单"></p>
-<p>某交易所遍历id可以越权删除地址：</p>
-<p><img src="/.top//.%5C%E8%B6%8A%E6%9D%83%E5%88%A0%E9%99%A4%E5%9C%B0%E5%9D%80.png" alt="越权删除地址" title="越权删除地址"></p>
-<p>​        根据上述示例可以看出，虽然请求头中含有token和userid等参数，但服务器在接受到请求后并没有将token和userid与body里所携带的id和userphone进行校验，没有做好鉴权，导致越权。</p>
-<h3 id="KYC认证缺陷"><a href="#KYC认证缺陷" class="headerlink" title="KYC认证缺陷"></a>KYC认证缺陷</h3><p>​        KYC[^  know-your-customer， 了解客户 ]认证作为交易所的重要功能之一，认证方式也百花齐放，常见的有身份证正反面照片，手持身份证照片，手持身份证视频等等。而认证方式有人工识别和接口识别两种，人工识别的准确性取决于审核员当天的心情以及前一天的睡眠，PS加AI换脸的手持身份证照片一般来说可以轻松通过。对于调用接口来进行识别的，有使用百度识图接口来验证，判断身份证照片上的身份证号以及姓名与用户输入的是否相同，来判断是否通过；有需要用户自己掏两块钱来审核的支付宝的人脸识别接口。</p>
-<p>​    下图为某交易所调用baidu API进行KYC认证的前端代码：</p>
-<p>![某交易所调用baidu api进行KYC认证的前端代码](.\某交易所调用baidu api进行KYC认证的前端代码.png “某交易所调用baidu api进行KYC认证的前端代码”)</p>
-<p>​        对于这种KYC认证方式，掌握画图的使用技巧可以轻松绕过。</p>
-<h3 id="OTC逻辑缺陷"><a href="#OTC逻辑缺陷" class="headerlink" title="OTC逻辑缺陷"></a>OTC逻辑缺陷</h3><p>​        OTC[^Over-the-counter，场外交易   ]是交易所的一类业务。依托交易所的担保，卖家和买家进行交易。</p>
-<p>正常OTC交易流程为：</p>
-<blockquote>
-<p>商家卖币  =&gt;  买家购买币并支付 =&gt; 商家确认收款 =&gt; 系统转账到买家。</p>
-</blockquote>
-<p>而攻击者通过越权：</p>
-<blockquote>
-<p>商家卖币 =&gt;  攻击者购买币并不支付 =&gt;  攻击者通过越权点击商家的确认收款  =&gt;  系统转账到买家。</p>
-</blockquote>
-<p>图下为某交易所OTC存在的逻辑缺陷：</p>
-<p><img src="/.top//.%5COTC%E6%94%BB%E5%87%BB%E6%B5%81%E7%A8%8B.png" alt="OTC攻击流程" title="OTC攻击流程"></p>
-<p>​        利用此类问题，攻击者可以不进行支付而直接获得系统转账。</p>
-<h2 id="盘口价格设置缺陷"><a href="#盘口价格设置缺陷" class="headerlink" title="盘口价格设置缺陷"></a>盘口价格设置缺陷</h2><h2 id="假充值"><a href="#假充值" class="headerlink" title="假充值"></a>假充值</h2><h2 id="短地址攻击"><a href="#短地址攻击" class="headerlink" title="短地址攻击"></a>短地址攻击</h2><blockquote>
-<p>引用</p>
-</blockquote>
+<h2 id="三、案例分析"><a href="#三、案例分析" class="headerlink" title="三、案例分析"></a>三、案例分析</h2><p>　　关于信息收集，众说纷纭，甚至也有言论称信息收集是测试中用处最不明显的一环，诚然并不是所有信息都是有效且可被利用的，但其中一些确实可以在山穷水复的时候柳暗花明，以致再次找到新的突破口。</p>
+<p>　　以下几个案例就将揭示，在测试中，信息收集这一阶段为整个测试过程贡献了怎样的力量。</p>
+<h3 id="服务器真实-IP-发现"><a href="#服务器真实-IP-发现" class="headerlink" title="服务器真实 IP 发现"></a>服务器真实 IP 发现</h3><p>​        开启CDN后的网站，会根据用户所在地的不同访问CDN的节点服务器，并不直接访问源服务器，由于CDN节点的阻挡防护，无论服务器是渗透还是DD0S攻击，攻击的目标都将是CDN节点，可以更好的保护员服务器的安全。</p>
+<p>​        在黑客攻击过程中找到目标真实IP至关重要，攻击者可通过多种方法绕过防护找到服务器真实IP地址。最常见的通过查询历史DNS记录获取服务器真实IP。通过真实IP直接绕过防护，进行端口扫描，服务指纹识别，绕过常规web安全防护，扩大攻击面。</p>
+<p>图下为通过DNS记录获取某交易所真实IP：</p>
+<p><img src="https://i.loli.net/2019/11/07/sHRWJIQiN6F7kVn.png" alt="真实 IP 发现"></p>
+<h3 id="目标子域探测"><a href="#目标子域探测" class="headerlink" title="目标子域探测"></a>目标子域探测</h3><p>​        子域名探测是查找一个或多个域的子域名的过程。这是信息搜集阶段的重要组成部分。子域名探测可以帮我们发现渗透测试中更多的服务，这将增加发现漏洞的可能性，查找一些用户上较少，被人遗忘的子域名，其上运行的应用程序可能会使我们发现关键漏洞。</p>
+<p>​        子域名探测的方法有很多，例如：利用DNS域传送漏洞，查看HTTPS证书和枚举挖掘等等。在针对交易所后台发现上，经过大量测试后发现，一部分交易所后台会隐藏在其二级域名下来保证安全。</p>
+<p>图下为某交易所后台登录界面，其子域名为 admin的MD5：</p>
+<p><img src="https://i.loli.net/2019/11/07/r7NthFvO423iqVW.png" alt="子域探测"></p>
+<p>​        将后台与主站分离某种意义上，增加了管理后台被攻击者发现的成本，但并不能规避因为自身缺陷造成的安全问题。所以，在保证隐蔽性下的前提下，管理后台可以采用白名单IP访问限制，强密码以及手机令牌等更加安全的登陆方式。</p>
+<h3 id="API接口信息泄露"><a href="#API接口信息泄露" class="headerlink" title="API接口信息泄露"></a>API接口信息泄露</h3><p>　　API的使用频率越来越高，占比也越来越大，所谓“能力越大责任越大”，安全的API使用固然可以带来极大的便利，但是API的安全一旦出了问题，带来的后果将是毁灭性的。在测试的第一步，信息收集的领域，关于API我们首先能接触到的，就是API具体使用参数等详情的信息保密状态了。</p>
+<p>　　零时科技安全团队对某交易所进行安全测试时，发现该交易所的代码是外包公司所编写。在而后的信息收集过程中，零时科技安全团队在google上找到了外包公司编写代码时留下的，托管在某团队协作平台上的API文档。文档中详细地说明了使用API时用到的各种参数及其类型和具体的含义，用处，并且在样例中遗留下了一些测试时使用的具体参数，对后续的测试提供了很大帮助。</p>
+<p><img src="https://i.loli.net/2019/11/07/qEcmYofRhLkNesi.png" alt="API接口信息"></p>
+<h3 id="域名-Whois及备案信息采集"><a href="#域名-Whois及备案信息采集" class="headerlink" title="域名 Whois及备案信息采集"></a>域名 Whois及备案信息采集</h3><p>　　虽然现在已经有交易所注册域名时会使用域名注册商提供的服务，没有在Whois等域名信息备案网站上泄露公司或相关人员信息，但仍然有一些交易所会“本尊”亲自注册域名，这时利用Whois或其它的工具就可以找到该交易所域名的注册公司或相关人员的详细信息。而这些不起眼的信息对于后续的测试手段（如密码猜解，社会工程学攻击等）都会有很大帮助，可以极大提高其成功率。</p>
+<p>　　零时科技安全团队在对另一家交易所进行安全测试时，根据该交易所在Whois上留下的门户网站域名备案信息，找到了其注册公司，而后又根据注册公司信息找到了该公司经理（亦为股东之一）的手机号，QQ号，微信号和注册人邮箱的一部分。虽然因为授权原因并没有开展后续的社会工程学攻击等测试手段，但在真正需要使用特殊攻击手法时，这些信息无疑会极大提高成功率，能让测试方更从容，更轻松地撕开突破口，完成测试。</p>
+<p><img src="https://i.loli.net/2019/11/07/Kl9XNmkWteuyg6R.png" alt="whois信息收集"></p>
+<p><img src="https://i.loli.net/2019/11/07/CwmeoZQ6V9Mjsb7.png" alt="注册公司及人员信息"></p>
+<p><img src="https://i.loli.net/2019/11/07/fVNaEYFeQM6pICZ.png" alt="注册公司及人员信息"></p>
+<h3 id="GitHub-源码泄露发现"><a href="#GitHub-源码泄露发现" class="headerlink" title="GitHub 源码泄露发现"></a>GitHub 源码泄露发现</h3><p>　　部分开发人员在编写代码时会习惯性地将源码上传到github等代码托管平台上，而这些源码，则是每个测试方都日思夜想要拿到的东西。毕竟，如果拿到了源码，就可以对其进行审计工作，直接找寻编写源码时留下的漏洞和疏忽。这会使得整个测试过程更加容易，减少了很大工作量。同时直接审计源码可以找到的问题和漏洞也会更加全面，具有针对性。</p>
+<p>　　同样地，对于交易所所使用的源码的找寻同样是信息收集中重要的一环，如下是在一家交易所网站上找到的/.git源码文件。零时科技安全团队通过审计源码，将审计过程中找到的，存放于注释中的敏感信息和其他审计所得与已发现的漏洞相互验证，成功地在测试中获得了该服务器的控制权，完成了这次测试。</p>
+<p><img src="https://i.loli.net/2019/11/07/mfsBpjLDXtT1JVi.png" alt="交易所.git源码泄露"></p>
+<h3 id="敏感文件发现"><a href="#敏感文件发现" class="headerlink" title="敏感文件发现"></a>敏感文件发现</h3><p>　　敏感文件的种类很多，其中最经典也往往在测试过程中最能发挥作用的就是robots.txt，sitemap.xml等文件，一些敏感文件甚至可以成为测试的突破口。</p>
+<p>　　以下仅以两家交易所网站中robots.txt的部分信息为例。对于测试方来说，获得了这些信息就可以轻松地找到交易所网站中确实存在却不允许被轻易访问的敏感页面。如果这些页面存在某种规律或特点，甚至可以找到其使用的组件，CMS等其他信息，进而更有针对性地进行测试工作。</p>
+<p>　　而在针对该交易所的测试过程中，零时科技安全团队也确实使用了其中的信息，配合其他手法成功攻入了该交易所后台。</p>
+<p>　　<img src="https://i.loli.net/2019/11/07/qNK3mpF17sPRkhg.png" alt="敏感文件发现"></p>
+<p>　　<img src="https://i.loli.net/2019/11/07/nXrcFj6GJmK5MDE.png" alt="敏感文件发现"></p>
+<hr>
+<p><strong>以上就是本期文章的全部内容。</strong></p>
+<p>　　<strong>信息收集对于测试方来说是测试的第一步，是测试的基础，那么对于交易所方来说，隐藏信息就是保障自身安全的第一步，做好自身信息的隐藏，就能将绝大多数的攻击扼杀在襁褓之中。</strong>    </p>
+<p>​        *<em>互联网是一座黑暗森林， 每个攻击者都是带枪的猎人，像幽灵般潜行于林间，轻轻拨开挡路的树枝，竭力不让脚步发出一点儿声音，连呼吸都必须小心翼翼 。 *</em></p>
+<p>　　<strong>下一篇文章将会讲述有关于社会工程学的更高级的情报收集，敬请关注。</strong></p>
 
             </div>
             <hr/>
@@ -551,7 +548,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://wensite.top/2019/11/07/jiao-yi-suo-an-quan-ce-shi-ye-wu-luo-ji-shen-ji/">http://wensite.top/2019/11/07/jiao-yi-suo-an-quan-ce-shi-ye-wu-luo-ji-shen-ji/</a>
+                    <a href="http://wensite.top/2019/11/08/0x01-xin-xi-shou-ji/">http://wensite.top/2019/11/08/0x01-xin-xi-shou-ji/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -761,24 +758,24 @@
                 <i class="far fa-dot-circle"></i>&nbsp;Current
             </div>
             <div class="card">
-                <a href="/2019/11/07/jiao-yi-suo-an-quan-ce-shi-ye-wu-luo-ji-shen-ji/">
+                <a href="/2019/11/08/0x01-xin-xi-shou-ji/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="交易所安全测试--业务逻辑审计">
+                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="交易所安全测试--信息收集">
                         
-                        <span class="card-title">交易所安全测试--业务逻辑审计</span>
+                        <span class="card-title">交易所安全测试--信息收集</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            交易所安全测试–业务逻辑审计一、概述​    对于交易所来说，一个逻辑完备，鉴权完整的交易流程必不可少。对于前期的信息收集，传统安全的测试这里不再赘述，逻辑安全独立与其他服务却又容易受到其他安全问题的牵扰，一直是困扰广大开发者和安全测试人员
+                            交易所安全测试–信息收集一、概述　　对于所有安全相关的测试来说，信息收集都是非常重要且必要的第一步，有时一次非常全面完善的信息收集甚至会占到一次渗透测试总工程量的的70%到80%，能为后续的工作节省大量精力，提供便利，数字货币交易所的安全测
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2019-11-07
+                                <i class="far fa-clock fa-fw icon-date"></i>2019-11-08
                             </span>
                         <span class="publish-author">
                             
@@ -807,24 +804,24 @@
                 Current&nbsp;<i class="far fa-dot-circle"></i>
             </div>
             <div class="card">
-                <a href="/2019/11/07/jiao-yi-suo-an-quan-ce-shi-ye-wu-luo-ji-shen-ji/">
+                <a href="/2019/11/08/0x01-xin-xi-shou-ji/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="交易所安全测试--业务逻辑审计">
+                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="交易所安全测试--信息收集">
                         
-                        <span class="card-title">交易所安全测试--业务逻辑审计</span>
+                        <span class="card-title">交易所安全测试--信息收集</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            交易所安全测试–业务逻辑审计一、概述​    对于交易所来说，一个逻辑完备，鉴权完整的交易流程必不可少。对于前期的信息收集，传统安全的测试这里不再赘述，逻辑安全独立与其他服务却又容易受到其他安全问题的牵扰，一直是困扰广大开发者和安全测试人员
+                            交易所安全测试–信息收集一、概述　　对于所有安全相关的测试来说，信息收集都是非常重要且必要的第一步，有时一次非常全面完善的信息收集甚至会占到一次渗透测试总工程量的的70%到80%，能为后续的工作节省大量精力，提供便利，数字货币交易所的安全测
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2019-11-07
+                                <i class="far fa-clock fa-fw icon-date"></i>2019-11-08
                             </span>
                         <span class="publish-author">
                             
@@ -989,7 +986,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">1k</span>&nbsp;字
+                class="white-color">2.3k</span>&nbsp;字
             
             
             
