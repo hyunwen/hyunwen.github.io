@@ -4,8 +4,9 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="0x05信息泄露, Hyun">
-    <meta name="description" content="0x05信息泄露一、概述信息泄露对于存有大量用户KYC信息的交易所来说影响深远，是非常严重的安全问题。经过大量测试后发现信息泄露问题一般集中于交易所的忘记密码、OTC中的查看商家信息以及查看订单、邀请列表和网站源代码等。造成信息泄露的主要原">
+    <meta name="keywords" content="0x01社会工程, Hyun">
+    <meta name="description" content="0x02社会工程一、概述社会工程学是信息收集技术的延伸和升级，是一种高级的信息利用手段。系统中最大的漏洞永远是人，社会工程学攻击则是一种高效利用这种漏洞的手段，它看似不起眼，也不专业，也没有技术性，但其实是最有效，最直接的攻击手段之一。
+面">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -13,7 +14,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>0x05信息泄露 | Hyun</title>
+    <title>0x01社会工程 | Hyun</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -303,13 +304,13 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/23.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/21.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        0x05信息泄露
+                        0x01社会工程
                     </div>
                 </div>
             </div>
@@ -446,7 +447,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>Word Count:&nbsp;&nbsp;
-                    1.6k
+                    1.7k
                 </div>
                 
 
@@ -469,61 +470,82 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="0x05信息泄露"><a href="#0x05信息泄露" class="headerlink" title="0x05信息泄露"></a>0x05信息泄露</h1><h2 id="一、概述"><a href="#一、概述" class="headerlink" title="一、概述"></a>一、概述</h2><p>信息泄露对于存有大量用户KYC信息的交易所来说影响深远，是非常严重的安全问题。经过大量测试后发现信息泄露问题一般集中于交易所的忘记密码、OTC中的查看商家信息以及查看订单、邀请列表和网站源代码等。造成信息泄露的主要原因一般时由于服务器响应包内容没有经过处理就将用户的所有信息返回，配合越权漏洞来批量的获取敏感信息。除此以外，网站源代码中还有存在各种存有敏感信息的注释（测试账户、内网IP、测试地址、测试token等等）没有在进入生产环境时被删除。</p>
+                <h1 id="0x02社会工程"><a href="#0x02社会工程" class="headerlink" title="0x02社会工程"></a>0x02社会工程</h1><h2 id="一、概述"><a href="#一、概述" class="headerlink" title="一、概述"></a>一、概述</h2><p>社会工程学是信息收集技术的延伸和升级，是一种高级的信息利用手段。系统中最大的漏洞永远是人，社会工程学攻击则是一种高效利用这种漏洞的手段，它看似不起眼，也不专业，也没有技术性，但其实是最有效，最直接的攻击手段之一。</p>
+<p>面对机器，一样的输入只有一种结果；而面对人，一样的输入却有千万种不同的反馈，根据这些探索出更深层次的信息，正是社会工程学的魅力所在。以下是信息收集List和社会工程学在测试中大放异彩的案例，供大家参考。（更详细的脑图见附录，仍在更新中） </p>
 <h2 id="二、测试列表"><a href="#二、测试列表" class="headerlink" title="二、测试列表"></a>二、测试列表</h2><blockquote>
-<p>信息泄露</p>
+<p>社会工程学攻击</p>
 <ul>
-<li>KYC信息泄露<ul>
-<li>忘记密码</li>
-<li>邀请列表</li>
-<li>OTC查看商家/订单</li>
+<li><p>身份信息采集</p>
+<ul>
+<li><p>姓名，绰号，性别发现</p>
+</li>
+<li><p>学籍履历发现</p>
+</li>
+<li><p>曾、现用手机号发现</p>
+</li>
 </ul>
 </li>
-<li>源码信息泄露<ul>
-<li>敏感信息泄露（测试账户、内网IP、测试地址、测试token等）</li>
-<li>API接口泄露源码信息泄露  </li>
+<li><p>关系网络梳理</p>
+<ul>
+<li><p>工作关系网络梳理</p>
+</li>
+<li><p>生活关系网络梳理</p>
+</li>
 </ul>
 </li>
-<li>敏感文件信息泄露<ul>
-<li>robots.txt</li>
-<li>crossdomain.xml</li>
-<li>sitemap.xml</li>
-<li>.git/.svn/.bak</li>
+<li><p>社交信息发现</p>
+<ul>
+<li><p>朋友圈，QQ空间等遗留信息发现</p>
+</li>
+<li><p>其他交友APP信息发现</p>
+</li>
 </ul>
+</li>
+<li><p>水坑攻击</p>
+</li>
+<li><p>钓鱼攻击</p>
+<ul>
+<li><p>邮件钓鱼</p>
+</li>
+<li><p>网页钓鱼</p>
+</li>
+</ul>
+</li>
+<li><p>口令猜解  </p>
 </li>
 </ul>
 </blockquote>
-<h2 id="三、案例分析"><a href="#三、案例分析" class="headerlink" title="三、案例分析"></a>三、案例分析</h2><h3 id="KYC信息泄露"><a href="#KYC信息泄露" class="headerlink" title="KYC信息泄露"></a>KYC信息泄露</h3><p>在业务逻辑文章中曾经讲过KYC认证缺陷 ，指的是用虚假以及非法的信息来绕过交易所的KYC认证。而对于使用真实KYC信息认证的用户，KYC信息本身的安全性显得尤为重要。</p>
-<h4 id="忘记密码"><a href="#忘记密码" class="headerlink" title="忘记密码"></a>忘记密码</h4><p>某交易所在用户忘记密码时未对响应包进行处理，当输入邮箱或者电话号码进行找回密码操作时，服务器将用户的uid、mobile、name、nickname、email、qq、wexin、identitycardnon（身份证号）以及googlesecret一并返回，造成了极其严重的KYC信息泄露：</p>
-<p><img src="/2019/11/14/0x05-xin-xi-xie-lu/zhmm.png" alt="找回密码泄露用户信息" title="找回密码泄露用户信息"></p>
-<h4 id="邀请列表"><a href="#邀请列表" class="headerlink" title="邀请列表"></a>邀请列表</h4><p>某交易所在用户查看邀请人列表时没有对服务器响应包内容进行处理，导致查看邀请列表时会泄露所有被邀请人的KYC信息包括uid、mobile、name、nickname、email、qq、wexin、identitycardnon（身份证号）以及googlesecret等。利用存在的越权漏洞，可以遍历收集所有被邀请用户的KYC信息：</p>
-<p><img src="/2019/11/14/0x05-xin-xi-xie-lu/yqlb.png" alt="邀请列表KYC信息泄露" title="邀请列表KYC信息泄露"></p>
-<p><em>注：处于敏感性原因暂不放出手机结果以及具体细节</em></p>
-<h4 id="OTC查看商家-订单"><a href="#OTC查看商家-订单" class="headerlink" title="OTC查看商家/订单"></a>OTC查看商家/订单</h4><p>某交易所在用户查看OTC订单时存在信息泄露，服务器的响应包里将商家的id、qq、alipay、whatsApp、nickname、mobile、wechat、telegram、username、realname、skype和email全部返回，只要遍历订单就可以获得所有商家的个人信息：</p>
-<p><img src="/2019/11/14/0x05-xin-xi-xie-lu/otcsj.png" alt="OTC信息泄露" title="OTC商家信息存在信息泄露"></p>
-<h4 id="信息泄露攻击链"><a href="#信息泄露攻击链" class="headerlink" title="信息泄露攻击链"></a>信息泄露攻击链</h4><p>零时安全团队在对某交易所进行安全测试时发现，该交易所在用户查看OTC商家的信息时，遍历userid便可以获得所有商家用户的phone、username和nickname。收集到所有泄露的商家phone后，经过测试又在忘记密码处发现信息泄露，只要输入手机号就可以获得商家的userid以及email，通过两个信息泄露漏洞构成的攻击链同时进行收集，最终收集到所有商家用户的真实姓名、电话号码、邮箱地址以及昵称。</p>
-<p>下图为通过遍历userid获取所有商家的phone和username:</p>
-<p><img src="/2019/11/14/0x05-xin-xi-xie-lu/otcsj1.png" alt="商户信息泄露"></p>
-<p>下图为通过收集到的手机号码来获取商家的email以及userid:</p>
-<p><img src="/2019/11/14/0x05-xin-xi-xie-lu/wjmm.png" alt="找回密码信息泄露"></p>
-<p>也许某个点的信息泄露看起来微不足道，一旦点与点之间连成线，对于攻击者来说这两个点确定的可不只是一条有始有终的线段，而当这条攻击链被利用起来的时候，便是条有始无终，直至目标的射线。</p>
-<h3 id="源码信息泄露"><a href="#源码信息泄露" class="headerlink" title="源码信息泄露"></a>源码信息泄露</h3><p>在开发过程中，开发与测试人员为了能够更加轻松地了解以及调试代码，通常在开发与测试阶段在代码中留下大量注释信息，其中不乏有测试用IP地址，测试端口，测试用账户，测试用token和测试用API等等。</p>
-<p>编写注释对于广大开发与测试人员可以提高代码的易读性以及开发效率，可算是与人方便，与己方便的好习惯。可一旦这些方便的注释经过开发环境、测试环境到达了生产环境，在公网上暴露出来，方便的可就不只是兢兢业业的开发者与测试者，还有在黑暗中隐藏行踪，时刻紧盯着目标的攻击者们。</p>
-<p>在经过对大量交易所测试后发现，开发与测试人员可能是世界上最具有开源精神的一批人，有的喜欢将自家网站的内网拓扑以及测试接口开源出来供大家欣赏。</p>
-<p>某交易所源代码中存有大量含有测试用接口，IP地址的注释：</p>
-<p><img src="/2019/11/14/0x05-xin-xi-xie-lu/sourcecode.png" alt="测试用接口，IP地址" title="源代码中存在信息泄露"></p>
-<p>有些喜欢将自家的加密的密钥开源出来供大家使用。</p>
-<p>某交易所源代码中含有AES加密的硬编码密钥，导致数据加密被破解：</p>
-<p><img src="/2019/11/14/0x05-xin-xi-xie-lu/AES.png" alt="AES加密密钥"></p>
-<p>而有些不仅直接将自家测试用token放到源码里，还向账户里进行充值，可谓是：“弱水三千，任君自取”，不过君取得是不是一瓢那可就不知道了。</p>
-<p>某交易所源码中含有测试用JWT，修改后可成功登录账户，控制资产：</p>
-<p><img src="/2019/11/14/0x05-xin-xi-xie-lu/JWT.png" alt="源码中含有测试用JWT"></p>
-<p>使用测试用JWT登录账户，控制资产：</p>
-<p><img src="/2019/11/14/0x05-xin-xi-xie-lu/JWT1.png" alt="测试用JWT登录账户"></p>
-<p>诚然，详细而又全面的注释是开发与测试人员良好的代码编写习惯，不过要记得在经过开发环境与测试环境后，进入生产环境之前，将所有可能会暴露到外界的含有敏感信息注释删除，以防敏感信息泄露。在GitHub上开源是好事，但也要记得上传之前仔细检查，不要将自家的数据库地址与密码一同开源出去。</p>
+<h2 id="三、案例分析"><a href="#三、案例分析" class="headerlink" title="三、案例分析"></a>三、案例分析</h2><p>就像那个举世闻名的大黑客——凯文·米特尼克至今仍存在争议，社会工程学作为他的主要武器之一，也在承受着人们最大的质疑。人们常言社会工程学不过是“骗术一类”的手段，不足以称之为一种安全技术。诚然，社会工程学不是通常以计算机网络技术为主的安全工作者们所常用的技术，亦非每个安全工作者都有所涉猎，但“ 不管黑猫白猫，能捉老鼠的就是好猫 ”，对于不择手段的黑客而言，能够达成目的的手段，才是最好的手段。 </p>
+<p>系统里最大的漏洞永远是人，堡垒往往最先从内部攻破。以下几个案例就将揭示，通过利用人性而实施攻击的社会工程学技术到底会发挥怎样的威力。</p>
+<h3 id="钓鱼攻击"><a href="#钓鱼攻击" class="headerlink" title="钓鱼攻击"></a>钓鱼攻击</h3><h4 id="邮件钓鱼"><a href="#邮件钓鱼" class="headerlink" title="邮件钓鱼"></a>邮件钓鱼</h4><p>安全人员在对一家交易所进行测试时，最容易接触到的人就是客服人员，所以负责对外交流的客服也往往成为社会工程学攻击的首要对象。</p>
+<p>零时科技安全团队研究员曾对某家交易所进行安全测试，在基础信息收集阶段过后，以及简单的漏洞测试后，发现该交易所的K线存在一个TradingView 的DOM XSS，将漏洞与钓鱼手段相结合对交易所的客服人员展开了社会工程学攻击。由于DOM XSS的payload中的域名与交易所域名相同，对一些不具备高安全意识的客服人员，很容易进入布下的陷阱之中。</p>
+<p>下图为零时科技安全团队构造的钓鱼邮件，发给交易所客服人员：</p>
+<p><img src="/2019/11/14/0x01-she-hui-gong-cheng/%E9%82%AE%E4%BB%B61.png" alt="钓鱼邮件"></p>
+<p>当客服人员打开邮件并点击邮件中的链接时，攻击者即可获取客服人员的登录会话认证，成功控制客服人员账号。</p>
+<p><img src="/2019/11/14/0x01-she-hui-gong-cheng/%E9%82%AE%E4%BB%B62.png" alt="获取登录会话认证"></p>
+<h4 id="网站钓鱼"><a href="#网站钓鱼" class="headerlink" title="网站钓鱼"></a>网站钓鱼</h4><p>在社工的领域里，针对于人的攻击中，最重要的两个点就是信任和需求。</p>
+<p>在一次某厂商开发人员授权的测试中，零时安全团队测试人员声称发现了某网址为推特镜像，且在国内也可访问，内容实时更新，并以话术诱导该人员点击进事先准备好的钓鱼网站并尝试性的输入了推特账户及密码。</p>
+<p>下图为该开发人员推特账号与密码。</p>
+<p><img src="/2019/11/14/0x01-she-hui-gong-cheng/%E6%8E%A8%E7%89%B9.jpg" alt="Fishhing"></p>
+<h3 id="身份信息采集"><a href="#身份信息采集" class="headerlink" title="身份信息采集"></a>身份信息采集</h3><p>将工作与生活分开，不使其产生交集已经成为当下甚是流行的一种趋势，如，区分开工作与生活各自领域使用的手机，微信，QQ等。这样的趋势看似是职场人工作压力大，切换环境逃避压力的大势所趋，但也不无安全考虑。</p>
+<p>零时安全团队在授权测试某家交易所时，找到了该公司相关的某贴吧ID（后经核实，为该公司某管理人员），然后以此ID为基础继续摸索，成功找到了该人员的QQ，手机号和另一私人用ID。因该人员的社交方式并未区分工作与生活使用，根据该管理的手机与QQ号，找到了其他曾注册的论坛ID等信息，并对该管理人员进行心理侧写，猜解出密码为姓名拼音首字母+出生年月日+字符”.“。为后续直接接触后实施的社会工程学攻击手段提供了大量便利。（以下是部分信息）</p>
+<p>下图为该人员具体信息。</p>
+<p><img src="/2019/11/14/0x01-she-hui-gong-cheng/%E8%BA%AB%E4%BB%BD1.png" alt="个人信息搜集1"></p>
+<p>下图是攻击中获取联系方式时记录。</p>
+<p><img src="/2019/11/14/0x01-she-hui-gong-cheng/%E8%BA%AB%E4%BB%BD2.png" alt="个人信息搜集2"></p>
+<h3 id="鱼叉攻击"><a href="#鱼叉攻击" class="headerlink" title="鱼叉攻击"></a>鱼叉攻击</h3><p>某交易平台于2019年3月被黑客团队利用鱼叉攻击的手段成功入侵。由于某客服人员打开了恶意用户在电报群中投放的捆绑后门的安装程序，随后攻击者获取到了主机权限，通过内网渗透实施入侵并盗取了私钥。</p>
+<p>下图为恶意安装程序的安全检测，成功识别为恶意程序：</p>
+<p><img src="/2019/11/14/0x01-she-hui-gong-cheng/%E9%B1%BC%E5%8F%891.png" alt="C&amp;C地址"></p>
+<p>此攻击团队通过搭建真实网站并运营，减少受害者的质疑，下图为C&amp;C服务器所搭建的钓鱼网站：</p>
+<p><img src="/2019/11/14/0x01-she-hui-gong-cheng/%E9%B1%BC%E5%8F%892.png" alt="C&amp;C网站"></p>
 <hr>
-<p><strong>对于交易所来说，不辜负用户的信赖，保护好用户给予的个人信息，应该是安身立命之本。</strong></p>
-<p><strong>对于开发人员来说，要做好差别对待，保护好代码安全，给用户良好体验的同时，不要攻击者有着同样良好的渗透体验。</strong></p>
+<p>目前对于钓鱼攻击，鱼叉攻击等社会工程学攻击并没有什么特效的手段。加强人员安全意识建设，不盲目的打开陌生的URL、文档以及文件，对基本的漏洞有简单的认识来规避可能存在的风险。</p>
+<hr>
+<p><strong>注：以上所有测试已经过相关交易所授权，请勿非法测试。</strong></p>
+<p><strong>以上就是本期文章的全部内容。</strong></p>
+<p><strong>社会工程学是一种针对于人的，高效利用信息的攻击方式。对于测试方来说，它是常能取胜，意料之外的一支“奇兵”；对于交易所方来说，做好工作人员安全意识的培养就是能防奇兵的那道“城墙”。</strong></p>
+<p><strong>下一篇文章将会讲述有关于逻辑漏洞的内容，敬请关注。</strong></p>
+<p><em>附脑图地址：<a href="https://github.com/NoneAge/BlockchainSecurityTutorial" target="_blank" rel="noopener">https://github.com/NoneAge/BlockchainSecurityTutorial</a></em></p>
 
             </div>
             <hr/>
@@ -549,7 +571,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://wensite.top/2019/11/14/0x05-xin-xi-xie-lu/">http://wensite.top/2019/11/14/0x05-xin-xi-xie-lu/</a>
+                    <a href="http://wensite.top/2019/11/14/0x01-she-hui-gong-cheng/">http://wensite.top/2019/11/14/0x01-she-hui-gong-cheng/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -754,9 +776,10 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
+                <i class="far fa-dot-circle"></i>&nbsp;Current
+            </div>
             <div class="card">
                 <a href="/2019/11/14/0x01-she-hui-gong-cheng/">
                     <div class="card-image">
@@ -775,9 +798,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2019-11-14
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2019-11-14
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -786,6 +809,7 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -804,24 +828,24 @@
                 Next&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2019/11/08/0x04-ye-wu-luo-ji/">
+                <a href="/2019/11/14/0x05-xin-xi-xie-lu/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="0x04业务逻辑">
+                        <img src="/medias/featureimages/23.jpg" class="responsive-img" alt="0x05信息泄露">
                         
-                        <span class="card-title">0x04业务逻辑</span>
+                        <span class="card-title">0x05信息泄露</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            0x04 业务逻辑一、概述对于交易所来说，一个逻辑完备，鉴权完整的交易流程必不可少。业务逻辑漏洞独立与其他服务却又容易受到其他安全问题的牵扰。与SQL注入、XSS等常规web安全漏洞不同，业务逻辑漏洞使用正常的业务流程中的程序固有不足，逻辑
+                            0x05信息泄露一、概述信息泄露对于存有大量用户KYC信息的交易所来说影响深远，是非常严重的安全问题。经过大量测试后发现信息泄露问题一般集中于交易所的忘记密码、OTC中的查看商家信息以及查看订单、邀请列表和网站源代码等。造成信息泄露的主要原
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2019-11-08
+                                <i class="far fa-clock fa-fw icon-date"></i>2019-11-14
                             </span>
                         <span class="publish-author">
                             
