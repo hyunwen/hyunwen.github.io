@@ -4,8 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="0x04业务逻辑, Hyun">
-    <meta name="description" content="0x04 业务逻辑一、概述对于交易所来说，一个逻辑完备，鉴权完整的交易流程必不可少。对于前期的信息收集，传统安全的测试这里不再赘述，逻辑安全独立与其他服务却又容易受到其他安全问题的牵扰，一直是困扰广大开发者和安全测试人员的问题。这里给出在经">
+    <meta name="keywords" content="0x05信息泄露, Hyun">
+    <meta name="description" content="0x05信息泄露一、概述信息泄露对于存有大量用户KYC信息的交易所来说影响深远，是非常严重的安全问题。经过大量测试后发现信息泄露问题一般集中于交易所的忘记密码、OTC中的查看商家信息以及查看订单、邀请列表和网站源代码等。造成信息泄露的主要原">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -13,7 +13,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>0x04业务逻辑 | Hyun</title>
+    <title>0x05信息泄露 | Hyun</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -303,13 +303,13 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/7.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/23.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        0x04业务逻辑
+                        0x05信息泄露
                     </div>
                 </div>
             </div>
@@ -437,7 +437,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
-                    2019-11-08
+                    2019-11-14
                 </div>
                 
 
@@ -446,7 +446,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>Word Count:&nbsp;&nbsp;
-                    1.5k
+                    1.6k
                 </div>
                 
 
@@ -469,74 +469,61 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="0x04-业务逻辑"><a href="#0x04-业务逻辑" class="headerlink" title="0x04 业务逻辑"></a>0x04 业务逻辑</h1><h2 id="一、概述"><a href="#一、概述" class="headerlink" title="一、概述"></a>一、概述</h2><p>对于交易所来说，一个逻辑完备，鉴权完整的交易流程必不可少。对于前期的信息收集，传统安全的测试这里不再赘述，逻辑安全独立与其他服务却又容易受到其他安全问题的牵扰，一直是困扰广大开发者和安全测试人员的问题。这里给出在经过大量对交易所安全测试后总结出的详细的测试条目，拿出具体案例和大家一起分析存在的安全问题。</p>
+                <h1 id="0x05信息泄露"><a href="#0x05信息泄露" class="headerlink" title="0x05信息泄露"></a>0x05信息泄露</h1><h2 id="一、概述"><a href="#一、概述" class="headerlink" title="一、概述"></a>一、概述</h2><p>信息泄露对于存有大量用户KYC信息的交易所来说影响深远，是非常严重的安全问题。经过大量测试后发现信息泄露问题一般集中于交易所的忘记密码、OTC中的查看商家信息以及查看订单、邀请列表和网站源代码等。造成信息泄露的主要原因一般时由于服务器响应包内容没有经过处理就将用户的所有信息返回，配合越权漏洞来批量的获取敏感信息。除此以外，网站源代码中还有存在各种存有敏感信息的注释（测试账户、内网IP、测试地址、测试token等等）没有在进入生产环境时被删除。</p>
 <h2 id="二、测试列表"><a href="#二、测试列表" class="headerlink" title="二、测试列表"></a>二、测试列表</h2><blockquote>
-<p>业务逻辑审计 </p>
+<p>信息泄露</p>
 <ul>
-<li><p>越权操作测试</p>
-<ul>
-<li><p>订单越权发起、查看、编辑、删除</p>
-</li>
-<li><p>地址越权添加、删除</p>
-</li>
-<li><p>用户信息越权查看、编辑</p>
-</li>
+<li>KYC信息泄露<ul>
+<li>忘记密码</li>
+<li>邀请列表</li>
+<li>OTC查看商家/订单</li>
 </ul>
 </li>
-<li><p>工作流程绕过测试</p>
-</li>
-<li><p>KYC认证缺陷测试</p>
-<ul>
-<li>接口识别</li>
-<li>人工识别</li>
+<li>源码信息泄露<ul>
+<li>敏感信息泄露（测试账户、内网IP、测试地址、测试token等）</li>
+<li>API接口泄露源码信息泄露  </li>
 </ul>
 </li>
-<li><p>OTC逻辑缺陷测试</p>
-</li>
-<li><p>盘口价格设置缺陷测试</p>
-</li>
-<li><p>假充值测试</p>
-</li>
-<li><p>短地址攻击测试</p>
+<li>敏感文件信息泄露<ul>
+<li>robots.txt</li>
+<li>crossdomain.xml</li>
+<li>sitemap.xml</li>
+<li>.git/.svn/.bak</li>
+</ul>
 </li>
 </ul>
 </blockquote>
-<h2 id="三、案例分析"><a href="#三、案例分析" class="headerlink" title="三、案例分析"></a>三、案例分析</h2><h3 id="越权操作"><a href="#越权操作" class="headerlink" title="越权操作"></a>越权操作</h3><p>可能是因为开发人员热衷于打破樊篱 ，所以越权一直是Web安全中老生常谈的问题，并且由于订单、地址、余额和个人信息等等功能的聚集，交易所是越权问题的重灾区。越权漏洞一般分为平行越权和垂直越权两种，而交易所中平行越权占大多数，不仅可以导致越权查看、修改、撤销订单，添加、删除地址以及修改个人信息，而且配合存在的信息泄露问题，可以变相的获取所有用户的KYC信息，因为是正常请求，比起脱裤更难被WAF所发现。</p>
-<p>某交易所修改userPhone可以越权让任意用户下单：</p>
-<p><img src="/2019/11/08/0x04-ye-wu-luo-ji/yqxd.png" alt="越权下单" title="越权下单"></p>
-<p>某交易所遍历id可以越权删除地址：</p>
-<p><img src="/2019/11/08/0x04-ye-wu-luo-ji/yqscdz.png" alt="越权删除地址" title="越权删除地址"></p>
-<p>根据上述示例可以看出，虽然请求头中含有token和userId等参数，但服务器在接受到请求后并没有将token和userId与body里所携带的id和userPhone进行校验，没有做好鉴权，导致越权。  </p>
-<h3 id="工作流程绕过"><a href="#工作流程绕过" class="headerlink" title="工作流程绕过"></a>工作流程绕过</h3><p>近期零时安全实验室在某交易所发现一起由于越权、信息泄露以及工作流程绕过导致的盗币事件。因为事件发生时间太近，不确定厂商是否修复完毕，这里不再披露详细的攻击细节以及截图，简单讲一讲攻击手法。<br>攻击者在某交易所前端文件中发现了转账时所调用的API接口。按照流程，用户验证身份通过后调用此API转账，但由于验证在前，转账在后，两者并非同时进行，导致攻击者直接调用转账API接口发起转账可以直接绕过身份验证并且可以越权其他用户进行转账。  </p>
-<p><img src="/2019/11/08/0x04-ye-wu-luo-ji/rglc.png" alt="绕过流程"></p>
-<p>造成本次攻击事件的主要原因有三：</p>
-<blockquote>
-<ul>
-<li>前端文件泄露API接口</li>
-<li>交易时验证逻辑可被绕过</li>
-<li>未能做好鉴权措施</li>
-</ul>
-</blockquote>
-<p>暴露意味着更大的攻击面。隐藏好自己的信息，完备逻辑，完整鉴权，来应对还在潜伏着的威胁。</p>
-<h3 id="KYC认证缺陷"><a href="#KYC认证缺陷" class="headerlink" title="KYC认证缺陷"></a>KYC认证缺陷</h3><p>KYC全称为know-your-customer,  充分了解你的客户 ，了解账户的实际控制人和交易的实际收益人，还要求对客户的身份、常住地址或企业所从事的业务进行充分的了解，并采取相应的措施。<br>认证作为交易所的重要功能之一，认证方式也百花齐放，常见的有身份证正反面照片，手持身份证照片，手持身份证视频等等。而认证方式有人工识别和接口识别两种，人工识别的准确性取决于审核员当天的心情以及前一天的睡眠，PS加AI换脸的手持身份证照片一般来说可以轻松通过。对于调用接口来进行识别的，有使用百度识图接口来验证，判断身份证照片上的身份证号以及姓名与用户输入的是否相同，来判断是否通过；有需要用户自己掏两块钱来审核的支付宝的人脸识别接口。<br>下图为某交易所调用baidu API进行KYC认证的前端代码：</p>
-<p><img src="/2019/11/08/0x04-ye-wu-luo-ji/kycjs.png" alt="某交易所调用baidu api进行KYC认证的前端代码" title="某交易所调用baidu api进行KYC认证的前端代码"></p>
-<p>对于这种形同虚设KYC认证方式，掌握画图的初级使用技巧即可可以轻松绕过。</p>
-<h3 id="OTC逻辑缺陷"><a href="#OTC逻辑缺陷" class="headerlink" title="OTC逻辑缺陷"></a>OTC逻辑缺陷</h3><p>OTC指的是Over-the-counter，场外交易市场， 通常是指店头交易市场或柜台交易市场 。对于交易所来说，OTC指的是用户依托交易所的担保，卖家和买家进行交易。</p>
-<p>正常OTC交易流程为：</p>
-<blockquote>
-<p>商家卖币  =&gt;  买家购买币并支付 =&gt; 商家确认收款 =&gt; 系统转账到买家。</p>
-</blockquote>
-<p>而攻击者通过越权：</p>
-<blockquote>
-<p>商家卖币 =&gt;  攻击者购买币并不支付 =&gt;  攻击者通过越权点击商家的确认收款  =&gt;  系统转账到买家。</p>
-</blockquote>
-<p>图下为某交易所OTC存在的逻辑缺陷：</p>
-<p><img src="/2019/11/08/0x04-ye-wu-luo-ji/OTCattack.png" alt="OTC攻击流程" title="OTC攻击流程"></p>
-<p>利用此类逻辑问题，攻击者可以轻易的不进行支付而直接获得系统转账。  </p>
-<h3 id="盘口价格设置缺陷"><a href="#盘口价格设置缺陷" class="headerlink" title="盘口价格设置缺陷"></a>盘口价格设置缺陷</h3><p>2019年8月23日，由于AWS东京机房硬件设备故障，导致无法连接到服务。部分交易所因使用其他交易所错误的价格数据导致币价出现剧烈波动，BTC成交价最低为0.32USD/BTC，ETH以及EOS均受到影响。</p>
-<p><img src="/2019/11/08/0x04-ye-wu-luo-ji/0.32USDBTC.png" alt="0.32USDBTC"></p>
-<p>在上游数据错误的情况下，没有对数据的有效性进行判断直接使用导致损失的出现。在传统安全行业将其称之为供应链攻击，一旦上游的数据、厂商被劫持，修改，对下游没有做好防护措施的交易所将会造成降维打击。</p>
+<h2 id="三、案例分析"><a href="#三、案例分析" class="headerlink" title="三、案例分析"></a>三、案例分析</h2><h3 id="KYC信息泄露"><a href="#KYC信息泄露" class="headerlink" title="KYC信息泄露"></a>KYC信息泄露</h3><p>在业务逻辑文章中曾经讲过KYC认证缺陷 ，指的是用虚假以及非法的信息来绕过交易所的KYC认证。而对于使用真实KYC信息认证的用户，KYC信息本身的安全性显得尤为重要。</p>
+<h4 id="忘记密码"><a href="#忘记密码" class="headerlink" title="忘记密码"></a>忘记密码</h4><p>某交易所在用户忘记密码时未对响应包进行处理，当输入邮箱或者电话号码进行找回密码操作时，服务器将用户的uid、mobile、name、nickname、email、qq、wexin、identitycardnon（身份证号）以及googlesecret一并返回，造成了极其严重的KYC信息泄露：</p>
+<p><img src="/2019/11/14/0x05-xin-xi-xie-lu/.%5Czhmm.png" alt="找回密码泄露用户信息" title="找回密码泄露用户信息"></p>
+<h4 id="邀请列表"><a href="#邀请列表" class="headerlink" title="邀请列表"></a>邀请列表</h4><p>某交易所在用户查看邀请人列表时没有对服务器响应包内容进行处理，导致查看邀请列表时会泄露所有被邀请人的KYC信息包括uid、mobile、name、nickname、email、qq、wexin、identitycardnon（身份证号）以及googlesecret等。利用存在的越权漏洞，可以遍历收集所有被邀请用户的KYC信息：</p>
+<p><img src="/2019/11/14/0x05-xin-xi-xie-lu/.%5Cyqlb.png" alt="邀请列表KYC信息泄露" title="邀请列表KYC信息泄露"></p>
+<p><em>注：处于敏感性原因暂不放出手机结果以及具体细节</em></p>
+<h4 id="OTC查看商家-订单"><a href="#OTC查看商家-订单" class="headerlink" title="OTC查看商家/订单"></a>OTC查看商家/订单</h4><p>某交易所在用户查看OTC订单时存在信息泄露，服务器的响应包里将商家的id、qq、alipay、whatsApp、nickname、mobile、wechat、telegram、username、realname、skype和email全部返回，只要遍历订单就可以获得所有商家的个人信息：</p>
+<p><img src="/2019/11/14/0x05-xin-xi-xie-lu/.%5Cotcsj.png" alt="OTC信息泄露" title="OTC商家信息存在信息泄露"></p>
+<h4 id="信息泄露攻击链"><a href="#信息泄露攻击链" class="headerlink" title="信息泄露攻击链"></a>信息泄露攻击链</h4><p>零时安全团队在对某交易所进行安全测试时发现，该交易所在用户查看OTC商家的信息时，遍历userid便可以获得所有商家用户的phone、username和nickname。收集到所有泄露的商家phone后，经过测试又在忘记密码处发现信息泄露，只要输入手机号就可以获得商家的userid以及email，通过两个信息泄露漏洞构成的攻击链同时进行收集，最终收集到所有商家用户的真实姓名、电话号码、邮箱地址以及昵称。</p>
+<p>下图为通过遍历userid获取所有商家的phone和username:</p>
+<p><img src="/2019/11/14/0x05-xin-xi-xie-lu/.%5Cotcsj1.png" alt="商户信息泄露"></p>
+<p>下图为通过收集到的手机号码来获取商家的email以及userid:</p>
+<p><img src="/2019/11/14/0x05-xin-xi-xie-lu/.%5Cwjmm.png" alt="找回密码信息泄露"></p>
+<p>也许某个点的信息泄露看起来微不足道，一旦点与点之间连成线，对于攻击者来说这两个点确定的可不只是一条有始有终的线段，而当这条攻击链被利用起来的时候，便是条有始无终，直至目标的射线。</p>
+<h3 id="源码信息泄露"><a href="#源码信息泄露" class="headerlink" title="源码信息泄露"></a>源码信息泄露</h3><p>在开发过程中，开发与测试人员为了能够更加轻松地了解以及调试代码，通常在开发与测试阶段在代码中留下大量注释信息，其中不乏有测试用IP地址，测试端口，测试用账户，测试用token和测试用API等等。</p>
+<p>编写注释对于广大开发与测试人员可以提高代码的易读性以及开发效率，可算是与人方便，与己方便的好习惯。可一旦这些方便的注释经过开发环境、测试环境到达了生产环境，在公网上暴露出来，方便的可就不只是兢兢业业的开发者与测试者，还有在黑暗中隐藏行踪，时刻紧盯着目标的攻击者们。</p>
+<p>在经过对大量交易所测试后发现，开发与测试人员可能是世界上最具有开源精神的一批人，有的喜欢将自家网站的内网拓扑以及测试接口开源出来供大家欣赏。</p>
+<p>某交易所源代码中存有大量含有测试用接口，IP地址的注释：</p>
+<p><img src="/2019/11/14/0x05-xin-xi-xie-lu/.%5Csourcecode.png" alt="测试用接口，IP地址" title="源代码中存在信息泄露"></p>
+<p>有些喜欢将自家的加密的密钥开源出来供大家使用。</p>
+<p>某交易所源代码中含有AES加密的硬编码密钥，导致数据加密被破解：</p>
+<p><img src="/2019/11/14/0x05-xin-xi-xie-lu/.%5CAES.png" alt="AES加密密钥"></p>
+<p>而有些不仅直接将自家测试用token放到源码里，还向账户里进行充值，可谓是：“弱水三千，任君自取”，不过君取得是不是一瓢那可就不知道了。</p>
+<p>某交易所源码中含有测试用JWT，修改后可成功登录账户，控制资产：</p>
+<p><img src="/2019/11/14/0x05-xin-xi-xie-lu/D:%5Conedrive%5C%E5%8C%BA%E5%9D%97%E9%93%BE%E5%AE%89%E5%85%A8%E6%B5%8B%E8%AF%95%5C0x05%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2%5CJWT.png" alt="源码中含有测试用JWT"></p>
+<p>使用测试用JWT登录账户，控制资产：</p>
+<p><img src="/2019/11/14/0x05-xin-xi-xie-lu/D:%5Conedrive%5C%E5%8C%BA%E5%9D%97%E9%93%BE%E5%AE%89%E5%85%A8%E6%B5%8B%E8%AF%95%5C0x05%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2%5CJWT1.png" alt="测试用JWT登录账户"></p>
+<p>诚然，详细而又全面的注释是开发与测试人员良好的代码编写习惯，不过要记得在经过开发环境与测试环境后，进入生产环境之前，将所有可能会暴露到外界的含有敏感信息注释删除，以防敏感信息泄露。在GitHub上开源是好事，但也要记得上传之前仔细检查，不要将自家的数据库地址与密码一同开源出去。</p>
 <hr>
+<p><strong>对于交易所来说，不辜负用户的信赖，保护好用户给予的个人信息，应该是安身立命之本。</strong></p>
+<p><strong>对于开发人员来说，要做好差别对待，保护好代码安全，给用户良好体验的同时，不要攻击者有着同样良好的渗透体验。</strong></p>
 
             </div>
             <hr/>
@@ -562,7 +549,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://wensite.top/2019/11/08/0x04-ye-wu-luo-ji/">http://wensite.top/2019/11/08/0x04-ye-wu-luo-ji/</a>
+                    <a href="http://wensite.top/2019/11/14/0x05-xin-xi-xie-lu/">http://wensite.top/2019/11/14/0x05-xin-xi-xie-lu/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -767,9 +754,10 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
+                <i class="far fa-dot-circle"></i>&nbsp;Current
+            </div>
             <div class="card">
                 <a href="/2019/11/14/0x05-xin-xi-xie-lu/">
                     <div class="card-image">
@@ -787,9 +775,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2019-11-14
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2019-11-14
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -798,6 +786,7 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -816,19 +805,19 @@
                 Next&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2019/11/08/0x00-xin-xi-shou-ji/">
+                <a href="/2019/11/08/0x04-ye-wu-luo-ji/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="0x00信息收集">
+                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="0x04业务逻辑">
                         
-                        <span class="card-title">0x00信息收集</span>
+                        <span class="card-title">0x04业务逻辑</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            0x00信息收集一、概述　　对于所有安全相关的测试来说，信息收集都是非常重要且必要的第一步，有时一次非常全面完善的信息收集甚至会占到一次渗透测试总工程量的的70%到80%，能为后续的工作节省大量精力，提供便利，数字货币交易所的安全测试也是一
+                            0x04 业务逻辑一、概述对于交易所来说，一个逻辑完备，鉴权完整的交易流程必不可少。对于前期的信息收集，传统安全的测试这里不再赘述，逻辑安全独立与其他服务却又容易受到其他安全问题的牵扰，一直是困扰广大开发者和安全测试人员的问题。这里给出在经
                         
                     </div>
                     <div class="publish-info">
