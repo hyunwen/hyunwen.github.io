@@ -498,7 +498,7 @@
 <p><img src="/2019/11/14/0x05-xin-xi-xie-lu/zhmm.png" alt="找回密码泄露用户信息" title="找回密码泄露用户信息"></p>
 <h4 id="邀请列表"><a href="#邀请列表" class="headerlink" title="邀请列表"></a>邀请列表</h4><p>某交易所在用户查看邀请人列表时没有对服务器响应包内容进行处理，导致查看邀请列表时会泄露所有被邀请人的KYC信息包括uid、mobile、name、nickname、email、qq、wexin、identitycardnon（身份证号）以及googlesecret等。利用存在的越权漏洞，可以遍历收集所有被邀请用户的KYC信息：</p>
 <p><img src="/2019/11/14/0x05-xin-xi-xie-lu/yqlb.png" alt="邀请列表KYC信息泄露" title="邀请列表KYC信息泄露"></p>
-<p><em>注：处于敏感性原因暂不放出手机结果以及具体细节</em></p>
+<p><em>注：由于敏感性原因暂不放出手机结果以及具体细节</em></p>
 <h4 id="OTC查看商家-订单"><a href="#OTC查看商家-订单" class="headerlink" title="OTC查看商家/订单"></a>OTC查看商家/订单</h4><p>某交易所在用户查看OTC订单时存在信息泄露，服务器的响应包里将商家的id、qq、alipay、whatsApp、nickname、mobile、wechat、telegram、username、realname、skype和email全部返回，只要遍历订单就可以获得所有商家的个人信息：</p>
 <p><img src="/2019/11/14/0x05-xin-xi-xie-lu/otcsj.png" alt="OTC信息泄露" title="OTC商家信息存在信息泄露"></p>
 <h4 id="信息泄露攻击链"><a href="#信息泄露攻击链" class="headerlink" title="信息泄露攻击链"></a>信息泄露攻击链</h4><p>零时安全团队在对某交易所进行安全测试时发现，该交易所在用户查看OTC商家的信息时，遍历userid便可以获得所有商家用户的phone、username和nickname。收集到所有泄露的商家phone后，经过测试又在忘记密码处发现信息泄露，只要输入手机号就可以获得商家的userid以及email，通过两个信息泄露漏洞构成的攻击链同时进行收集，最终收集到所有商家用户的真实姓名、电话号码、邮箱地址以及昵称。</p>
