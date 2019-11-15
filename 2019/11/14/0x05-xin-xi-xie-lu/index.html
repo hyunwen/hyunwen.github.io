@@ -5,7 +5,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="keywords" content="0x05信息泄露, Hyun">
-    <meta name="description" content="0x05信息泄露一、概述信息泄露对于存有大量用户KYC信息的交易所来说影响深远，是非常严重的安全问题。经过大量测试后发现信息泄露问题一般集中于交易所的忘记密码、OTC中的查看商家信息以及查看订单、邀请列表和网站源代码等。造成信息泄露的主要原">
+    <meta name="description" content="0x05信息泄露一、概述信息泄露在安全审计中屡见不鲜，对于存有大量用户KYC信息的交易所来说影响更加深远，是非常严重的安全问题。零时科技安全团队在审计大量交易所后发现，信息泄露问题一般集中于交易所的账户体系、OTC交易系统、用户订单、邀请列">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -469,19 +469,27 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="0x05信息泄露"><a href="#0x05信息泄露" class="headerlink" title="0x05信息泄露"></a>0x05信息泄露</h1><h2 id="一、概述"><a href="#一、概述" class="headerlink" title="一、概述"></a>一、概述</h2><p>信息泄露对于存有大量用户KYC信息的交易所来说影响深远，是非常严重的安全问题。经过大量测试后发现信息泄露问题一般集中于交易所的忘记密码、OTC中的查看商家信息以及查看订单、邀请列表和网站源代码等。造成信息泄露的主要原因一般时由于服务器响应包内容没有经过处理就将用户的所有信息返回，配合越权漏洞来批量的获取敏感信息。除此以外，网站源代码中还有存在各种存有敏感信息的注释（测试账户、内网IP、测试地址、测试token等等）没有在进入生产环境时被删除。</p>
+                <h1 id="0x05信息泄露"><a href="#0x05信息泄露" class="headerlink" title="0x05信息泄露"></a>0x05信息泄露</h1><h2 id="一、概述"><a href="#一、概述" class="headerlink" title="一、概述"></a>一、概述</h2><p>信息泄露在安全审计中屡见不鲜，对于存有大量用户KYC信息的交易所来说影响更加深远，是非常严重的安全问题。零时科技安全团队在审计大量交易所后发现，信息泄露问题一般集中于交易所的账户体系、OTC交易系统、用户订单、邀请列表和网站源代码等地方。造成信息泄露的主要原因一般时由于服务器响应包内容没有经过处理就将用户的所有信息返回，配合其他漏洞甚至可以批量的获取用户敏感信息，除此以外，对善于掘金的攻击者来说网站前端源码可谓是遍地黄金，大量敏感信息的注释（测试账户、内网IP、测试地址、测试token等等）没有在进入生产环境时被删除。</p>
 <h2 id="二、测试列表"><a href="#二、测试列表" class="headerlink" title="二、测试列表"></a>二、测试列表</h2><blockquote>
 <p>信息泄露</p>
 <ul>
 <li>KYC信息泄露<ul>
+<li>登录注册</li>
 <li>忘记密码</li>
 <li>邀请列表</li>
-<li>OTC查看商家/订单</li>
+<li>OTC交易系统</li>
+<li>用户订单</li>
 </ul>
 </li>
-<li>源码信息泄露<ul>
-<li>敏感信息泄露（测试账户、内网IP、测试地址、测试token等）</li>
-<li>API接口泄露源码信息泄露  </li>
+<li>前端源码信息泄露<ul>
+<li>测试数据泄露</li>
+<li>敏感信息泄露</li>
+<li>API接口泄露</li>
+</ul>
+</li>
+<li>Github信息泄露<ul>
+<li>数据库文件/连接凭据</li>
+<li>敏感信息泄露</li>
 </ul>
 </li>
 <li>敏感文件信息泄露<ul>
