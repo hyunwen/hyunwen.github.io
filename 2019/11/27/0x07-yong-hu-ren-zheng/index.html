@@ -4,9 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="0x01社会工程, Hyun">
-    <meta name="description" content="0x01社会工程一、概述社会工程学是信息收集技术的延伸和升级，是一种高级的信息利用手段。系统中最大的漏洞永远是人，社会工程学攻击则是一种高效利用这种漏洞的手段，它看似不起眼，也不专业，也没有技术性，但其实是最有效，最直接的攻击手段之一。
-面">
+    <meta name="keywords" content="0x07用户认证, Hyun">
+    <meta name="description" content="0x07 用户认证一、概述用户认证安全方面的安全问题也许单单从技术层面上讲，并不是一种非常复杂的问题，因为解决起来并不怎么困难；但如果从交易所的实际交易业务层面来看，用户认证方面如果存在安全隐患，那将是非常可怕的。简单试想一下，如果一个黑客">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -14,7 +13,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>0x01社会工程 | Hyun</title>
+    <title>0x07用户认证 | Hyun</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -304,13 +303,13 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/21.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/5.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        0x01社会工程
+                        0x07用户认证
                     </div>
                 </div>
             </div>
@@ -438,7 +437,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
-                    2019-11-14
+                    2019-11-27
                 </div>
                 
 
@@ -447,14 +446,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>Word Count:&nbsp;&nbsp;
-                    1.7k
+                    1.4k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>Read Times:&nbsp;&nbsp;
-                    5 Min
+                    4 Min
                 </div>
                 
 				
@@ -470,82 +469,42 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="0x01社会工程"><a href="#0x01社会工程" class="headerlink" title="0x01社会工程"></a>0x01社会工程</h1><h2 id="一、概述"><a href="#一、概述" class="headerlink" title="一、概述"></a>一、概述</h2><p>社会工程学是信息收集技术的延伸和升级，是一种高级的信息利用手段。系统中最大的漏洞永远是人，社会工程学攻击则是一种高效利用这种漏洞的手段，它看似不起眼，也不专业，也没有技术性，但其实是最有效，最直接的攻击手段之一。</p>
-<p>面对机器，一样的输入只有一种结果；而面对人，一样的输入却有千万种不同的反馈，根据这些探索出更深层次的信息，正是社会工程学的魅力所在。以下是信息收集List和社会工程学在测试中大放异彩的案例，供大家参考。（更详细的脑图见附录，仍在更新中） </p>
+                <h1 id="0x07-用户认证"><a href="#0x07-用户认证" class="headerlink" title="0x07 用户认证"></a>0x07 用户认证</h1><h2 id="一、概述"><a href="#一、概述" class="headerlink" title="一、概述"></a>一、概述</h2><p>用户认证安全方面的安全问题也许单单从技术层面上讲，并不是一种非常复杂的问题，因为解决起来并不怎么困难；但如果从交易所的实际交易业务层面来看，用户认证方面如果存在安全隐患，那将是非常可怕的。简单试想一下，如果一个黑客可以通过任意账号的用户认证，那这位攻击者会对那些账户里的余额做什么呢……</p>
+<p>这只是用户认证安全问题的一个小例子，当然同类的问题还有很多，虽然不尽相同，但其破坏性影响是同样可怕的。零时科技安全团队已经对此类问题做了一些整理，详情可见以下的测试列表，建议各大交易所以此列表自查，规避不必要的安全风险。</p>
 <h2 id="二、测试列表"><a href="#二、测试列表" class="headerlink" title="二、测试列表"></a>二、测试列表</h2><blockquote>
-<p>社会工程学攻击</p>
+<p><strong>用户认证</strong></p>
 <ul>
-<li><p>身份信息采集</p>
-<ul>
-<li><p>姓名，绰号，性别发现</p>
-</li>
-<li><p>学籍履历发现</p>
-</li>
-<li><p>曾、现用手机号发现</p>
-</li>
-</ul>
-</li>
-<li><p>关系网络梳理</p>
-<ul>
-<li><p>工作关系网络梳理</p>
-</li>
-<li><p>生活关系网络梳理</p>
-</li>
-</ul>
-</li>
-<li><p>社交信息发现</p>
-<ul>
-<li><p>朋友圈，QQ空间等遗留信息发现</p>
-</li>
-<li><p>其他交友APP信息发现</p>
-</li>
-</ul>
-</li>
-<li><p>水坑攻击</p>
-</li>
-<li><p>钓鱼攻击</p>
-<ul>
-<li><p>邮件钓鱼</p>
-</li>
-<li><p>网页钓鱼</p>
-</li>
-</ul>
-</li>
-<li><p>口令猜解  </p>
-</li>
+<li>用户注册过程测试</li>
+<li>用户登录过程测试</li>
+<li>找回密码过程测试</li>
+<li>设备解绑过程测试</li>
+<li>验证码策略测试</li>
+<li>帐户权限变化测试</li>
+<li>帐户枚举测试</li>
+<li>弱密码策略测试</li>
+<li>口令信息加密传输测试</li>
+<li>默认口令测试</li>
+<li>帐户锁定机制测试</li>
+<li>认证绕过测试</li>
+<li>浏览器缓存测试</li>
+<li>权限提升测试</li>
+<li>授权绕过测试</li>
 </ul>
 </blockquote>
-<h2 id="三、案例分析"><a href="#三、案例分析" class="headerlink" title="三、案例分析"></a>三、案例分析</h2><p>就像那个举世闻名的大黑客——凯文·米特尼克至今仍存在争议，社会工程学作为他的主要武器之一，也在承受着人们最大的质疑。人们常言社会工程学不过是“骗术一类”的手段，不足以称之为一种安全技术。诚然，社会工程学不是通常以计算机网络技术为主的安全工作者们所常用的技术，亦非每个安全工作者都有所涉猎，但“ 不管黑猫白猫，能捉老鼠的就是好猫 ”，对于不择手段的黑客而言，能够达成目的的手段，才是最好的手段。 </p>
-<p>系统里最大的漏洞永远是人，堡垒往往最先从内部攻破。以下几个案例就将揭示，通过利用人性而实施攻击的社会工程学技术到底会发挥怎样的威力。</p>
-<h3 id="钓鱼攻击"><a href="#钓鱼攻击" class="headerlink" title="钓鱼攻击"></a>钓鱼攻击</h3><h4 id="邮件钓鱼"><a href="#邮件钓鱼" class="headerlink" title="邮件钓鱼"></a>邮件钓鱼</h4><p>安全人员在对一家交易所进行测试时，最容易接触到的人就是客服人员，所以负责对外交流的客服也往往成为社会工程学攻击的首要对象。</p>
-<p>零时科技安全团队研究员曾对某家交易所进行安全测试，在基础信息收集阶段过后，以及简单的漏洞测试后，发现该交易所的K线存在一个TradingView 的DOM XSS，将漏洞与钓鱼手段相结合对交易所的客服人员展开了社会工程学攻击。由于DOM XSS的payload中的域名与交易所域名相同，对一些不具备高安全意识的客服人员，很容易进入布下的陷阱之中。</p>
-<p>下图为零时科技安全团队构造的钓鱼邮件，发给交易所客服人员：</p>
-<p><img src="/2019/11/14/0x01-she-hui-gong-cheng/%E9%82%AE%E4%BB%B61.png" alt="钓鱼邮件"></p>
-<p>当客服人员打开邮件并点击邮件中的链接时，攻击者即可获取客服人员的登录会话认证，成功控制客服人员账号。</p>
-<p><img src="/2019/11/14/0x01-she-hui-gong-cheng/%E9%82%AE%E4%BB%B62.png" alt="获取登录会话认证"></p>
-<h4 id="网站钓鱼"><a href="#网站钓鱼" class="headerlink" title="网站钓鱼"></a>网站钓鱼</h4><p>在社工的领域里，针对于人的攻击中，最重要的两个点就是信任和需求。</p>
-<p>在一次某厂商开发人员授权的测试中，零时安全团队测试人员声称发现了某网址为推特镜像，且在国内也可访问，内容实时更新，并以话术诱导该人员点击进事先准备好的钓鱼网站并尝试性的输入了推特账户及密码。</p>
-<p>下图为该开发人员推特账号与密码。</p>
-<p><img src="/2019/11/14/0x01-she-hui-gong-cheng/%E6%8E%A8%E7%89%B9.jpg" alt="Fishhing"></p>
-<h3 id="身份信息采集"><a href="#身份信息采集" class="headerlink" title="身份信息采集"></a>身份信息采集</h3><p>将工作与生活分开，不使其产生交集已经成为当下甚是流行的一种趋势，如，区分开工作与生活各自领域使用的手机，微信，QQ等。这样的趋势看似是职场人工作压力大，切换环境逃避压力的大势所趋，但也不无安全考虑。</p>
-<p>零时安全团队在授权测试某家交易所时，找到了该公司相关的某贴吧ID（后经核实，为该公司某管理人员），然后以此ID为基础继续摸索，成功找到了该人员的QQ，手机号和另一私人用ID。因该人员的社交方式并未区分工作与生活使用，根据该管理的手机与QQ号，找到了其他曾注册的论坛ID等信息，并对该管理人员进行心理侧写，猜解出密码为姓名拼音首字母+出生年月日+字符”.“。为后续直接接触后实施的社会工程学攻击手段提供了大量便利。（以下是部分信息）</p>
-<p>下图为该人员具体信息。</p>
-<p><img src="/2019/11/14/0x01-she-hui-gong-cheng/%E8%BA%AB%E4%BB%BD1.png" alt="个人信息搜集1"></p>
-<p>下图是攻击中获取联系方式时记录。</p>
-<p><img src="/2019/11/14/0x01-she-hui-gong-cheng/%E8%BA%AB%E4%BB%BD2.png" alt="个人信息搜集2"></p>
-<h3 id="鱼叉攻击"><a href="#鱼叉攻击" class="headerlink" title="鱼叉攻击"></a>鱼叉攻击</h3><p>某交易平台于2019年3月被黑客团队利用鱼叉攻击的手段成功入侵。由于某客服人员打开了恶意用户在电报群中投放的捆绑后门的安装程序，随后攻击者获取到了主机权限，通过内网渗透实施入侵并盗取了私钥。</p>
-<p>下图为恶意安装程序的安全检测，成功识别为恶意程序：</p>
-<p><img src="/2019/11/14/0x01-she-hui-gong-cheng/%E9%B1%BC%E5%8F%891.png" alt="C&amp;C地址"></p>
-<p>此攻击团队通过搭建真实网站并运营，减少受害者的质疑，下图为C&amp;C服务器所搭建的钓鱼网站：</p>
-<p><img src="/2019/11/14/0x01-she-hui-gong-cheng/%E9%B1%BC%E5%8F%892.png" alt="C&amp;C网站"></p>
+<h2 id="三、案例分析"><a href="#三、案例分析" class="headerlink" title="三、案例分析"></a>三、案例分析</h2><h3 id="口令信息加密传输测试"><a href="#口令信息加密传输测试" class="headerlink" title="口令信息加密传输测试"></a>口令信息加密传输测试</h3><p>“反正数据包也只是在用户和交易所之间传输的，口令要加密干什么”，可能有部分粗心大意的开发人员会这么想，但事实真的是这样吗？口令加密真的没有用吗？显而易见，事实当然不是这样的。但可能有的开发人员真的会这么想，所以口令信息不加密即传输成为了各大交易所中最常见的问题之一。</p>
+<p>口令加密的好处很多，比如可在一定程度上防止爆破；比如用户登录交易所期间被中间人攻击时，攻击者截获的数据包中若没有明文口令信息，即可使攻击者无法轻易获取口令等等。零时科技安全团队在对某交易所进行测试时，发现该交易所的口令信息在传输时已被前端加密。零时科技团队安全研究员随即审计网站前端js代码，寻找登录/重置密码时需要提交的参数，并在找到后，按js内容要求构造未加密数据包向api请求，所幸该某交易所对非加密数据包也敞开怀抱，即使是明文数据包，只要参数正确也可发挥作用。最后通过该漏洞和其他漏洞配合，成功登进其他用户账户。</p>
+<p>零时科技安全团队建议，各大交易所在传输口令信息时，能够使用加密传输的方式，且最好不要留下加密算法的明显线索（加密用何种算法，密钥是什么等），保障信息安全。</p>
+<p><img src="/2019/11/27/0x07-yong-hu-ren-zheng/1.png" alt="明文传输"></p>
+<h3 id="用户登录过程测试"><a href="#用户登录过程测试" class="headerlink" title="用户登录过程测试"></a>用户登录过程测试</h3><p>爆破，即暴力破解，意指使用大量可能有效的潜在答案一一尝试，最后留下确实有效答案的攻击手法。爆破虽然笨重但却经常有效；虽然常有奇效，但也确实要和某些其他问题合作才能发挥功能。</p>
+<p>零时科技安全团队对某交易所进行安全测试时，发现该交易所的某交易所在账号登录处存在问题，虽然限制每个用户的登录试错次数，但并不限制同一IP对不同用户尝试登录的请求数量。零时科技安全研究员随即对该交易所实施了撞库攻击，最终成功破解出部分用户口令。</p>
+<p>零时科技安全团队建议，各大交易所在登录页面应同时使用图形或更复杂的验证码；对同一IP发出的请求频率和数量进行限制。</p>
+<p><img src="/2019/11/27/0x07-yong-hu-ren-zheng/2.png" alt="撞库"></p>
+<h3 id="验证码策略"><a href="#验证码策略" class="headerlink" title="验证码策略"></a>验证码策略</h3><p>验证码在某些情况下有着极强的安全作用，但如若使用不当或有所疏漏，也会留下安全隐患。看似有验证码放心了不少，其实有可能只是一件“皇帝的新衣”。零时科技安全团队在对某交易所进行安全测试时发现，该交易所在手机登录处需要向用户发送验证码并进行校验。该交易所验证码长度6位，貌似安全性较高，但实则可发现具有递增趋势且递增速度缓慢，爆破验证码时可以轻易确认当前验证码所在范围。对于交易所来说，这样的验证码机制就是“皇帝的新衣”；对于攻击者来说，更降低了攻击成本，提高了攻击效率。</p>
+<p>零时科技安全团队建议各大交易所使用验证码保障自身安全时，应使用随机多位的验证码，有条件的话最好使用字母和数字混杂的高强度验证码，并限制验证码输入错误的次数，采取一定措施。</p>
+<p><img src="/2019/11/27/0x07-yong-hu-ren-zheng/3.png" alt="验证码爆破"></p>
 <hr>
-<p>目前对于钓鱼攻击，鱼叉攻击等社会工程学攻击并没有什么特效的手段。加强人员安全意识建设，不盲目的打开陌生的URL、文档以及文件，对基本的漏洞有简单的认识来规避可能存在的风险。</p>
-<hr>
-<p><em>注：以上所有测试已经过相关交易所授权，请勿非法测试。</em></p>
-<p><strong>以上就是本期文章的全部内容。</strong></p>
-<p><strong>社会工程学是一种针对于人的，高效利用信息的攻击方式。对于测试方来说，它是常能取胜，意料之外的一支“奇兵”；对于交易所方来说，做好工作人员安全意识的培养就是能防奇兵的那道“城墙”。</strong></p>
-<p><strong>下一篇文章将会讲述有关于逻辑漏洞的内容，敬请关注。</strong></p>
-<p><em>附脑图地址：<a href="https://github.com/NoneAge/BlockchainSecurityTutorial" target="_blank" rel="noopener">https://github.com/NoneAge/BlockchainSecurityTutorial</a></em></p>
+<p><strong>假作真时真亦假，但凭伪造之证，信手指鹿为马，登堂入室。尔用户之安危，岂非人为刀俎，我为鱼肉乎？</strong></p>
+<p><em>注：以上所有测试均已经过相关交易所授权，请勿自行非法测试。</em></p>
 
             </div>
             <hr/>
@@ -571,7 +530,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://wensite.top/2019/11/14/0x01-she-hui-gong-cheng/">http://wensite.top/2019/11/14/0x01-she-hui-gong-cheng/</a>
+                    <a href="http://wensite.top/2019/11/27/0x07-yong-hu-ren-zheng/">http://wensite.top/2019/11/27/0x07-yong-hu-ren-zheng/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -776,29 +735,30 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
+                <i class="far fa-dot-circle"></i>&nbsp;Current
+            </div>
             <div class="card">
-                <a href="/2019/11/15/0x02-shu-ru-shu-chu/">
+                <a href="/2019/11/27/0x07-yong-hu-ren-zheng/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="0x02输入输出">
+                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="0x07用户认证">
                         
-                        <span class="card-title">0x02输入输出</span>
+                        <span class="card-title">0x07用户认证</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            0x02输入输出一、概述输入输出的安全问题来源于开发人员编码过程中的粗心大意以及应有的安全意识的缺失。这些安全问题对于网站来说是非常严峻的，对数据库，网站管理权限，内网都有巨大威胁。而且利用手法很多，如利用任意文件上传漏洞可直接获取网站sh
+                            0x07 用户认证一、概述用户认证安全方面的安全问题也许单单从技术层面上讲，并不是一种非常复杂的问题，因为解决起来并不怎么困难；但如果从交易所的实际交易业务层面来看，用户认证方面如果存在安全隐患，那将是非常可怕的。简单试想一下，如果一个黑客
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2019-11-15
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2019-11-27
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -807,6 +767,7 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -825,24 +786,24 @@
                 Next&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2019/11/08/0x00-xin-xi-shou-ji/">
+                <a href="/2019/11/27/0x06-jie-kou-an-quan/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="0x00信息收集">
+                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="0x06接口安全">
                         
-                        <span class="card-title">0x00信息收集</span>
+                        <span class="card-title">0x06接口安全</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            0x00信息收集一、概述　　对于所有安全相关的测试来说，信息收集都是非常重要且必要的第一步，有时一次非常全面完善的信息收集甚至会占到一次渗透测试总工程量的的70%到80%，能为后续的工作节省大量精力，提供便利，数字货币交易所的安全测试也是一
+                            0x06接口安全一 、概述API，英文全称Application Programming Interface，翻译为“应用程序编程接口”。是一些预先定义的函数，目的是提供应用程序与开发人员基于某软件或硬件得以访问一组例程的能力，而又无需访问
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2019-11-08
+                                <i class="far fa-clock fa-fw icon-date"></i>2019-11-27
                             </span>
                         <span class="publish-author">
                             
