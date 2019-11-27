@@ -437,7 +437,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
-                    2019-11-27
+                    2019-11-17
                 </div>
                 
 
@@ -504,14 +504,14 @@
 <p>WebDAV虽然方便了网站管理员对网站的管理，但是也带来了新的安全风险。如PUT方法自身不带验证机制，利用PUT方法可以向服务器上传文件，所以恶意攻击者可以上传木马等恶意文件；DELETE方法可以删除服务器上特定的资源文件，造成恶意攻击等有害操作。所以如果要使用WebDAV，务必禁止不必要的HTTP 方法，以防被其他攻击者利用。</p>
 <p>以下为零时科技安全团队在对交易所进行测试时，发现使用不安全的HTTP方法的案例。使用OPTIONS请求，可返回网站支持的HTTP方法，由图可看出网站开启了PUT，DELETE等有害方法。由于测试时及时反映给了厂商，厂商也及时进行了修复，故没有利用该漏洞进行下一步测试。</p>
 <p>顾及到该漏洞危害巨大，如果各大交易所有此类开启不安全HTTP方法的网站，零时科技安全团队建议及时修复，以规避不必要的安全风险。</p>
-<p><img src="/2019/11/27/0x03-an-quan-pei-zhi/1.png" alt="HTTP METHOD"></p>
+<p><img src="/2019/11/17/0x03-an-quan-pei-zhi/1.png" alt="HTTP METHOD"></p>
 <h3 id="管理后台探测"><a href="#管理后台探测" class="headerlink" title="管理后台探测"></a>管理后台探测</h3><p>网站管理后台对于测试人员来说都已经相当熟悉，稍微解释一下，管理后台是对网站数据库和文件的快速操作和管理系统，可使得前台内容能够得到及时更新和调整。管理后台的功能繁多而强大，每个恶意攻击者也会想尽办法攻进后台，而正所谓“能力越大责任越大”，一旦管理后台被恶意攻击者占领，基本也就宣布该权限下的“阵地”已经全部失守，所有数据也任人宰割。但由此也可见得后台保护的重要性，那么如何使得后台不被攻破呢？最简单的办法无非就是把后台藏起来了。所以网站后台的隐藏也就成了保护网站的重要步骤。</p>
 <p>零时科技安全团队在对某交易所进行安全测试时，发现该交易所的管理后台地址为其子域名的admin的MD5形式。对后台进行弱口令测试后，发现确实存在弱口令，以此直接进入了后台，所有数据一览无余。</p>
 <p>零时科技安全团队建议：各大交易所如有条件，可不将后台管理入口暴露在外网中或设置可登录的ip白名单；如不得不将后台管理入口置于外网，请尽量设置安全性高的验证码机制，使用安全性高的管理平台和复杂度足够的管理员密码，以规避不必要的风险。</p>
-<p><img src="/2019/11/27/0x03-an-quan-pei-zhi/2.png" alt="CONSOLE"></p>
+<p><img src="/2019/11/17/0x03-an-quan-pei-zhi/2.png" alt="CONSOLE"></p>
 <h3 id="后台服务组件配置测试"><a href="#后台服务组件配置测试" class="headerlink" title="后台服务组件配置测试"></a>后台服务组件配置测试</h3><p>安全意识不佳的网站管理者在使用后台服务组件时可能会选择默认配置，并不做个性化的改动。而当今的很多漏洞想要被用来发挥破坏性，也需要破除很多此类的限制——在很多个性化的配置下，大多数的漏洞是无法应用的。</p>
 <p>零时科技安全团队在对某交易所进行安全测试期间，发现访问该交易所的门户网站中不存在的目录时，由于该网站的管理员配置不当，网站会爆出一些敏感信息，如物理路径，真实IP等。这些信息会对攻击者的后续攻击提供便利，大大减少攻击难度，攻击成本。</p>
-<p><img src="/2019/11/27/0x03-an-quan-pei-zhi/3.png" alt="组件"></p>
+<p><img src="/2019/11/17/0x03-an-quan-pei-zhi/3.png" alt="组件"></p>
 <h3 id="弱口令及默认口令探测"><a href="#弱口令及默认口令探测" class="headerlink" title="弱口令及默认口令探测"></a>弱口令及默认口令探测</h3><p>弱口令没有很明确的定义，一般指的是易被猜到或破解的口令。易被破解的如仅包含简单数字的”123456“；仅包含字母的”abcabc“，”qazwsx“等。易被猜到的如一些生日密码，姓名缩写密码，身份证后6位等。</p>
 <p>默认口令是指很多网站后台密码或者用户密码为初始默认状态，并没有做二次更改的口令。例如：“admin”，“111111”，身份证后六位等。这种口令的易猜解易破解性，使得攻击成本与难度大大降低，攻击者有时可以轻易登录相关账号，进入用户账户或网站后台，获取非法权限，做出恶意操作。如对用户的相关信息进行更改，或发布一些恶意消息或文件；恶意修改网站信息和配置，导致网站信息混乱或攻击者借此拿到更高权限，进一步攻击等。</p>
 <p>由此，对于相关工作人员安全意识的培养，对于弱口令及默认口令的及时修改和复杂度加强，就显得尤为重要，刻不容缓。</p>
@@ -546,7 +546,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://wensite.top/2019/11/27/0x03-an-quan-pei-zhi/">http://wensite.top/2019/11/27/0x03-an-quan-pei-zhi/</a>
+                    <a href="http://wensite.top/2019/11/17/0x03-an-quan-pei-zhi/">http://wensite.top/2019/11/17/0x03-an-quan-pei-zhi/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -751,30 +751,29 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;Current
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
             <div class="card">
-                <a href="/2019/11/27/0x03-an-quan-pei-zhi/">
+                <a href="/2019/11/18/0x04-ye-wu-luo-ji/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="0x03安全配置">
+                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="0x04业务逻辑">
                         
-                        <span class="card-title">0x03安全配置</span>
+                        <span class="card-title">0x04业务逻辑</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            0x05 安全配置一、概述服务端是一种专门为某一客户端设立的，具有针对性的程序，通常都只具备认证与传输数据功能。比如游戏服务端，就是专门为游戏客户端提供服务的，服务的内容包括为客户端提供登录服务，保存游戏玩家资料，提供玩家在线游戏等。而游戏
+                            0x04 业务逻辑一、概述对于交易所来说，一个逻辑完备，鉴权完整的交易流程必不可少。业务逻辑漏洞独立与其他服务却又容易受到其他安全问题的牵扰。与SQL注入、XSS等常规web安全漏洞不同，业务逻辑漏洞使用正常的业务流程中的程序固有不足，逻辑
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2019-11-27
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2019-11-18
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -783,7 +782,6 @@
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
@@ -802,24 +800,24 @@
                 Next&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2019/11/27/0x06-jie-kou-an-quan/">
+                <a href="/2019/11/15/0x02-shu-ru-shu-chu/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="0x06接口安全">
+                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="0x02输入输出">
                         
-                        <span class="card-title">0x06接口安全</span>
+                        <span class="card-title">0x02输入输出</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            接口安全测试一 、概述API，英文全称Application Programming Interface，翻译为“应用程序编程接口”。是一些预先定义的函数，目的是提供应用程序与开发人员基于某软件或硬件得以访问一组例程的能力，而又无需访问源码
+                            0x02输入输出一、概述输入输出的安全问题来源于开发人员编码过程中的粗心大意以及应有的安全意识的缺失。这些安全问题对于网站来说是非常严峻的，对数据库，网站管理权限，内网都有巨大威胁。而且利用手法很多，如利用任意文件上传漏洞可直接获取网站sh
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2019-11-27
+                                <i class="far fa-clock fa-fw icon-date"></i>2019-11-15
                             </span>
                         <span class="publish-author">
                             
