@@ -4,9 +4,9 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="0x01社会工程, Hyun">
-    <meta name="description" content="0x01社会工程一、概述社会工程学是信息收集技术的延伸和升级，是一种高级的信息利用手段。系统中最大的漏洞永远是人，社会工程学攻击则是一种高效利用这种漏洞的手段，它看似不起眼，也不专业，也没有技术性，但其实是最有效，最直接的攻击手段之一。
-面">
+    <meta name="keywords" content="0x08App安全·上, Hyun">
+    <meta name="description" content="0x08App安全一、概述如今，随着人们使用手机，平板等移动端设备上网的时间与频率增加，移动app的发展也是愈来愈迅速。各大交易所在与用户交互的这方面，除了网页浏览以外，也就是移动端的app了。
+尽管app时下相当流行，但其安全性却一直没有">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -14,7 +14,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>0x01社会工程 | Hyun</title>
+    <title>0x08App安全·上 | Hyun</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -304,13 +304,13 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/21.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/3.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        0x01社会工程
+                        0x08App安全·上
                     </div>
                 </div>
             </div>
@@ -438,7 +438,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
-                    2019-11-14
+                    2019-11-29
                 </div>
                 
 
@@ -447,14 +447,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>Word Count:&nbsp;&nbsp;
-                    1.7k
+                    1.3k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>Read Times:&nbsp;&nbsp;
-                    5 Min
+                    4 Min
                 </div>
                 
 				
@@ -470,82 +470,67 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="0x01社会工程"><a href="#0x01社会工程" class="headerlink" title="0x01社会工程"></a>0x01社会工程</h1><h2 id="一、概述"><a href="#一、概述" class="headerlink" title="一、概述"></a>一、概述</h2><p>社会工程学是信息收集技术的延伸和升级，是一种高级的信息利用手段。系统中最大的漏洞永远是人，社会工程学攻击则是一种高效利用这种漏洞的手段，它看似不起眼，也不专业，也没有技术性，但其实是最有效，最直接的攻击手段之一。</p>
-<p>面对机器，一样的输入只有一种结果；而面对人，一样的输入却有千万种不同的反馈，根据这些探索出更深层次的信息，正是社会工程学的魅力所在。以下是信息收集List和社会工程学在测试中大放异彩的案例，供大家参考。（更详细的脑图见附录，仍在更新中） </p>
-<h2 id="二、测试列表"><a href="#二、测试列表" class="headerlink" title="二、测试列表"></a>二、测试列表</h2><blockquote>
-<p>社会工程学攻击</p>
+                <h1 id="0x08App安全"><a href="#0x08App安全" class="headerlink" title="0x08App安全"></a>0x08App安全</h1><h2 id="一、概述"><a href="#一、概述" class="headerlink" title="一、概述"></a>一、概述</h2><p>如今，随着人们使用手机，平板等移动端设备上网的时间与频率增加，移动app的发展也是愈来愈迅速。各大交易所在与用户交互的这方面，除了网页浏览以外，也就是移动端的app了。</p>
+<p>尽管app时下相当流行，但其安全性却一直没有得到足够的关注。在app安全的领域上，大部分厂商都做得比较初级，很多用户也不具备相对应的安全意识。由此，app也就变成了恶意攻击者的一个有效突破口。</p>
+<p>零时科技安全团队在经过大量对app进行的安全测试之后，总结出了一份相对完整有效的测试列表，建议各大交易所以此自查，防患于未然。</p>
+<h2 id="二、测试列表"><a href="#二、测试列表" class="headerlink" title="二、测试列表"></a>二、测试列表</h2><p><strong>App安全</strong></p>
 <ul>
-<li><p>身份信息采集</p>
-<ul>
-<li><p>姓名，绰号，性别发现</p>
-</li>
-<li><p>学籍履历发现</p>
-</li>
-<li><p>曾、现用手机号发现</p>
-</li>
+<li>App 运行时虚拟机监测</li>
+<li>App 运行时root监测</li>
+<li>App数据备份检测</li>
+<li>代码反编译检测</li>
+<li>敏感权限使用</li>
+<li>敏感信息泄露</li>
+<li>拒绝服务测试</li>
+<li>目录穿越安全测试</li>
+<li>App 缓存安全检测</li>
+<li>接口安全测试</li>
+<li>弱加密安全测试</li>
 </ul>
-</li>
-<li><p>关系网络梳理</p>
-<ul>
-<li><p>工作关系网络梳理</p>
-</li>
-<li><p>生活关系网络梳理</p>
-</li>
-</ul>
-</li>
-<li><p>社交信息发现</p>
-<ul>
-<li><p>朋友圈，QQ空间等遗留信息发现</p>
-</li>
-<li><p>其他交友APP信息发现</p>
-</li>
-</ul>
-</li>
-<li><p>水坑攻击</p>
-</li>
-<li><p>钓鱼攻击</p>
-<ul>
-<li><p>邮件钓鱼</p>
-</li>
-<li><p>网页钓鱼</p>
-</li>
-</ul>
-</li>
-<li><p>口令猜解  </p>
-</li>
-</ul>
+<h2 id="三、案例分析"><a href="#三、案例分析" class="headerlink" title="三、案例分析"></a>三、案例分析</h2><h3 id="App-运行时虚拟机监测"><a href="#App-运行时虚拟机监测" class="headerlink" title="App 运行时虚拟机监测"></a>App 运行时虚拟机监测</h3><p>零时科技在对某交易所进行发现，该交易app未进行虚拟机运行检测，攻击者在虚拟机中安装运行该app，即可在虚拟机中截取并操作数据包或进行其他有害操作。</p>
+<p><img src="/2019/11/29/0x08app-an-quan-shang/.%5C1.png" alt="VM DETECT"></p>
+<h3 id="App数据备份检测"><a href="#App数据备份检测" class="headerlink" title="App数据备份检测"></a>App数据备份检测</h3><p>零时科技安全团队在对某交易所app进行安全测试时，发现该交易所并未对app进行数据备份检测，安卓AndroidManifest.xml文件中android:allowBackup为true，当这个标志被设置成true或不设置该标志位时，应用程序数据可以备份和恢复，adb调试备份允许恶意攻击者复制应用程序数据。</p>
+<p>零时科技安全团队在对某交易所app进行安全测试时，发现该交易所并未对app进行数据备份检测，其AndroidManifest.xml文件中android: allowBackup为true，存在数据任意备份漏洞。</p>
+<p><img src="/2019/11/29/0x08app-an-quan-shang/.%5C2.png" alt="Source Code"></p>
+<p>链接手机，然后输入以下备份命令，会出现一个对话窗，输入备份密码即可：</p>
+<blockquote>
+<p>adb backup -nosystem -noshared -apk -f com.xxx.wallet com.xxx.wallet</p>
 </blockquote>
-<h2 id="三、案例分析"><a href="#三、案例分析" class="headerlink" title="三、案例分析"></a>三、案例分析</h2><p>就像那个举世闻名的大黑客——凯文·米特尼克至今仍存在争议，社会工程学作为他的主要武器之一，也在承受着人们最大的质疑。人们常言社会工程学不过是“骗术一类”的手段，不足以称之为一种安全技术。诚然，社会工程学不是通常以计算机网络技术为主的安全工作者们所常用的技术，亦非每个安全工作者都有所涉猎，但“ 不管黑猫白猫，能捉老鼠的就是好猫 ”，对于不择手段的黑客而言，能够达成目的的手段，才是最好的手段。 </p>
-<p>系统里最大的漏洞永远是人，堡垒往往最先从内部攻破。以下几个案例就将揭示，通过利用人性而实施攻击的社会工程学技术到底会发挥怎样的威力。</p>
-<h3 id="钓鱼攻击"><a href="#钓鱼攻击" class="headerlink" title="钓鱼攻击"></a>钓鱼攻击</h3><h4 id="邮件钓鱼"><a href="#邮件钓鱼" class="headerlink" title="邮件钓鱼"></a>邮件钓鱼</h4><p>安全人员在对一家交易所进行测试时，最容易接触到的人就是客服人员，所以负责对外交流的客服也往往成为社会工程学攻击的首要对象。</p>
-<p>零时科技安全团队研究员曾对某家交易所进行安全测试，在基础信息收集阶段过后，以及简单的漏洞测试后，发现该交易所的K线存在一个TradingView 的DOM XSS，将漏洞与钓鱼手段相结合对交易所的客服人员展开了社会工程学攻击。由于DOM XSS的payload中的域名与交易所域名相同，对一些不具备高安全意识的客服人员，很容易进入布下的陷阱之中。</p>
-<p>下图为零时科技安全团队构造的钓鱼邮件，发给交易所客服人员：</p>
-<p><img src="/2019/11/14/0x01-she-hui-gong-cheng/%E9%82%AE%E4%BB%B61.png" alt="钓鱼邮件"></p>
-<p>当客服人员打开邮件并点击邮件中的链接时，攻击者即可获取客服人员的登录会话认证，成功控制客服人员账号。</p>
-<p><img src="/2019/11/14/0x01-she-hui-gong-cheng/%E9%82%AE%E4%BB%B62.png" alt="获取登录会话认证"></p>
-<h4 id="网站钓鱼"><a href="#网站钓鱼" class="headerlink" title="网站钓鱼"></a>网站钓鱼</h4><p>在社工的领域里，针对于人的攻击中，最重要的两个点就是信任和需求。</p>
-<p>在一次某厂商开发人员授权的测试中，零时安全团队测试人员声称发现了某网址为推特镜像，且在国内也可访问，内容实时更新，并以话术诱导该人员点击进事先准备好的钓鱼网站并尝试性的输入了推特账户及密码。</p>
-<p>下图为该开发人员推特账号与密码。</p>
-<p><img src="/2019/11/14/0x01-she-hui-gong-cheng/%E6%8E%A8%E7%89%B9.jpg" alt="Fishhing"></p>
-<h3 id="身份信息采集"><a href="#身份信息采集" class="headerlink" title="身份信息采集"></a>身份信息采集</h3><p>将工作与生活分开，不使其产生交集已经成为当下甚是流行的一种趋势，如，区分开工作与生活各自领域使用的手机，微信，QQ等。这样的趋势看似是职场人工作压力大，切换环境逃避压力的大势所趋，但也不无安全考虑。</p>
-<p>零时安全团队在授权测试某家交易所时，找到了该公司相关的某贴吧ID（后经核实，为该公司某管理人员），然后以此ID为基础继续摸索，成功找到了该人员的QQ，手机号和另一私人用ID。因该人员的社交方式并未区分工作与生活使用，根据该管理的手机与QQ号，找到了其他曾注册的论坛ID等信息，并对该管理人员进行心理侧写，猜解出密码为姓名拼音首字母+出生年月日+字符”.“。为后续直接接触后实施的社会工程学攻击手段提供了大量便利。（以下是部分信息）</p>
-<p>下图为该人员具体信息。</p>
-<p><img src="/2019/11/14/0x01-she-hui-gong-cheng/%E8%BA%AB%E4%BB%BD1.png" alt="个人信息搜集1"></p>
-<p>下图是攻击中获取联系方式时记录。</p>
-<p><img src="/2019/11/14/0x01-she-hui-gong-cheng/%E8%BA%AB%E4%BB%BD2.png" alt="个人信息搜集2"></p>
-<h3 id="鱼叉攻击"><a href="#鱼叉攻击" class="headerlink" title="鱼叉攻击"></a>鱼叉攻击</h3><p>某交易平台于2019年3月被黑客团队利用鱼叉攻击的手段成功入侵。由于某客服人员打开了恶意用户在电报群中投放的捆绑后门的安装程序，随后攻击者获取到了主机权限，通过内网渗透实施入侵并盗取了私钥。</p>
-<p>下图为恶意安装程序的安全检测，成功识别为恶意程序：</p>
-<p><img src="/2019/11/14/0x01-she-hui-gong-cheng/%E9%B1%BC%E5%8F%891.png" alt="C&amp;C地址"></p>
-<p>此攻击团队通过搭建真实网站并运营，减少受害者的质疑，下图为C&amp;C服务器所搭建的钓鱼网站：</p>
-<p><img src="/2019/11/14/0x01-she-hui-gong-cheng/%E9%B1%BC%E5%8F%892.png" alt="C&amp;C网站"></p>
+<p><img src="/2019/11/29/0x08app-an-quan-shang/.%5C3.png" alt="BACKUP"></p>
+<p>连接到另一台手机或root的本机，输入下列命令，弹出对话框，输入备份时的密码即可恢复数据</p>
+<blockquote>
+<p>adb restore com</p>
+</blockquote>
+<p>如果用户账号密码保存在本地，则恢复到另一台root的手机后，可以看到各种敏感信息。</p>
+<p>零时科技安全团队建议设置AndroidManifest.xml的android:allowBackup标志为false。</p>
+<h3 id="代码反编译检测"><a href="#代码反编译检测" class="headerlink" title="代码反编译检测"></a>代码反编译检测</h3><p>若app的apk文件可被反编译，就有可能导致源代码信息泄露，攻击者也可对其进行代码审计以找出可能存在隐患的攻击点。</p>
+<p>零时科技安全团队对某交易所app进行安全测试时，通过检测apk文件是否通过加固，代码是否通过加密或者混淆，是否可以通过反编译攻击等方面对该app进行测试。发现该apk文件可被反编译，反编译后可以看到java源代码，导致源代码信息泄露。（通过jadx-gui或其他反编译工具可直接操作apk，查看java源代码。）</p>
+<p><img src="/2019/11/29/0x08app-an-quan-shang/.%5C4.png" alt="Decompile"></p>
+<p>零时科技安全团队建议，可使用专业加固工具对apk进行加壳处理。</p>
+<h3 id="敏感权限使用"><a href="#敏感权限使用" class="headerlink" title="敏感权限使用"></a>敏感权限使用</h3><p>目前很多系统在app请求权限这一方面上都不甚敏感，这也是如今移动端并不那么安全的成因之一。很多app都会请求一些敏感的权限，有的甚至会直接绕过，不向用户请求就直接自行取得了权限。而这些app有可能对交易所和用户都产生足够的恶意影响。</p>
+<p>零时科技安全团队在对某交易所app进行安全测试时，检测APP程序中是否存在敏感权限的使用，发现确实存在敏感权限使用漏洞。</p>
+<p><img src="/2019/11/29/0x08app-an-quan-shang/.%5C5.jpg" alt="Authority control"> </p>
+<p>敏感权限如下：</p>
+<ul>
+<li><p>android.permision.WRITE_EXTERNAL_STORAGE 允许应用写入外部存储</p>
+</li>
+<li><p>ndroid.permission.READ_PHONE_STATE 允许访问电话状态、设备信息</p>
+</li>
+<li><p>ndroid.permission.CAMERA 允许访问摄像头</p>
+</li>
+<li><p>android.permission.GET_TASKS 允许获取系统应用列表</p>
+</li>
+<li><p>android.permission.MOUNT_UNMOUNT_FILESYSTEMS 允许挂载、反挂载外部文件系统 </p>
+</li>
+</ul>
+<p>零时科技安全团队建议禁用不需要的敏感权限。</p>
+<h3 id="敏感信息泄露"><a href="#敏感信息泄露" class="headerlink" title="敏感信息泄露"></a>敏感信息泄露</h3><p>敏感信息泄露危害极大，如泄露出测试/管理员数据，参数注释信息等。但它又是一种危害虽大却又较容易避免的漏洞，只要开发人员多加注重安全意识即可避免大部分问题。</p>
+<p>零时科技安全团队在对某交易所进行安全测试时，查找其 app 程序文件中是否存在敏感信息泄露（如源码中，备份文件中，xml 资源文件中等），发现确实存在敏感信息泄露漏洞，源码中泄露了微信公众号 appid 和 secretkey：</p>
+<p><img src="/2019/11/29/0x08app-an-quan-shang/.%5C6.png" alt="Decompile Code"></p>
+<p>获取token：</p>
+<p><img src="/2019/11/29/0x08app-an-quan-shang/.%5C7.png" alt="Wechat"></p>
 <hr>
-<p>目前对于钓鱼攻击，鱼叉攻击等社会工程学攻击并没有什么特效的手段。加强人员安全意识建设，不盲目的打开陌生的URL、文档以及文件，对基本的漏洞有简单的认识来规避可能存在的风险。</p>
-<hr>
-<p><em>注：以上所有测试已经过相关交易所授权，请勿非法测试。</em></p>
-<p><strong>以上就是本期文章的全部内容。</strong></p>
-<p><strong>社会工程学是一种针对于人的，高效利用信息的攻击方式。对于测试方来说，它是常能取胜，意料之外的一支“奇兵”；对于交易所方来说，做好工作人员安全意识的培养就是能防奇兵的那道“城墙”。</strong></p>
-<p><strong>下一篇文章将会讲述有关于逻辑漏洞的内容，敬请关注。</strong></p>
-<p><em>附脑图地址：<a href="https://github.com/NoneAge/BlockchainSecurityTutorial" target="_blank" rel="noopener">https://github.com/NoneAge/BlockchainSecurityTutorial</a></em></p>
+<p><em>鉴于文章内容长度限制，本期内容将分为上、下篇，顺序放送。</em></p>
 
             </div>
             <hr/>
@@ -571,7 +556,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://wensite.top/2019/11/14/0x01-she-hui-gong-cheng/">http://wensite.top/2019/11/14/0x01-she-hui-gong-cheng/</a>
+                    <a href="http://wensite.top/2019/11/29/0x08app-an-quan-shang/">http://wensite.top/2019/11/29/0x08app-an-quan-shang/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -776,29 +761,31 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
+                <i class="far fa-dot-circle"></i>&nbsp;Current
+            </div>
             <div class="card">
-                <a href="/2019/11/15/0x02-shu-ru-shu-chu/">
+                <a href="/2019/11/29/0x08app-an-quan-shang/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="0x02输入输出">
+                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="0x08App安全·上">
                         
-                        <span class="card-title">0x02输入输出</span>
+                        <span class="card-title">0x08App安全·上</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            0x02输入输出一、概述输入输出的安全问题来源于开发人员编码过程中的粗心大意以及应有的安全意识的缺失。这些安全问题对于网站来说是非常严峻的，对数据库，网站管理权限，内网都有巨大威胁。而且利用手法很多，如利用任意文件上传漏洞可直接获取网站sh
+                            0x08App安全一、概述如今，随着人们使用手机，平板等移动端设备上网的时间与频率增加，移动app的发展也是愈来愈迅速。各大交易所在与用户交互的这方面，除了网页浏览以外，也就是移动端的app了。
+尽管app时下相当流行，但其安全性却一直没有
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2019-11-15
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2019-11-29
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -807,6 +794,7 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -825,24 +813,24 @@
                 Next&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2019/11/08/0x00-xin-xi-shou-ji/">
+                <a href="/2019/11/27/0x07-yong-hu-ren-zheng/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="0x00信息收集">
+                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="0x07用户认证">
                         
-                        <span class="card-title">0x00信息收集</span>
+                        <span class="card-title">0x07用户认证</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            0x00信息收集一、概述　　对于所有安全相关的测试来说，信息收集都是非常重要且必要的第一步，有时一次非常全面完善的信息收集甚至会占到一次渗透测试总工程量的的70%到80%，能为后续的工作节省大量精力，提供便利，数字货币交易所的安全测试也是一
+                            0x07 用户认证一、概述用户认证安全方面的安全问题也许单单从技术层面上讲，并不是一种非常复杂的问题，因为解决起来并不怎么困难；但如果从交易所的实际交易业务层面来看，用户认证方面如果存在安全隐患，那将是非常可怕的。简单试想一下，如果一个黑客
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2019-11-08
+                                <i class="far fa-clock fa-fw icon-date"></i>2019-11-27
                             </span>
                         <span class="publish-author">
                             
