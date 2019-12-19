@@ -4,8 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="0x04业务逻辑, Hyun">
-    <meta name="description" content="0x04业务逻辑一、概述对于交易所来说，一个逻辑完备，鉴权完整的交易流程必不可少。业务逻辑漏洞独立与其他服务却又容易受到其他安全问题的牵扰。与SQL注入、XSS等常规web安全漏洞不同，业务逻辑漏洞使用正常的业务流程中的程序固有不足，逻辑设">
+    <meta name="keywords" content="一个人的密码进化史, Hyun">
+    <meta name="description" content="一个人的密码进化史依稀记得零六年，在三峡大坝全线建成之际，我也有了第一个自己qq号，受地道战的影响从小我就是一个安全意识极强的小朋友，认认真真的把密码和密保问题的答案记到笔记本上，字迹扭扭捏捏，但一笔一划都洋溢着真诚，记下MD5 加密后为4">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -13,7 +13,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>0x04业务逻辑 | Hyun</title>
+    <title>一个人的密码进化史 | Hyun</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -303,13 +303,13 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/7.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/0.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        0x04业务逻辑
+                        一个人的密码进化史
                     </div>
                 </div>
             </div>
@@ -421,8 +421,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E5%8C%BA%E5%9D%97%E9%93%BE%E5%AE%89%E5%85%A8/">
-                                <span class="chip bg-color">区块链安全</span>
+                            <a href="/tags/%E4%B8%80%E4%B8%AA%E4%BA%BA%E7%9A%84%E5%AF%86%E7%A0%81%E8%BF%9B%E5%8C%96%E5%8F%B2/">
+                                <span class="chip bg-color">一个人的密码进化史</span>
                             </a>
                         
                     </div>
@@ -437,7 +437,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
-                    2019-11-18
+                    2019-12-19
                 </div>
                 
 
@@ -446,14 +446,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>Word Count:&nbsp;&nbsp;
-                    2.1k
+                    1.7k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>Read Times:&nbsp;&nbsp;
-                    7 Min
+                    5 Min
                 </div>
                 
 				
@@ -469,100 +469,46 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="0x04业务逻辑"><a href="#0x04业务逻辑" class="headerlink" title="0x04业务逻辑"></a>0x04业务逻辑</h1><h2 id="一、概述"><a href="#一、概述" class="headerlink" title="一、概述"></a>一、概述</h2><p>对于交易所来说，一个逻辑完备，鉴权完整的交易流程必不可少。业务逻辑漏洞独立与其他服务却又容易受到其他安全问题的牵扰。与SQL注入、XSS等常规web安全漏洞不同，业务逻辑漏洞使用正常的业务流程中的程序固有不足，逻辑设计缺陷等进行攻击，甚至绕过已有安全防护措施，一般防护手段以及安全设备无法防御，因此业务逻辑漏洞一直困扰着广大开发者和安全测试人员。这里给出在经过大量对交易所安全测试后总结出的详细的测试条目，拿出具体案例和大家一起分析存在的安全问题。</p>
-<h2 id="二、测试列表"><a href="#二、测试列表" class="headerlink" title="二、测试列表"></a>二、测试列表</h2><blockquote>
-<p>业务逻辑审计 </p>
-<ul>
-<li><p>越权操作测试</p>
-<ul>
-<li><p>订单越权发起、查看、编辑、删除</p>
-</li>
-<li><p>地址越权添加、删除</p>
-</li>
-<li><p>用户信息越权查看、编辑</p>
-</li>
-</ul>
-</li>
-<li><p>工作流程绕过测试</p>
-</li>
-<li><p>KYC认证缺陷测试</p>
-<ul>
-<li>接口识别</li>
-<li>人工识别</li>
-</ul>
-</li>
-<li><p>OTC逻辑缺陷测试</p>
-</li>
-<li><p>数值精度测试</p>
-</li>
-<li><p>资产安全测试</p>
-<ul>
-<li>充值</li>
-<li>提现</li>
-</ul>
-</li>
-<li><p>二次验证绕过测试</p>
-<ul>
-<li>Google验证器</li>
-<li>手机及邮箱验证吗</li>
-</ul>
-</li>
-<li><p>盘口价格设置缺陷测试</p>
-</li>
-<li><p>假充值测试</p>
-</li>
-<li><p>短地址攻击测试</p>
-</li>
-<li><p>数值精度测试</p>
-</li>
-</ul>
-</blockquote>
-<h2 id="三、案例分析"><a href="#三、案例分析" class="headerlink" title="三、案例分析"></a>三、案例分析</h2><h3 id="越权操作"><a href="#越权操作" class="headerlink" title="越权操作"></a>越权操作</h3><p>可能是因为开发人员热衷于打破樊篱 ，所以越权一直是Web安全中老生常谈的问题，并且由于订单、地址、余额和个人信息等等功能的聚集，交易所是越权问题的重灾区。越权漏洞一般分为平行越权和垂直越权两种，而交易所中平行越权占大多数，不仅可以导致越权查看、修改、撤销订单，添加、删除地址以及修改个人信息，而且配合存在的信息泄露问题，可以变相的获取所有用户的KYC信息，因为是正常请求，比起脱裤更难被WAF所发现。</p>
-<p>某交易所修改userPhone可以越权让任意用户下单：</p>
-<p><img src="/2019/11/18/0x04-ye-wu-luo-ji/yqxd.png" alt="越权下单" title="越权下单"></p>
-<p>某交易所遍历id可以越权删除地址：</p>
-<p><img src="/2019/11/18/0x04-ye-wu-luo-ji/yqscdz.png" alt="越权删除地址" title="越权删除地址"></p>
-<p>根据上述示例可以看出，虽然请求头中含有token和userId等参数，但服务器在接受到请求后并没有将token和userId与body里所携带的id和userPhone进行校验，没有做好鉴权，导致越权。  </p>
-<h3 id="工作流程绕过"><a href="#工作流程绕过" class="headerlink" title="工作流程绕过"></a>工作流程绕过</h3><p>近期零时安全团队在某交易所发现一起由于越权、信息泄露以及工作流程绕过导致的盗币事件。因为事件发生时间太近，不确定厂商是否修复完毕，这里不再披露详细的攻击细节以及截图，简单讲一讲攻击手法。</p>
-<p>攻击者在某交易所前端文件中发现了转账时所调用的API接口。按照流程，用户验证身份通过后调用此API转账，但由于验证在前，转账在后，两者并非同时进行，导致攻击者直接调用转账API接口发起转账可以直接绕过身份验证并且可以越权其他用户进行转账。  </p>
-<p><img src="/2019/11/18/0x04-ye-wu-luo-ji/rglc.png" alt="绕过流程"></p>
-<p>造成本次攻击事件的主要原因有三：</p>
-<blockquote>
-<ul>
-<li>前端文件泄露API接口</li>
-<li>交易时验证逻辑可被绕过</li>
-<li>未能做好鉴权措施</li>
-</ul>
-</blockquote>
-<p>暴露意味着更大的攻击面。隐藏好自己的信息，完备逻辑，完整鉴权，来应对还在潜伏着的威胁。</p>
-<h3 id="KYC认证缺陷"><a href="#KYC认证缺陷" class="headerlink" title="KYC认证缺陷"></a>KYC认证缺陷</h3><p>KYC全称为know-your-customer,  充分了解你的客户 ，了解账户的实际控制人和交易的实际收益人，还要求对客户的身份、常住地址或企业所从事的业务进行充分的了解，并采取相应的措施。</p>
-<p>认证作为交易所的重要功能之一，认证方式也百花齐放，常见的有身份证正反面照片，手持身份证照片，手持身份证视频等等。而认证方式有人工识别和接口识别两种，人工识别的准确性取决于审核员当天的心情以及前一天的睡眠，PS加AI换脸的手持身份证照片一般来说可以轻松通过。对于调用接口来进行识别的，有使用百度识图接口来验证，判断身份证照片上的身份证号以及姓名与用户输入的是否相同，来判断是否通过；有需要用户自己掏两块钱来审核的支付宝的人脸识别接口。<br>下图为某交易所调用baidu API进行KYC认证的前端代码：</p>
-<p><img src="/2019/11/18/0x04-ye-wu-luo-ji/kycjs.png" alt="某交易所调用baidu api进行KYC认证的前端代码" title="某交易所调用baidu api进行KYC认证的前端代码"></p>
-<p>对于这种形同虚设KYC认证方式，掌握画图的初级使用技巧即可可以轻松绕过。</p>
-<h3 id="OTC逻辑缺陷"><a href="#OTC逻辑缺陷" class="headerlink" title="OTC逻辑缺陷"></a>OTC逻辑缺陷</h3><p>OTC指的是Over-the-counter，场外交易市场， 通常是指店头交易市场或柜台交易市场 。对于交易所来说，OTC指的是用户依托交易所的担保，卖家和买家进行交易。</p>
-<p>正常OTC交易流程为：</p>
-<blockquote>
-<p>商家卖币  =&gt;  买家购买币并支付 =&gt; 商家确认收款 =&gt; 系统转账到买家。</p>
-</blockquote>
-<p>而攻击者通过越权：</p>
-<blockquote>
-<p>商家卖币 =&gt;  攻击者购买币并不支付 =&gt;  攻击者通过越权点击商家的确认收款  =&gt;  系统转账到买家。</p>
-</blockquote>
-<p>图下为某交易所OTC存在的逻辑缺陷：</p>
-<p><img src="/2019/11/18/0x04-ye-wu-luo-ji/OTCattack.png" alt="OTC攻击流程" title="OTC攻击流程"></p>
-<p>利用此类逻辑问题，攻击者可以轻易的不进行支付而直接获得系统转账。此类问题在零时科技安全团体对交易所客户进行安全审计时多次出现，对交易所带来直接的经济损失。</p>
-<h3 id="二次验证绕过"><a href="#二次验证绕过" class="headerlink" title="二次验证绕过"></a>二次验证绕过</h3><p>在安全审计过程中，交易所的二次验证有使用Google验证码以及手机和邮箱验证码，二次验证就是为了保障用户账号安全，已经敏感操作的确认，但是由于设计缺陷将导致二次验证形同虚设。</p>
-<p>在工作流程绕过中谈过，如果支付验证与转账操作分为两步进行，就一定需要在转账时对当前用户进行验证以及鉴权来防止绕过和越权。零时科技安全团队对大量交易所进行安全审计时发现，大部分交易所进行转账等敏感操作二次验证时，将验证操作与转账操作通过不同接口隔离实现，导致验证码结构脱离转账操作，失去二次验证的效果；部分交易所虽然服务器验证了手机号与短信验证码的有效性，但是并未验证手机号是否为当前用户所绑定，换句话来说，修改数据包就可以达到使用任意手机号进行验证，从而任意提币；还有更难解释的将验证码填空即可绕过验证。</p>
-<p>如下图，某交易所进行提币的二次验证，虽然使用手机和邮箱验证码同时验证，但并未对当前操作用户的手机号绑定进行验证，导致可以使用任意手机号码的验证码进行二次验证，直接提币。</p>
-<p><img src="/2019/11/18/0x04-ye-wu-luo-ji/%E4%BB%BB%E6%84%8F%E6%8F%90%E5%B8%81.png" alt="任意提币"></p>
-<h3 id="盘口价格设置缺陷"><a href="#盘口价格设置缺陷" class="headerlink" title="盘口价格设置缺陷"></a>盘口价格设置缺陷</h3><p>2019年8月23日，由于AWS东京机房硬件设备故障，导致无法连接到服务。部分交易所因使用其他交易所错误的价格数据导致币价出现剧烈波动，BTC成交价最低为0.32USD/BTC，ETH以及EOS均受到影响。</p>
-<p><img src="/2019/11/18/0x04-ye-wu-luo-ji/0.32USDBTC.png" alt="0.32USDBTC"></p>
-<p>在上游数据错误的情况下，没有对数据的有效性进行判断直接使用导致损失的出现。</p>
-<p>在传统安全行业我们称之为供应链攻击，一旦上游的数据、厂商被劫持，修改，对下游没有做好防护措施的交易所将会造成降维打击。</p>
-<hr>
-<p><strong>没有绝对安全的系统</strong></p>
-<p><strong>因为代码之后是人的逻辑</strong></p>
-<p><em>注：以上所有测试均已经过相关交易所授权，请勿自行非法测试。</em></p>
+                <h1 id="一个人的密码进化史"><a href="#一个人的密码进化史" class="headerlink" title="一个人的密码进化史"></a>一个人的密码进化史</h1><p>依稀记得零六年，在三峡大坝全线建成之际，我也有了第一个自己qq号，受地道战的影响从小我就是一个安全意识极强的小朋友，认认真真的把密码和密保问题的答案记到笔记本上，字迹扭扭捏捏，但一笔一划都洋溢着真诚，记下MD5 加密后为4297f44b13955235245b2497399d7a93（123123的MD5密文）的这串密码，记下“我的梦想是什么？”这个密保问题的答案。</p>
+<p><img src="/2019/12/19/yi-ge-ren-de-mi-ma-jin-hua-shi/.%5Cdream.png" alt="dream"></p>
+<p>白驹过隙，转眼两年过去了，这一年北京向全世界打开了大门，奥运圣火点燃了，但对我幼小的心灵留下更深刻回忆的却还是在奥运开幕第二个星期发布的一款叫做DNF的游戏。记得当年捧着50元大钞，前往报刊亭，桌面上摆满了读者，意林和故事会，而我的目光一直盯在挂在墙上的点卡。起初店家以“不给小孩卖，叫你家大人来”义正言辞的拒绝了我，但当我掏出了50元的大钞并喊出”老子嘞压岁钱，哪个用屋头人来“，不知道店家是被第四套人民币上的人民所震撼，还是被我的赤子之心所折服，终究我拿到那张50元的巨额点卡。因为我是一个安全意识极强的小朋友，所以一回到家我就绑上了背面的密保卡。</p>
+<img src="/2019/12/19/yi-ge-ren-de-mi-ma-jin-hua-shi/密保卡.png" alt="密保卡" style="zoom:50%;">
+
+
+
+<p>时如逝水，永不回头。二零一二年并不是世界末日，我迎来了中考，也拿到了自己的第一部魔幻手机，Android 2.2.3这个版本永远被我铭记。一回家我就利用我初中的技术水平进行了刷机，把512M内存里的预留应用全部进行了卸载。”自行Root后的手机没有保修，一百块钱“售后是这样告诉我的。我一边颤抖的从兜里掏出已经被手汗打湿揉成一团的百元大钞，一边心中暗想，不会再让任何人夺走她。而手势密码是我唯一可以保护他的手段。</p>
+<p><img src="/2019/12/19/yi-ge-ren-de-mi-ma-jin-hua-shi/.%5C%E6%89%8B%E5%8A%BF%E5%AF%86%E7%A0%81.png" alt="手势密码"></p>
+<p>第二年，苹果发布了新一代IPhone 5，指纹识别来到了大众的眼前。或是由于高中时囊中羞涩，或是由于对安卓阵营的坚守。侥幸的避过一批喜欢将用户指纹信息上传到云端的厂商。</p>
+<p><img src="/2019/12/19/yi-ge-ren-de-mi-ma-jin-hua-shi/.%5C%E6%8C%87%E7%BA%B9.png" alt="指纹"></p>
+<p>二零一七年，已是我步入普通高等大学的第二个年头，一款名为绝地求生的游戏横空出世，一石激起千层浪。大街小巷的网吧从LOL的统治之中解放出来，我又与舍友众筹98元巨款。常言道，人在江湖飘，哪有不挨刀。虽然steam使用了邮箱验证码登录，但在某次网吧上网后，应是因为选择在此计算机上保留登录凭据的原因，被盗号者修改邮箱，更改密码一气呵成。</p>
+<p>翌日，与往常一样打开steam,发现密码错误无法登录，修改密码邮箱不对。因为我是一个安全意识极强的小朋友，所以我立马给客服发送我四级英文水平编写的邮件，冻结账号，申诉找回。经过一日鏖战，终于找回了邮箱与密码，当我以为自己挽狂澜于既倒，扶大厦之将倾时，有些事情一旦错过就晚了。最是人间留不住，朱颜辞镜花辞树，因为自己的大意，永远了失去那价值98元的她。</p>
+<img src="/2019/12/19/yi-ge-ren-de-mi-ma-jin-hua-shi/steam1.png" alt="vac" style="zoom: 80%;">
+
+
+
+<p>我听取了客服的建议，绑定上了steam令牌，开启两步验证，每次登录都需要输入令牌上生成的字符串，自此steam再无盗号问题发生。</p>
+<img src="/2019/12/19/yi-ge-ren-de-mi-ma-jin-hua-shi/steam2.png" alt="steam令牌" style="zoom: 67%;">
+
+
+
+<p>但是我的邮箱密码和steam密码不尽相同，就算获取到了我的steam账号密码，又如何通过邮箱验证来修改？我百思不得其解。再大量的查阅相关资料后，发现了一种叫做<strong>撞库</strong>的攻击手法，简而言之就是用你A网站的账号密码来尝试登录B网站，如果账号密码都相同，登录就如探囊取物。</p>
+<p>巧了，那我A网站的账号密码又是如何被泄露的?haveibeenpwned免费提供了查询个人信息是否因为平台原因被泄露。</p>
+<p>福无双至，祸不单行。据不完全统计，原来年幼无知的我在9个网站上，泄露了email地址，密码，用户名。作为一个安全意识极强的小朋友，马上对我重要的网站密码进行更改，做到不是一光荣俱光荣。</p>
+<img src="/2019/12/19/yi-ge-ren-de-mi-ma-jin-hua-shi/haveibeenpwnd.png" alt="haveibeenpwned" style="zoom: 80%;">
+
+<p>我换了新手机，但不是所有手机都是Apple，也不是所有面部识别都是Face ID。所以一张普通打印机用普通A4纸打印出的我的相貌普通的照片就可以轻松的解锁我的手机。</p>
+<p><img src="/2019/12/19/yi-ge-ren-de-mi-ma-jin-hua-shi/.%5C%E9%9D%A2%E9%83%A8%E8%AF%86%E5%88%AB1.png" alt="面部识别"></p>
+<p>慢慢的发现面部识别已经融入我们生活之中，路边自动售卖机，商超，地铁，机场各式各样的地方都摆放上了面部识别设备，而安全性也是最为关注的问题之一。古有赵高指鹿为马，今有AI指鹿为狗。 对抗攻击也是图像识别里一大安全风险轻微的扰动，以至于人类视觉系统无法察觉这种扰动（图片看起来几乎一样）。这样的攻击会导致神经网络完全改变它对图片的分类。此外，同样的图片扰动可以欺骗好多网络分类器。</p>
+<p><img src="/2019/12/19/yi-ge-ren-de-mi-ma-jin-hua-shi/.%5C%E9%9D%A2%E9%83%A8%E5%AF%B9%E6%8A%97.png" alt="对抗攻击"></p>
+<p>时代在变化，技术在发展，新事物必将取代旧事物。从密码，密保问题，密保卡，手势验证，短信验证码，动态令牌，指纹，面部识别，这一代代的演化，其目的就是为了安全性的提升。而曾几何时让人抓耳挠腮都想不起来的密保问题已经不再安全。</p>
+<p><img src="/2019/12/19/yi-ge-ren-de-mi-ma-jin-hua-shi/.%5Cmibao.png" alt="密保问题"></p>
+<p>改革开放40周年之际，望眼欲穿，我终于拥有了自己的第一个数字钱包。她的“密码”是那么的与众不同，可惜助记词要是汉字，要是“自由” “民主” “文明” “和谐” 之类的词语那就就更好了。</p>
+<p>我在四下无人的夜里悄悄的将它抄在纸上，此情此景，像极了那年把第一个密码抄录在纸上的我，未觉池塘春草梦，阶前梧叶已秋声。 </p>
+<p>我把它对齐并慢慢的折好，夹到电视机柜下第三个抽屉的第二本书中。这样的话，书中不一定有颜如玉，可一定会有黄金屋了。</p>
+<p><img src="/2019/12/19/yi-ge-ren-de-mi-ma-jin-hua-shi/.%5C%E5%8A%A9%E8%AE%B0%E8%AF%8D.png" alt="助记词"></p>
+<p><em>这就是我的密码进化史</em></p>
+<p><img src="/2019/12/19/yi-ge-ren-de-mi-ma-jin-hua-shi/.%5Chistory.png" alt="history"></p>
+<p><em>The end.</em></p>
 
             </div>
             <hr/>
@@ -588,7 +534,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://wensite.top/2019/11/18/0x04-ye-wu-luo-ji/">http://wensite.top/2019/11/18/0x04-ye-wu-luo-ji/</a>
+                    <a href="http://wensite.top/2019/12/19/yi-ge-ren-de-mi-ma-jin-hua-shi/">http://wensite.top/2019/12/19/yi-ge-ren-de-mi-ma-jin-hua-shi/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -626,8 +572,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E5%8C%BA%E5%9D%97%E9%93%BE%E5%AE%89%E5%85%A8/">
-                                    <span class="chip bg-color">区块链安全</span>
+                                <a href="/tags/%E4%B8%80%E4%B8%AA%E4%BA%BA%E7%9A%84%E5%AF%86%E7%A0%81%E8%BF%9B%E5%8C%96%E5%8F%B2/">
+                                    <span class="chip bg-color">一个人的密码进化史</span>
                                 </a>
                             
                         </div>
@@ -793,29 +739,30 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
+                <i class="far fa-dot-circle"></i>&nbsp;Current
+            </div>
             <div class="card">
-                <a href="/2019/11/21/0x05-xin-xi-xie-lu/">
+                <a href="/2019/12/19/yi-ge-ren-de-mi-ma-jin-hua-shi/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/23.jpg" class="responsive-img" alt="0x05信息泄露">
+                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="一个人的密码进化史">
                         
-                        <span class="card-title">0x05信息泄露</span>
+                        <span class="card-title">一个人的密码进化史</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            0x05信息泄露一、概述信息泄露在安全审计中屡见不鲜，对于存有大量用户KYC信息的交易所来说影响更加深远，是非常严重的安全问题。零时科技安全团队在审计大量交易所后发现，信息泄露问题一般集中于交易所的账户体系、OTC交易系统、用户订单、邀请列
+                            一个人的密码进化史依稀记得零六年，在三峡大坝全线建成之际，我也有了第一个自己qq号，受地道战的影响从小我就是一个安全意识极强的小朋友，认认真真的把密码和密保问题的答案记到笔记本上，字迹扭扭捏捏，但一笔一划都洋溢着真诚，记下MD5 加密后为4
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2019-11-21
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2019-12-19
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -824,11 +771,12 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E5%8C%BA%E5%9D%97%E9%93%BE%E5%AE%89%E5%85%A8/">
-                        <span class="chip bg-color">区块链安全</span>
+                    <a href="/tags/%E4%B8%80%E4%B8%AA%E4%BA%BA%E7%9A%84%E5%AF%86%E7%A0%81%E8%BF%9B%E5%8C%96%E5%8F%B2/">
+                        <span class="chip bg-color">一个人的密码进化史</span>
                     </a>
                     
                 </div>
@@ -842,24 +790,25 @@
                 Next&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2019/11/17/0x03-an-quan-pei-zhi/">
+                <a href="/2019/11/29/0x08app-an-quan-shang/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="0x03安全配置">
+                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="0x08App安全·上">
                         
-                        <span class="card-title">0x03安全配置</span>
+                        <span class="card-title">0x08App安全·上</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            0x05安全配置一、概述服务端是一种专门为某一客户端设立的，具有针对性的程序，通常都只具备认证与传输数据功能。比如游戏服务端，就是专门为游戏客户端提供服务的，服务的内容包括为客户端提供登录服务，保存游戏玩家资料，提供玩家在线游戏等。而游戏客
+                            0x08App安全一、概述如今，随着人们使用手机，平板等移动端设备上网的时间与频率增加，移动app的发展也是愈来愈迅速。各大交易所在与用户交互的这方面，除了网页浏览以外，也就是移动端的app了。
+尽管app时下相当流行，但其安全性却一直没有
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2019-11-17
+                                <i class="far fa-clock fa-fw icon-date"></i>2019-11-29
                             </span>
                         <span class="publish-author">
                             
