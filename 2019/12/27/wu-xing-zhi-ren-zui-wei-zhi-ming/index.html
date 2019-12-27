@@ -4,9 +4,9 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="0x08App安全·上, Hyun">
-    <meta name="description" content="0x08App安全·上篇一、概述如今，随着人们使用手机，平板等移动端设备上网的时间与频率增加，移动app的发展也是愈来愈迅速。各大交易所在与用户交互的这方面，除了网页浏览以外，也就是移动端的app了。
-尽管app时下相当流行，但其安全性却一">
+    <meta name="keywords" content="无形之刃，最为致命, Hyun">
+    <meta name="description" content="无形之刃，最为致命WiFi安全现如今已经是老生常谈的问题了，笔者也查阅了很多相关文章，提出的解决方案一般如下三种：①不要连接公共WIFI。②开发者使用更安全的HTTPS协议传输数据。 ③办公WIFI的话将内网和访客分开。
+诚然这些方法可以避">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -14,7 +14,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>0x08App安全·上 | Hyun</title>
+    <title>无形之刃，最为致命 | Hyun</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -310,7 +310,7 @@
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        0x08App安全·上
+                        无形之刃，最为致命
                     </div>
                 </div>
             </div>
@@ -422,8 +422,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E5%8C%BA%E5%9D%97%E9%93%BE%E5%AE%89%E5%85%A8/">
-                                <span class="chip bg-color">区块链安全</span>
+                            <a href="/tags/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E6%84%8F%E8%AF%86/">
+                                <span class="chip bg-color">网络安全意识</span>
                             </a>
                         
                     </div>
@@ -438,7 +438,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
-                    2019-11-29
+                    2019-12-27
                 </div>
                 
 
@@ -447,14 +447,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>Word Count:&nbsp;&nbsp;
-                    1.3k
+                    1.8k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>Read Times:&nbsp;&nbsp;
-                    4 Min
+                    5 Min
                 </div>
                 
 				
@@ -470,67 +470,55 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="0x08App安全·上篇"><a href="#0x08App安全·上篇" class="headerlink" title="0x08App安全·上篇"></a>0x08App安全·上篇</h1><h2 id="一、概述"><a href="#一、概述" class="headerlink" title="一、概述"></a>一、概述</h2><p>如今，随着人们使用手机，平板等移动端设备上网的时间与频率增加，移动app的发展也是愈来愈迅速。各大交易所在与用户交互的这方面，除了网页浏览以外，也就是移动端的app了。</p>
-<p>尽管app时下相当流行，但其安全性却一直没有得到足够的关注。在app安全的领域上，大部分厂商都做得比较初级，很多用户也不具备相对应的安全意识。由此，app也就变成了恶意攻击者的一个有效突破口。</p>
-<p>零时科技安全团队在经过大量对app进行的安全测试之后，总结出了一份相对完整有效的测试列表，建议各大交易所以此自查，防患于未然。</p>
-<h2 id="二、测试列表"><a href="#二、测试列表" class="headerlink" title="二、测试列表"></a>二、测试列表</h2><p><strong>App安全</strong></p>
-<ul>
-<li>App 运行时虚拟机监测</li>
-<li>App 运行时root监测</li>
-<li>App数据备份检测</li>
-<li>代码反编译检测</li>
-<li>敏感权限使用</li>
-<li>敏感信息泄露</li>
-<li>拒绝服务测试</li>
-<li>目录穿越安全测试</li>
-<li>App 缓存安全检测</li>
-<li>接口安全测试</li>
-<li>弱加密安全测试</li>
-</ul>
-<h2 id="三、案例分析"><a href="#三、案例分析" class="headerlink" title="三、案例分析"></a>三、案例分析</h2><h3 id="App-运行时虚拟机监测"><a href="#App-运行时虚拟机监测" class="headerlink" title="App 运行时虚拟机监测"></a>App 运行时虚拟机监测</h3><p>零时科技在对某交易所进行发现，该交易app未进行虚拟机运行检测，攻击者在虚拟机中安装运行该app，即可在虚拟机中截取并操作数据包或进行其他有害操作。</p>
-<p><img src="/2019/11/29/0x08app-an-quan-shang/1.png" alt="VM DETECT"></p>
-<h3 id="App数据备份检测"><a href="#App数据备份检测" class="headerlink" title="App数据备份检测"></a>App数据备份检测</h3><p>零时科技安全团队在对某交易所app进行安全测试时，发现该交易所并未对app进行数据备份检测，安卓AndroidManifest.xml文件中android:allowBackup为true，当这个标志被设置成true或不设置该标志位时，应用程序数据可以备份和恢复，adb调试备份允许恶意攻击者复制应用程序数据。</p>
-<p>零时科技安全团队在对某交易所app进行安全测试时，发现该交易所并未对app进行数据备份检测，其AndroidManifest.xml文件中android: allowBackup为true，存在数据任意备份漏洞。</p>
-<p><img src="/2019/11/29/0x08app-an-quan-shang/2.png" alt="Source Code"></p>
-<p>链接手机，然后输入以下备份命令，会出现一个对话窗，输入备份密码即可：</p>
-<blockquote>
-<p>adb backup -nosystem -noshared -apk -f com.xxx.wallet com.xxx.wallet</p>
-</blockquote>
-<p><img src="/2019/11/29/0x08app-an-quan-shang/3.png" alt="BACKUP"></p>
-<p>连接到另一台手机或root的本机，输入下列命令，弹出对话框，输入备份时的密码即可恢复数据</p>
-<blockquote>
-<p>adb restore com</p>
-</blockquote>
-<p>如果用户账号密码保存在本地，则恢复到另一台root的手机后，可以看到各种敏感信息。</p>
-<p>零时科技安全团队建议设置AndroidManifest.xml的android:allowBackup标志为false。</p>
-<h3 id="代码反编译检测"><a href="#代码反编译检测" class="headerlink" title="代码反编译检测"></a>代码反编译检测</h3><p>若app的apk文件可被反编译，就有可能导致源代码信息泄露，攻击者也可对其进行代码审计以找出可能存在隐患的攻击点。</p>
-<p>零时科技安全团队对某交易所app进行安全测试时，通过检测apk文件是否通过加固，代码是否通过加密或者混淆，是否可以通过反编译攻击等方面对该app进行测试。发现该apk文件可被反编译，反编译后可以看到java源代码，导致源代码信息泄露。（通过jadx-gui或其他反编译工具可直接操作apk，查看java源代码。）</p>
-<p><img src="/2019/11/29/0x08app-an-quan-shang/4.png" alt="Decompile"></p>
-<p>零时科技安全团队建议，可使用专业加固工具对apk进行加壳处理。</p>
-<h3 id="敏感权限使用"><a href="#敏感权限使用" class="headerlink" title="敏感权限使用"></a>敏感权限使用</h3><p>目前很多系统在app请求权限这一方面上都不甚敏感，这也是如今移动端并不那么安全的成因之一。很多app都会请求一些敏感的权限，有的甚至会直接绕过，不向用户请求就直接自行取得了权限。而这些app有可能对交易所和用户都产生足够的恶意影响。</p>
-<p>零时科技安全团队在对某交易所app进行安全测试时，检测APP程序中是否存在敏感权限的使用，发现确实存在敏感权限使用漏洞。</p>
-<p><img src="/2019/11/29/0x08app-an-quan-shang/5.jpg" alt="Authority control"> </p>
-<p>敏感权限如下：</p>
-<ul>
-<li><p>android.permision.WRITE_EXTERNAL_STORAGE 允许应用写入外部存储</p>
-</li>
-<li><p>ndroid.permission.READ_PHONE_STATE 允许访问电话状态、设备信息</p>
-</li>
-<li><p>ndroid.permission.CAMERA 允许访问摄像头</p>
-</li>
-<li><p>android.permission.GET_TASKS 允许获取系统应用列表</p>
-</li>
-<li><p>android.permission.MOUNT_UNMOUNT_FILESYSTEMS 允许挂载、反挂载外部文件系统 </p>
-</li>
-</ul>
-<p>零时科技安全团队建议禁用不需要的敏感权限。</p>
-<h3 id="敏感信息泄露"><a href="#敏感信息泄露" class="headerlink" title="敏感信息泄露"></a>敏感信息泄露</h3><p>敏感信息泄露危害极大，如泄露出测试/管理员数据，参数注释信息等。但它又是一种危害虽大却又较容易避免的漏洞，只要开发人员多加注重安全意识即可避免大部分问题。</p>
-<p>零时科技安全团队在对某交易所进行安全测试时，查找其 app 程序文件中是否存在敏感信息泄露（如源码中，备份文件中，xml 资源文件中等），发现确实存在敏感信息泄露漏洞，源码中泄露了微信公众号 appid 和 secretkey：</p>
-<p><img src="/2019/11/29/0x08app-an-quan-shang/6.png" alt="Decompile Code"></p>
-<p>获取token：</p>
-<p><img src="/2019/11/29/0x08app-an-quan-shang/7.png" alt="Wechat"></p>
+                <h1 id="无形之刃，最为致命"><a href="#无形之刃，最为致命" class="headerlink" title="无形之刃，最为致命"></a>无形之刃，最为致命</h1><p>WiFi安全现如今已经是老生常谈的问题了，笔者也查阅了很多相关文章，提出的解决方案一般如下三种：①不要连接公共WIFI。②开发者使用更安全的HTTPS协议传输数据。 ③办公WIFI的话将内网和访客分开。</p>
+<p>诚然这些方法可以避免一些安全隐患，但是一刀切的禁止连接公共WIFI，实在是有些因噎废食的韵味。即便开发者使用了HTTPS协议，但如果没有进行双向校验的话，仍然存在中间人攻击的风险，而大多数情况下开发者因为运行速度的原因，并不会采用这种方式。访客WiFi如果自身网络设备存在安全问题，即使与办公网络分开，通过网络设备一样可以轻而易举的进入内网。</p>
+<p>世面已经有太多告诉我们不应该做什么事情的文章了，笔者希望本系列文章能告诉我们普通人在碰到时应该做什么，以及在不得不使用开放WiFi时如何将自身的风险降到最低。</p>
+<img src="/2019/12/27/wu-xing-zhi-ren-zui-wei-zhi-ming/1.png" alt="WiFi需求" style="zoom:50%;">
+
 <hr>
-<p><em>鉴于文章内容长度限制，本期内容将分为上、下篇，顺序放送。</em></p>
+<p>这是一个名叫ESP8266的WiFi开发模块，淘宝售价仅为14.8元，插上充电宝就可以启动。</p>
+<img src="/2019/12/27/wu-xing-zhi-ren-zui-wei-zhi-ming/2.png" alt="ESP8266" style="zoom: 33%;">
+
+<p>它的效果？它可以生产大量随机WiFi SSID广播，让你找不到其他WIFI。</p>
+<img src="/2019/12/27/wu-xing-zhi-ren-zui-wei-zhi-ming/3.png" alt="random ssid" style="zoom:67%;">
+
+<p>它会扫描周围所有WiFi查看什么设备进行了连接。</p>
+<p><img src="/2019/12/27/wu-xing-zhi-ren-zui-wei-zhi-ming/4.png" alt="scan ap"></p>
+<p>而如果它被用来作恶。首先他会克隆大量目标WiFi SSID，然后在向连接目标WiFi的设备发送送解除认证帧来关闭设备的连接来使其掉线。用户再次输入密码连接WiFi时便已经落入早已准备好的天罗地网。因为几乎没有人可以在这么多一模一样的列表里分辨出真实的WiFi。</p>
+<img src="/2019/12/27/wu-xing-zhi-ren-zui-wei-zhi-ming/5.png" alt="clone ssid" style="zoom: 25%;">
+
+<p>在连接WiFi时，如果发现大量重复或随机WiFi名出现时，我们应该有所警觉。对于这种移动式神出鬼没的钓鱼WiFi威胁，生活中有可能遇到的情况比较少，而比较多的，泄露WiFi密码的方式还有两种，一种是自己不经意之间，通过某APP分享出去，这里我就不点名了；第二种就是由于人为的原因。</p>
+<hr>
+<p>笔者目前在某公寓租住，公寓给每户都配备了独立的路由器，但是不允许住户更改密码，美其名曰方便维修和管理。每户的WiFi默认密码都是房间号输两遍，比如笔者门牌号是0721，WiFi密码就是07210721，无线路由器的默认密码都是123123。笔者就此事向管家进行沟通，并说明安全隐患，得到的答复是：”你被黑客攻击了，关我什么事“。无奈之下，只好回去更改了自己的WiFi以及路由器密码。只好过上了用自己家的WiFi看电视，用楼上的WiFi下载的生活。</p>
+<p><img src="/2019/12/27/wu-xing-zhi-ren-zui-wei-zhi-ming/6.png" alt="wifi list"></p>
+<p>更危险的是，因为路由器没有更改密码，所以可以随便的登录到大多数住户的管理页面，只需轻轻选择远程Web管理权限，便可在千里之外进行控制。</p>
+<img src="/2019/12/27/wu-xing-zhi-ren-zui-wei-zhi-ming/7.png" alt="router control" style="zoom: 80%;">
+
+
+
+<p>在这里建议大家，WiFi的安全性，由于目前智能设备的增加大大提高了其暴露后的攻击面。WiFi密码这个东西若是自用一般不要分享出去，如有被泄露可的能应及时更改。如果需要向外提供WiFi,应该与自家设备所连接的分开。至于路由器管理密码更应该牢牢的掌握在自己的手中，以免在不经意之间沦为肉鸡。</p>
+<p>这里给大家提出几个关于WiFi安全的小建议：</p>
+<p>对一般人来说：</p>
+<ul>
+<li>路由器管理后台设置强密码，防止弱口令被登录。</li>
+<li>关闭使用pin码登录，指的是WPS功能，只需输入数字就可登录。</li>
+<li>启用WPA加密，不用已经过时的WEP加密。</li>
+<li>如果特别注重安全的话可以对SSID进行隐藏。</li>
+<li>不安装某APP进行WiFi密码分享。</li>
+</ul>
+<p>这些就可以满足大多数人的安全需求了，在办公安全那篇里会对办公WiFi提出安全性更高建议。</p>
+<hr>
+<p>上述文章讲的都是使用个人WiFi所要注意的事情，而在酒店、饭店、机场甚至于高铁与飞机上目前都提供了公共WiFi来使用，其安全性又如何进行保障呢？</p>
+<p><img src="/2019/12/27/wu-xing-zhi-ren-zui-wei-zhi-ming/8.png" alt="public wifi"></p>
+<p>2017年的冬天，笔者和同学去北京参加一场安全技能比赛。北京的冬天很冷，比赛结束后，就一起在主办方安排的酒店休息。那时正值吃鸡如日中天，同学耐不住寂寞，连上酒店WiFi便准备Chicken Dinner。打了没多久电脑突然黑屏了，重启后发现所有硬盘都被格式化了。一是因为格式化硬盘这种事情实在太过分。二是因为电脑上确实存着与某涉密部门的项目。一怒之下便报了警，北京的出警速度很快，不一会儿，一个民警带着两个辅警赶到了酒店。询问过后，也属实无奈，一是无法确定到底是何人进行了攻击，不可能一个房间一个房间的去查。二是也不是所有民警都具备网络取证的能力。诚然连我们这些和安全接触较多的学生也不具备这个追踪能力，何苦相互为难。所行的是项目有备份，格式化的硬盘使用恢复软件可以恢复绝大多数的数据。</p>
+<p>事后我们分析这次攻击，酒店Wifi并没有进行隔离，所有连接进来的人都暴露在其中、可能是工具里有后门、未开防护软件、补丁没有打到最新。</p>
+<p>总结经验教训得出了如下几点：</p>
+<ul>
+<li>公共WiFi该用还是要用，用的是尽量避免敏感操作（登录、转账）。现如今流量也不是很贵，建议出门在外敏感操作还是使用流量，相信运营商。</li>
+<li>敏感设备，存储了重要文件或者数据的设备就不要连接公共WiFi。同理手机热点是一个不错的解决方法。</li>
+<li>一个整个酒店都用同一个WiFi在一般情况下的安全性都要比每个房间独立WiFi的安全性要低，连接前做好权衡。</li>
+<li>大多数采用手机认证的公共WiFi会绑定IP和手机号方便出事后进行溯源相比之下会更安全一些，但是目前对于日志的保存情况我们也不要报太多的希望。</li>
+</ul>
 
             </div>
             <hr/>
@@ -556,7 +544,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://wensite.top/2019/11/29/0x08app-an-quan-shang/">http://wensite.top/2019/11/29/0x08app-an-quan-shang/</a>
+                    <a href="http://wensite.top/2019/12/27/wu-xing-zhi-ren-zui-wei-zhi-ming/">http://wensite.top/2019/12/27/wu-xing-zhi-ren-zui-wei-zhi-ming/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -594,8 +582,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E5%8C%BA%E5%9D%97%E9%93%BE%E5%AE%89%E5%85%A8/">
-                                    <span class="chip bg-color">区块链安全</span>
+                                <a href="/tags/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E6%84%8F%E8%AF%86/">
+                                    <span class="chip bg-color">网络安全意识</span>
                                 </a>
                             
                         </div>
@@ -761,29 +749,31 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
+                <i class="far fa-dot-circle"></i>&nbsp;Current
+            </div>
             <div class="card">
-                <a href="/2019/12/19/yi-ge-ren-de-mi-ma-jin-hua-shi/">
+                <a href="/2019/12/27/wu-xing-zhi-ren-zui-wei-zhi-ming/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="一个人的密码进化史">
+                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="无形之刃，最为致命">
                         
-                        <span class="card-title">一个人的密码进化史</span>
+                        <span class="card-title">无形之刃，最为致命</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            一个人的密码进化史依稀记得零六年，在三峡大坝全线建成之际，我也有了第一个自己qq号，受地道战的影响从小我就是一个安全意识极强的小朋友，认认真真的把密码和密保问题的答案记到笔记本上，字迹扭扭捏捏，但一笔一划都洋溢着真诚，记下MD5 加密后为4
+                            无形之刃，最为致命WiFi安全现如今已经是老生常谈的问题了，笔者也查阅了很多相关文章，提出的解决方案一般如下三种：①不要连接公共WIFI。②开发者使用更安全的HTTPS协议传输数据。 ③办公WIFI的话将内网和访客分开。
+诚然这些方法可以避
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2019-12-19
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2019-12-27
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -792,11 +782,12 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E4%B8%80%E4%B8%AA%E4%BA%BA%E7%9A%84%E5%AF%86%E7%A0%81%E8%BF%9B%E5%8C%96%E5%8F%B2/">
-                        <span class="chip bg-color">一个人的密码进化史</span>
+                    <a href="/tags/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E6%84%8F%E8%AF%86/">
+                        <span class="chip bg-color">网络安全意识</span>
                     </a>
                     
                 </div>
@@ -810,24 +801,25 @@
                 Next&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2019/11/27/0x07-yong-hu-ren-zheng/">
+                <a href="/2019/12/27/0x09app-an-quan-xia/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="0x07用户认证">
+                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="0x09App安全·下">
                         
-                        <span class="card-title">0x07用户认证</span>
+                        <span class="card-title">0x09App安全·下</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            0x07用户认证一、概述用户认证安全方面的安全问题也许单单从技术层面上讲，并不是一种非常复杂的问题，因为解决起来并不怎么困难；但如果从交易所的实际交易业务层面来看，用户认证方面如果存在安全隐患，那将是非常可怕的。简单试想一下，如果一个黑客可
+                            0x09App安全·下篇一、概述如今，随着人们使用手机，平板等移动端设备上网的时间与频率增加，移动app的发展也是愈来愈迅速。各大交易所在与用户交互的这方面，除了网页浏览以外，也就是移动端的app了。
+尽管app时下相当流行，但其安全性却一
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2019-11-27
+                                <i class="far fa-clock fa-fw icon-date"></i>2019-12-27
                             </span>
                         <span class="publish-author">
                             
