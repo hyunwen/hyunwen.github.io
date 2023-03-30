@@ -26,7 +26,7 @@
     
     <script src="/libs/jquery/jquery.min.js"></script>
     
-</head>
+<meta name="generator" content="Hexo 6.3.0"></head>
 
 
 <body>
@@ -504,10 +504,10 @@
 <p>虽然单次获取收益很小，但是无限制的话，收益还是不错的。</p>
 <p>通过大量无限制刷单，可以套取系统中心账号代币，攻击者可以出售代币套现跑路。</p>
 <p>如下图所示，批量下单0.9999个代币，当15分钟后，系统默认取消交易，然后钱包中心钱包将返回1个代币给卖家，获取额为代币：</p>
-<p><img src="/2019/11/27/0x06-jie-kou-an-quan/jingdu.png" alt="精度刷取代币"></p>
+<p><img src="/./jingdu.png" alt="精度刷取代币"></p>
 <p>建议严格按照4位小数精度进行算术运算，并对下单频率以及数量进行限制。</p>
 <h3 id="接口频率限制测试"><a href="#接口频率限制测试" class="headerlink" title="接口频率限制测试"></a>接口频率限制测试</h3><h4 id="邮箱验证接口"><a href="#邮箱验证接口" class="headerlink" title="邮箱验证接口"></a>邮箱验证接口</h4><p>在进行身份甄别时，邮箱验证码因其免费的缘故被广泛使用。但是在开发过程中没有正确的限制接口频率，就可能被利用进行电子邮箱炸弹攻击。电子邮件炸弹是最古老的匿名攻击之一，通过设置一台机器不断的大量的向同一地址发送电子邮件，攻击者能够耗尽接受者网络的宽带。 </p>
-<p><img src="/2019/11/27/0x06-jie-kou-an-quan/email.png" alt="Email Bomb"></p>
+<p><img src="/./email.png" alt="Email Bomb"></p>
 <h4 id="短信验证接口"><a href="#短信验证接口" class="headerlink" title="短信验证接口"></a>短信验证接口</h4><p>与上述所说的邮箱验证相同，因为短信验证的方便快捷以及安全性较高也被广泛的用于身份验证中。与邮箱验证不同的是，短信验证码的条数是需要按照数量付费的。如果未进行合理频率限制会导致：</p>
 <ul>
 <li><p>持续给手机号发送垃圾短信，造成极差的用户体验。</p>
@@ -515,9 +515,9 @@
 <li><p>对于公司来说，发送短信一般借助第三方运营商，每条短信需要支付费用，如果一天被刷几十万条，一天造成上万的亏损。</p>
 </li>
 </ul>
-<p><img src="/2019/11/27/0x06-jie-kou-an-quan/sms.png" alt="SMS Bomb"></p>
+<p><img src="/./sms.png" alt="SMS Bomb"></p>
 <h4 id="批量刷单"><a href="#批量刷单" class="headerlink" title="批量刷单"></a>批量刷单</h4><p>零时科技安全团队在对某交易所进行安全测试时发现，可不停购买数量为负数的代币，然后确认付款，在商家后台无法进行确认收款，可以批量生产垃圾订单，而且会导致短信炸弹。请求如下：</p>
-<p><img src="/2019/11/27/0x06-jie-kou-an-quan/shuadan.png" alt="批量刷单"></p>
+<p><img src="/./shuadan.png" alt="批量刷单"></p>
 <p>此漏洞是由于可以接受非法参数以及未作频率限制共同造成。不仅影响到业务流程的正常运转，而且耗费了大量的短信资源。这种类似于薅羊毛的技术单次看来危害较小，所以经常会被忽略，但如果被无限制的利用，羊毛出在羊身上，终有秃噜皮的一天。</p>
 <hr>
 <p><strong>君子生非异也，善假于物也。</strong></p>
@@ -984,7 +984,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">21.3k</span>&nbsp;字
+                class="white-color">23.4k</span>&nbsp;字
             
             
             

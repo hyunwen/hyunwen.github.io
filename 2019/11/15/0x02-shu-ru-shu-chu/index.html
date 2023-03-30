@@ -26,7 +26,7 @@
     
     <script src="/libs/jquery/jquery.min.js"></script>
     
-</head>
+<meta name="generator" content="Hexo 6.3.0"></head>
 
 
 <body>
@@ -495,27 +495,27 @@
 <h2 id="三、案例分析"><a href="#三、案例分析" class="headerlink" title="三、案例分析"></a>三、案例分析</h2><h3 id="跨站脚本（XSS）测试"><a href="#跨站脚本（XSS）测试" class="headerlink" title="跨站脚本（XSS）测试"></a>跨站脚本（XSS）测试</h3><p>跨站脚本（XSS）是最常见的web漏洞之一，亦是客户端脚本安全的头号大敌，在各大漏洞提交平台也经常见到XSS的漏洞提交。跨站脚本攻击的危害巨大且可利用处繁多：如XSS钓鱼，Cookie劫持，获取用户真实IP等操作。</p>
 <p>零时安全实验室在对某交易所进行测试时，发现在资产充值的付款钱包地址处，可以输入任意字符，并没有对输入的字符进行过滤和编码。初步测试时弹框成功，进一步写入利用XSS获取cookie的脚本。等待一段时间后，成功获取到后台管理员cookie，并以此登录后台成功，其后台可进行任意转账和充值操作，且存在大量用户信息。</p>
 <p>下图为测试XSS时截图：</p>
-<p>​    <img src="/2019/11/15/0x02-shu-ru-shu-chu/1.png" alt="XSS PAYLOAD"></p>
+<p>​	<img src="/./1.png" alt="XSS PAYLOAD"></p>
 <p>  成功弹框</p>
-<p><img src="/2019/11/15/0x02-shu-ru-shu-chu/2.png" alt="XSS ALERT"></p>
+<p><img src="/./2.png" alt="XSS ALERT"></p>
 <p>成功获取后台管理员cookie：</p>
-<p><img src="/2019/11/15/0x02-shu-ru-shu-chu/3.png" alt="XSS GET COOKIE"></p>
+<p><img src="/./3.png" alt="XSS GET COOKIE"></p>
 <p>用管理员cookie登录后台</p>
-<p><img src="/2019/11/15/0x02-shu-ru-shu-chu/4.png" alt="CONSOL LOG"></p>
+<p><img src="/./4.png" alt="CONSOL LOG"></p>
 <h3 id="SQL注入测试"><a href="#SQL注入测试" class="headerlink" title="SQL注入测试"></a>SQL注入测试</h3><p>数据库（SQL）对于开发者和网络安全人员来说，应该是非常熟悉了。OWASP TOP 10多次把数据库相关的SQL注入攻击列在榜首，也足以见得其危害。SQL注入漏洞的产生主要是因为Web应用程序对用户输入的数据没有进行合法性判断，攻击者可以控制前端传入到后端的参数，利用参数代入数据库查询，通过构造不同的SQL语句实现对数据库的任意操作。鉴于其危害性巨大，零时安全实验室在对交易所测试时，对SQL注入类漏洞会进行全面细微的排查。</p>
 <p>零时安全实验室被授权测试某交易所时，在一个提交GET请求的数据包中，发现疑似的注入点。进行手工测试后，验证存在延时注入，后使用工具进一步测试，得到了数据库表，用户名，密码等数据库存储的相关信息。</p>
 <p>下图为手工注入测试过程：</p>
-<p><img src="/2019/11/15/0x02-shu-ru-shu-chu/5.png" alt="SQLI"></p>
+<p><img src="/./5.png" alt="SQLI"></p>
 <p>工具测试过程：</p>
-<p><img src="/2019/11/15/0x02-shu-ru-shu-chu/6.png" alt="SQLMAP"></p>
+<p><img src="/./6.png" alt="SQLMAP"></p>
 <h3 id="代码注入测试"><a href="#代码注入测试" class="headerlink" title="代码注入测试"></a>代码注入测试</h3><p>代码注入漏洞与SQL注入漏洞同隶属于注入类型，其危害也相当巨大，是经常被攻击者能用来拿下网站权限的“利器”。这种漏洞的产生大多是因为部分开发人员的编程习惯并不安全，例如经常使用一些类似于eval()，system()的危险函数等。下面用一个实例说明一下此类漏洞的危害。</p>
 <p>零时安全实验室在对某交易所进行测试时，发现交易所的某相关域名下报错信息提示中间件及版本为Thinkphp 5.0.11，随即利用其已公开的一个代码执行漏洞写入shell，连接成功后拿下网站权限。</p>
 <p>访问网站不存在的目录，管理员开启了debug信息：</p>
-<p><img src="/2019/11/15/0x02-shu-ru-shu-chu/7.png" alt="DEBUG"></p>
+<p><img src="/./7.png" alt="DEBUG"></p>
 <p>根据ThinkPHP相关版本漏洞，验证漏洞是否存在，可以看到禁用方法：</p>
-<p><img src="/2019/11/15/0x02-shu-ru-shu-chu/8.png" alt="PHPINFO"></p>
+<p><img src="/./8.png" alt="PHPINFO"></p>
 <p>写入木马后，连接成功，拿到网站管理员权限：</p>
-<p><img src="/2019/11/15/0x02-shu-ru-shu-chu/9.png" alt="ANTSWORD"></p>
+<p><img src="/./9.png" alt="ANTSWORD"></p>
 <hr>
 <p><strong>人和机器总是要产生交互</strong></p>
 <p><strong>交互就意味着存在危险</strong></p>
@@ -982,7 +982,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">21.3k</span>&nbsp;字
+                class="white-color">23.4k</span>&nbsp;字
             
             
             

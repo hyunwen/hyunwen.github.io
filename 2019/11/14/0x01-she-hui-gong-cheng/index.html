@@ -27,7 +27,7 @@
     
     <script src="/libs/jquery/jquery.min.js"></script>
     
-</head>
+<meta name="generator" content="Hexo 6.3.0"></head>
 
 
 <body>
@@ -511,7 +511,7 @@
 </li>
 </ul>
 </li>
-<li><p>口令猜解  </p>
+<li><p>口令猜解</p>
 </li>
 </ul>
 </blockquote>
@@ -520,24 +520,24 @@
 <h3 id="钓鱼攻击"><a href="#钓鱼攻击" class="headerlink" title="钓鱼攻击"></a>钓鱼攻击</h3><h4 id="邮件钓鱼"><a href="#邮件钓鱼" class="headerlink" title="邮件钓鱼"></a>邮件钓鱼</h4><p>安全人员在对一家交易所进行测试时，最容易接触到的人就是客服人员，所以负责对外交流的客服也往往成为社会工程学攻击的首要对象。</p>
 <p>零时科技安全团队研究员曾对某家交易所进行安全测试，在基础信息收集阶段过后，以及简单的漏洞测试后，发现该交易所的K线存在一个TradingView 的DOM XSS，将漏洞与钓鱼手段相结合对交易所的客服人员展开了社会工程学攻击。由于DOM XSS的payload中的域名与交易所域名相同，对一些不具备高安全意识的客服人员，很容易进入布下的陷阱之中。</p>
 <p>下图为零时科技安全团队构造的钓鱼邮件，发给交易所客服人员：</p>
-<p><img src="/2019/11/14/0x01-she-hui-gong-cheng/%E9%82%AE%E4%BB%B61.png" alt="钓鱼邮件"></p>
+<p><img src="/./%E9%82%AE%E4%BB%B61.png" alt="钓鱼邮件"></p>
 <p>当客服人员打开邮件并点击邮件中的链接时，攻击者即可获取客服人员的登录会话认证，成功控制客服人员账号。</p>
-<p><img src="/2019/11/14/0x01-she-hui-gong-cheng/%E9%82%AE%E4%BB%B62.png" alt="获取登录会话认证"></p>
+<p><img src="/./%E9%82%AE%E4%BB%B62.png" alt="获取登录会话认证"></p>
 <h4 id="网站钓鱼"><a href="#网站钓鱼" class="headerlink" title="网站钓鱼"></a>网站钓鱼</h4><p>在社工的领域里，针对于人的攻击中，最重要的两个点就是信任和需求。</p>
 <p>在一次某厂商开发人员授权的测试中，零时安全团队测试人员声称发现了某网址为推特镜像，且在国内也可访问，内容实时更新，并以话术诱导该人员点击进事先准备好的钓鱼网站并尝试性的输入了推特账户及密码。</p>
 <p>下图为该开发人员推特账号与密码。</p>
-<p><img src="/2019/11/14/0x01-she-hui-gong-cheng/%E6%8E%A8%E7%89%B9.jpg" alt="Fishhing"></p>
+<p><img src="/./%E6%8E%A8%E7%89%B9.jpg" alt="Fishhing"></p>
 <h3 id="身份信息采集"><a href="#身份信息采集" class="headerlink" title="身份信息采集"></a>身份信息采集</h3><p>将工作与生活分开，不使其产生交集已经成为当下甚是流行的一种趋势，如，区分开工作与生活各自领域使用的手机，微信，QQ等。这样的趋势看似是职场人工作压力大，切换环境逃避压力的大势所趋，但也不无安全考虑。</p>
 <p>零时安全团队在授权测试某家交易所时，找到了该公司相关的某贴吧ID（后经核实，为该公司某管理人员），然后以此ID为基础继续摸索，成功找到了该人员的QQ，手机号和另一私人用ID。因该人员的社交方式并未区分工作与生活使用，根据该管理的手机与QQ号，找到了其他曾注册的论坛ID等信息，并对该管理人员进行心理侧写，猜解出密码为姓名拼音首字母+出生年月日+字符”.“。为后续直接接触后实施的社会工程学攻击手段提供了大量便利。（以下是部分信息）</p>
 <p>下图为该人员具体信息。</p>
-<p><img src="/2019/11/14/0x01-she-hui-gong-cheng/%E8%BA%AB%E4%BB%BD1.png" alt="个人信息搜集1"></p>
+<p><img src="/./%E8%BA%AB%E4%BB%BD1.png" alt="个人信息搜集1"></p>
 <p>下图是攻击中获取联系方式时记录。</p>
-<p><img src="/2019/11/14/0x01-she-hui-gong-cheng/%E8%BA%AB%E4%BB%BD2.png" alt="个人信息搜集2"></p>
+<p><img src="/./%E8%BA%AB%E4%BB%BD2.png" alt="个人信息搜集2"></p>
 <h3 id="鱼叉攻击"><a href="#鱼叉攻击" class="headerlink" title="鱼叉攻击"></a>鱼叉攻击</h3><p>某交易平台于2019年3月被黑客团队利用鱼叉攻击的手段成功入侵。由于某客服人员打开了恶意用户在电报群中投放的捆绑后门的安装程序，随后攻击者获取到了主机权限，通过内网渗透实施入侵并盗取了私钥。</p>
 <p>下图为恶意安装程序的安全检测，成功识别为恶意程序：</p>
-<p><img src="/2019/11/14/0x01-she-hui-gong-cheng/%E9%B1%BC%E5%8F%891.png" alt="C&amp;C地址"></p>
+<p><img src="/./%E9%B1%BC%E5%8F%891.png" alt="C&amp;C地址"></p>
 <p>此攻击团队通过搭建真实网站并运营，减少受害者的质疑，下图为C&amp;C服务器所搭建的钓鱼网站：</p>
-<p><img src="/2019/11/14/0x01-she-hui-gong-cheng/%E9%B1%BC%E5%8F%892.png" alt="C&amp;C网站"></p>
+<p><img src="/./%E9%B1%BC%E5%8F%892.png" alt="C&amp;C网站"></p>
 <hr>
 <p>目前对于钓鱼攻击，鱼叉攻击等社会工程学攻击并没有什么特效的手段。加强人员安全意识建设，不盲目的打开陌生的URL、文档以及文件，对基本的漏洞有简单的认识来规避可能存在的风险。</p>
 <hr>
@@ -545,7 +545,7 @@
 <p><strong>以上就是本期文章的全部内容。</strong></p>
 <p><strong>社会工程学是一种针对于人的，高效利用信息的攻击方式。对于测试方来说，它是常能取胜，意料之外的一支“奇兵”；对于交易所方来说，做好工作人员安全意识的培养就是能防奇兵的那道“城墙”。</strong></p>
 <p><strong>下一篇文章将会讲述有关于逻辑漏洞的内容，敬请关注。</strong></p>
-<p><em>附脑图地址：<a href="https://github.com/NoneAge/BlockchainSecurityTutorial" target="_blank" rel="noopener">https://github.com/NoneAge/BlockchainSecurityTutorial</a></em></p>
+<p><em>附脑图地址：<a target="_blank" rel="noopener" href="https://github.com/NoneAge/BlockchainSecurityTutorial">https://github.com/NoneAge/BlockchainSecurityTutorial</a></em></p>
 
             </div>
             <hr/>
@@ -1006,7 +1006,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">21.3k</span>&nbsp;字
+                class="white-color">23.4k</span>&nbsp;字
             
             
             
