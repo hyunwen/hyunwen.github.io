@@ -452,31 +452,31 @@
 </blockquote>
 <h2 id="三、案例分析"><a href="#三、案例分析" class="headerlink" title="三、案例分析"></a>三、案例分析</h2><h3 id="KYC信息泄露"><a href="#KYC信息泄露" class="headerlink" title="KYC信息泄露"></a>KYC信息泄露</h3><p>在业务逻辑文章中曾经讲过KYC认证缺陷 ，指的是用虚假以及非法的信息来绕过交易所的KYC认证。而对于使用真实KYC信息认证的用户，KYC信息本身的安全性显得尤为重要。</p>
 <h4 id="忘记密码"><a href="#忘记密码" class="headerlink" title="忘记密码"></a>忘记密码</h4><p>某交易所在用户忘记密码时未对响应包进行处理，当输入邮箱或者电话号码进行找回密码操作时，服务器将用户的uid、mobile、name、nickname、email、qq、wexin、identitycardnon（身份证号）以及googlesecret一并返回，造成了极其严重的KYC信息泄露：</p>
-<p><img src="/./zhmm.png" alt="找回密码泄露用户信息" title="找回密码泄露用户信息"></p>
+<p><img src="/2019/11/21/0x05-xin-xi-xie-lu/zhmm.png" alt="找回密码泄露用户信息" title="找回密码泄露用户信息"></p>
 <h4 id="邀请列表"><a href="#邀请列表" class="headerlink" title="邀请列表"></a>邀请列表</h4><p>某交易所在用户查看邀请人列表时没有对服务器响应包内容进行处理，导致查看邀请列表时会泄露所有被邀请人的KYC信息包括uid、mobile、name、nickname、email、qq、wexin、identitycardnon（身份证号）以及googlesecret等。利用存在的越权漏洞，可以遍历收集所有被邀请用户的KYC信息：</p>
-<p><img src="/./yqlb.png" alt="邀请列表KYC信息泄露" title="邀请列表KYC信息泄露"></p>
+<p><img src="/2019/11/21/0x05-xin-xi-xie-lu/yqlb.png" alt="邀请列表KYC信息泄露" title="邀请列表KYC信息泄露"></p>
 <p><em>注：由于敏感性原因暂不放出手机结果以及具体细节</em></p>
 <h4 id="OTC查看商家-x2F-订单"><a href="#OTC查看商家-x2F-订单" class="headerlink" title="OTC查看商家&#x2F;订单"></a>OTC查看商家&#x2F;订单</h4><p>某交易所在用户查看OTC订单时存在信息泄露，服务器的响应包里将商家的id、qq、alipay、whatsApp、nickname、mobile、wechat、telegram、username、realname、skype和email全部返回，只要遍历订单就可以获得所有商家的个人信息：</p>
-<p><img src="/./otcsj.png" alt="OTC信息泄露" title="OTC商家信息存在信息泄露"></p>
+<p><img src="/2019/11/21/0x05-xin-xi-xie-lu/otcsj.png" alt="OTC信息泄露" title="OTC商家信息存在信息泄露"></p>
 <h4 id="信息泄露攻击链"><a href="#信息泄露攻击链" class="headerlink" title="信息泄露攻击链"></a>信息泄露攻击链</h4><p>零时安全团队在对某交易所进行安全测试时发现，该交易所在用户查看OTC商家的信息时，遍历userid便可以获得所有商家用户的phone、username和nickname。收集到所有泄露的商家phone后，经过测试又在忘记密码处发现信息泄露，只要输入手机号就可以获得商家的userid以及email，通过两个信息泄露漏洞构成的攻击链同时进行收集，最终收集到所有商家用户的真实姓名、电话号码、邮箱地址以及昵称。</p>
 <p>下图为通过遍历userid获取所有商家的phone和username:</p>
-<p><img src="/./otcsj1.png" alt="商户信息泄露"></p>
+<p><img src="/2019/11/21/0x05-xin-xi-xie-lu/otcsj1.png" alt="商户信息泄露"></p>
 <p>下图为通过收集到的手机号码来获取商家的email以及userid:</p>
-<p><img src="/./wjmm.png" alt="找回密码信息泄露"></p>
+<p><img src="/2019/11/21/0x05-xin-xi-xie-lu/wjmm.png" alt="找回密码信息泄露"></p>
 <p>也许某个点的信息泄露看起来微不足道，一旦点与点之间连成线，对于攻击者来说这两个点确定的可不只是一条有始有终的线段，而当这条攻击链被利用起来的时候，便是条有始无终，直至目标的射线。</p>
 <h3 id="源码信息泄露"><a href="#源码信息泄露" class="headerlink" title="源码信息泄露"></a>源码信息泄露</h3><p>在开发过程中，开发与测试人员为了能够更加轻松地了解以及调试代码，通常在开发与测试阶段在代码中留下大量注释信息，其中不乏有测试用IP地址，测试端口，测试用账户，测试用token和测试用API等等。</p>
 <p>编写注释对于广大开发与测试人员可以提高代码的易读性以及开发效率，可算是与人方便，与己方便的好习惯。可一旦这些方便的注释经过开发环境、测试环境到达了生产环境，在公网上暴露出来，方便的可就不只是兢兢业业的开发者与测试者，还有在黑暗中隐藏行踪，时刻紧盯着目标的攻击者们。</p>
 <p>在经过对大量交易所测试后发现，开发与测试人员可能是世界上最具有开源精神的一批人，有的喜欢将自家网站的内网拓扑以及测试接口开源出来供大家欣赏。</p>
 <p>某交易所源代码中存有大量含有测试用接口，IP地址的注释：</p>
-<p><img src="/./sourcecode.png" alt="测试用接口，IP地址" title="源代码中存在信息泄露"></p>
+<p><img src="/2019/11/21/0x05-xin-xi-xie-lu/sourcecode.png" alt="测试用接口，IP地址" title="源代码中存在信息泄露"></p>
 <p>有些喜欢将自家的加密的密钥开源出来供大家使用。</p>
 <p>某交易所源代码中含有AES加密的硬编码密钥，导致数据加密被破解：</p>
-<p><img src="/./AES.png" alt="AES加密密钥"></p>
+<p><img src="/2019/11/21/0x05-xin-xi-xie-lu/AES.png" alt="AES加密密钥"></p>
 <p>而有些不仅直接将自家测试用token放到源码里，还向账户里进行充值，可谓是：“弱水三千，任君自取”，不过君取得是不是一瓢那可就不知道了。</p>
 <p>某交易所源码中含有测试用JWT，修改后可成功登录账户，控制资产：</p>
-<p><img src="/./JWT.png" alt="源码中含有测试用JWT"></p>
+<p><img src="/2019/11/21/0x05-xin-xi-xie-lu/JWT.png" alt="源码中含有测试用JWT"></p>
 <p>使用测试用JWT登录账户，控制资产：</p>
-<p><img src="/./JWT1.png" alt="测试用JWT登录账户"></p>
+<p><img src="/2019/11/21/0x05-xin-xi-xie-lu/JWT1.png" alt="测试用JWT登录账户"></p>
 <p>诚然，详细而又全面的注释是开发与测试人员良好的代码编写习惯，不过要记得在经过开发环境与测试环境后，进入生产环境之前，将所有可能会暴露到外界的含有敏感信息注释删除，以防敏感信息泄露。在GitHub上开源是好事，但也要记得上传之前仔细检查，不要将自家的数据库地址与密码一同开源出去。</p>
 <hr>
 <p><strong>对于交易所来说，不辜负用户的信赖，保护好用户给予的个人信息，应该是安身立命之本。</strong></p>

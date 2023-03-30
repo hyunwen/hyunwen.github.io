@@ -437,15 +437,15 @@
 <li>弱加密安全测试</li>
 </ul>
 <h2 id="三、案例分析"><a href="#三、案例分析" class="headerlink" title="三、案例分析"></a>三、案例分析</h2><h3 id="App-运行时虚拟机监测"><a href="#App-运行时虚拟机监测" class="headerlink" title="App 运行时虚拟机监测"></a>App 运行时虚拟机监测</h3><p>零时科技在对某交易所进行发现，该交易app未进行虚拟机运行检测，攻击者在虚拟机中安装运行该app，即可在虚拟机中截取并操作数据包或进行其他有害操作。</p>
-<p><img src="/./1.png" alt="VM DETECT"></p>
+<p><img src="/2019/11/29/0x08app-an-quan-shang/1.png" alt="VM DETECT"></p>
 <h3 id="App数据备份检测"><a href="#App数据备份检测" class="headerlink" title="App数据备份检测"></a>App数据备份检测</h3><p>零时科技安全团队在对某交易所app进行安全测试时，发现该交易所并未对app进行数据备份检测，安卓AndroidManifest.xml文件中android:allowBackup为true，当这个标志被设置成true或不设置该标志位时，应用程序数据可以备份和恢复，adb调试备份允许恶意攻击者复制应用程序数据。</p>
 <p>零时科技安全团队在对某交易所app进行安全测试时，发现该交易所并未对app进行数据备份检测，其AndroidManifest.xml文件中android: allowBackup为true，存在数据任意备份漏洞。</p>
-<p><img src="/./2.png" alt="Source Code"></p>
+<p><img src="/2019/11/29/0x08app-an-quan-shang/2.png" alt="Source Code"></p>
 <p>链接手机，然后输入以下备份命令，会出现一个对话窗，输入备份密码即可：</p>
 <blockquote>
 <p>adb backup -nosystem -noshared -apk -f com.xxx.wallet com.xxx.wallet</p>
 </blockquote>
-<p><img src="/./3.png" alt="BACKUP"></p>
+<p><img src="/2019/11/29/0x08app-an-quan-shang/3.png" alt="BACKUP"></p>
 <p>连接到另一台手机或root的本机，输入下列命令，弹出对话框，输入备份时的密码即可恢复数据</p>
 <blockquote>
 <p>adb restore com</p>
@@ -454,11 +454,11 @@
 <p>零时科技安全团队建议设置AndroidManifest.xml的android:allowBackup标志为false。</p>
 <h3 id="代码反编译检测"><a href="#代码反编译检测" class="headerlink" title="代码反编译检测"></a>代码反编译检测</h3><p>若app的apk文件可被反编译，就有可能导致源代码信息泄露，攻击者也可对其进行代码审计以找出可能存在隐患的攻击点。</p>
 <p>零时科技安全团队对某交易所app进行安全测试时，通过检测apk文件是否通过加固，代码是否通过加密或者混淆，是否可以通过反编译攻击等方面对该app进行测试。发现该apk文件可被反编译，反编译后可以看到java源代码，导致源代码信息泄露。（通过jadx-gui或其他反编译工具可直接操作apk，查看java源代码。）</p>
-<p><img src="/./4.png" alt="Decompile"></p>
+<p><img src="/2019/11/29/0x08app-an-quan-shang/4.png" alt="Decompile"></p>
 <p>零时科技安全团队建议，可使用专业加固工具对apk进行加壳处理。</p>
 <h3 id="敏感权限使用"><a href="#敏感权限使用" class="headerlink" title="敏感权限使用"></a>敏感权限使用</h3><p>目前很多系统在app请求权限这一方面上都不甚敏感，这也是如今移动端并不那么安全的成因之一。很多app都会请求一些敏感的权限，有的甚至会直接绕过，不向用户请求就直接自行取得了权限。而这些app有可能对交易所和用户都产生足够的恶意影响。</p>
 <p>零时科技安全团队在对某交易所app进行安全测试时，检测APP程序中是否存在敏感权限的使用，发现确实存在敏感权限使用漏洞。</p>
-<p><img src="/./5.jpg" alt="Authority control"> </p>
+<p><img src="/2019/11/29/0x08app-an-quan-shang/5.jpg" alt="Authority control"> </p>
 <p>敏感权限如下：</p>
 <ul>
 <li><p>android.permision.WRITE_EXTERNAL_STORAGE 允许应用写入外部存储</p>
@@ -475,9 +475,9 @@
 <p>零时科技安全团队建议禁用不需要的敏感权限。</p>
 <h3 id="敏感信息泄露"><a href="#敏感信息泄露" class="headerlink" title="敏感信息泄露"></a>敏感信息泄露</h3><p>敏感信息泄露危害极大，如泄露出测试&#x2F;管理员数据，参数注释信息等。但它又是一种危害虽大却又较容易避免的漏洞，只要开发人员多加注重安全意识即可避免大部分问题。</p>
 <p>零时科技安全团队在对某交易所进行安全测试时，查找其 app 程序文件中是否存在敏感信息泄露（如源码中，备份文件中，xml 资源文件中等），发现确实存在敏感信息泄露漏洞，源码中泄露了微信公众号 appid 和 secretkey：</p>
-<p><img src="/./6.png" alt="Decompile Code"></p>
+<p><img src="/2019/11/29/0x08app-an-quan-shang/6.png" alt="Decompile Code"></p>
 <p>获取token：</p>
-<p><img src="/./7.png" alt="Wechat"></p>
+<p><img src="/2019/11/29/0x08app-an-quan-shang/7.png" alt="Wechat"></p>
 <hr>
 <p><em>鉴于文章内容长度限制，本期内容将分为上、下篇，顺序放送。</em></p>
 
